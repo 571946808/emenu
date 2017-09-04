@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>结算中心管理</title>
+    	<!--#include file="/pages/admin/common/head.html"-->
+    	<link rel="stylesheet" href="/resources/css/admin/store-management/store-management.css">
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+								<li><a href="#">库存管理</a></li>
+								<li class="active">结算中心管理</li>
+							</ol>
+							<h2>结算中心管理</h2>
+						</div>
+						<div class="col-sm-12">
+							<div class="alert alert-danger J_tip" role="alert">搜索失败!</div>	
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>搜索</h4>
+								</div>
+								<div class="panel-body">
+									<form class="form-horizontal J_searchForm" action="" method="">
+										<div class="form-group">
+											<label class="col-sm-3 control-label">开始时间：</label>
+											<div class="col-sm-2">
+												<input type="text" class="w190 form-control date" readonly name="startTime" value="">
+											</div>
+										</div>
+										<div class="form-group">
+										    <label class="col-sm-3 control-label">结束时间：</label>
+											<div class="col-sm-2">
+												<input type="text" class="w190 form-control date" readonly name="endTime" value="">
+										    </div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">供货商：</label>
+											<div class="col-sm-2">
+												<select class="w190 form-control" name="supplier" value="">
+										     		<option value="-1">请选择</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-6 col-sm-offset-3">
+											<div class="btn-toolbar">
+												<button class="btn btn-primary J_searchBtn" type="submit"><i class="fa fa-search"></i>&nbsp;搜索</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>列表</h4>
+								</div>
+								<div class="panel-body">
+									<div class="text-right">
+										<a href="" class="btn btn-warning margin-bottom-15 J_exportExcel"><i class="fa fa-download"></i>&nbsp;导出Excel</a>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-hover table-bordered">
+											<thead>
+												<tr>
+													<th>供货商</th>
+													<th>名称</th>
+													<th>数量</th>
+													<th>金额</th>
+													<th>经手人</th>
+													<th>操作人</th>
+													<th>总金额</th>
+												</tr>
+											</thead>
+											<tbody id="dataRender">
+												<tr class="J_supplier">
+													<td rowspan="">大连老鲜生</td>
+													<td>螃蟹</td>
+													<td>0</td>
+													<td>38.00</td>
+													<td>代经理</td>
+													<td>代经理</td>
+													<td rowspan="">0.00</td>
+												</tr>
+												<tr>
+													<td>螃蟹</td>
+													<td>0</td>
+													<td>38.00</td>
+													<td>代经理</td>
+													<td>代经理</td>
+												</tr>
+												<tr>
+													<td>螃蟹</td>
+													<td>0</td>
+													<td>38.00</td>
+													<td>代经理</td>
+													<td>代经理</td>
+												</tr>
+												<tr class="J_supplier">
+													<td rowspan="">大连老鲜生</td>
+													<td>螃蟹</td>
+													<td>0</td>
+													<td>38.00</td>
+													<td>代经理</td>
+													<td>代经理</td>
+													<td rowspan="">0.00</td>
+												</tr>
+												<tr>
+													<td>螃蟹</td>
+													<td>0</td>
+													<td>38.00</td>
+													<td>代经理</td>
+													<td>代经理</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/template" id="renderTpl">
+			{@each list as it}
+				{@if it.items == ''}
+					<tr>
+						<td rowspan=''>&{it.supplierName}</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td rowspan=''>&{it.totalMoney}</td>
+					</tr>
+				{@else}
+					{@each it.items as item}
+						{@if item.status == 1}
+							<tr class="J_supplier">
+							<td rowspan=&{item.length}>&{it.supplierName}</td>
+						{@else}
+							<tr>
+						{@/if}
+							<td>&{item.itemName}</td>
+							<td>&{item.itemQuantity}</td>
+							<td>&{item.itemMoney}</td>
+							<td>&{item.handlerName}</td>
+							<td>&{item.createdName}</td>
+							{@if item.status == 1}
+								<td rowspan=&{item.length}>&{it.totalMoney}</td>
+							{@/if}
+						</tr>
+					{@/each}
+				{@/if}
+			{@/each}
+		</script>
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use("page/store-management/settlement-management", function(S){
+					PW.page.StoreManagement.SettlementManagement();
+				});
+			});
+		</script>
+	</body>
+</html>

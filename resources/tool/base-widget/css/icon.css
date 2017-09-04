@@ -1,0 +1,434 @@
+/*-----------------------------------------------------------------------------
+* @Description: icon样式 (icon.css)
+* @Version: 	V1.0.0
+* @author: 		wangjing(12846632460@qq.com)
+* @date			2014.05.26
+* ==NOTES:=============================================
+* v1.0.0(2014.05.26):
+* 	初始生成 
+* ---------------------------------------------------------------------------*/
+.icon{
+	width: 20px;
+	height: 20px; 
+}
+.icon-warn{
+	background: url(../../../img/admin/widget/icon/one-six.png) -14px -13px no-repeat;
+}
+.icon-cloud{
+	background: url(../../../img/admin/widget/icon/one-six.png) -46px -13px no-repeat;
+}
+.icon-lock{
+	background: url(../../../img/admin/widget/icon/one-six.png) -78px -13px no-repeat;
+}
+.icon-note{
+	background: url(../../../img/admin/widget/icon/one-six.png) -142px -13px no-repeat;
+}
+.icon-voice{
+	background: url(../../../img/admin/widget/icon/one-six.png) -175px -13px no-repeat;
+}
+.icon-email{
+	background: url(../../../img/admin/widget/icon/one-six.png) -206px -13px no-repeat;
+}
+.icon-package{
+	background: url(../../../img/admin/widget/icon/one-six.png) -238px -13px no-repeat;
+}
+.icon-cart{
+	background: url(../../../img/admin/widget/icon/one-six.png) -271px -13px no-repeat;
+}
+.icon-smile{
+	background: url(../../../img/admin/widget/icon/one-six.png) -302px -13px no-repeat;
+}
+.icon-clock{
+	background: url(../../../img/admin/widget/icon/one-six.png) -334px -13px no-repeat;
+}
+.icon-user{
+	background: url(../../../img/admin/widget/icon/one-six.png) -366px -13px no-repeat;
+}
+.icon-set{
+	background: url(../../../img/admin/widget/icon/one-six.png) -14px -44px no-repeat;
+}
+.icon-music{
+	background: url(../../../img/admin/widget/icon/one-six.png) -47px -44px no-repeat;
+}
+.icon-pen{
+	background: url(../../../img/admin/widget/icon/one-six.png) -110px -44px no-repeat;
+}
+.icon-power{
+	background: url(../../../img/admin/widget/icon/one-six.png) -174px -44px no-repeat;
+}
+.icon-star{
+	background: url(../../../img/admin/widget/icon/one-six.png) -208px -44px no-repeat;
+}
+.icon-key{
+	background: url(../../../img/admin/widget/icon/one-six.png) -238px -44px no-repeat;
+}
+.icon-chart{
+	background: url(../../../img/admin/widget/icon/one-six.png) -271px -44px no-repeat;
+}
+.icon-apple{
+	background: url(../../../img/admin/widget/icon/one-six.png) -302px -44px no-repeat;
+}
+.icon-file{
+	background: url(../../../img/admin/widget/icon/one-six.png) -334px -44px no-repeat;
+}
+.icon-add{
+	background: url(../../../img/admin/widget/icon/one-six.png) -366px -44px no-repeat;
+}
+.icon-sub{
+	background: url(../../../img/admin/widget/icon/one-six.png) -14px -75px no-repeat;
+}
+.icon-photo{
+	background: url(../../../img/admin/widget/icon/one-six.png) -46px -75px no-repeat;
+}
+.icon-camera{
+	background: url(../../../img/admin/widget/icon/one-six.png) -110px -75px no-repeat;
+}
+.icon-search{
+	background: url(../../../img/admin/widget/icon/one-six.png) -142px -75px no-repeat;
+}
+.icon-ball{
+	background: url(../../../img/admin/widget/icon/one-six.png) -174px -75px no-repeat;
+}
+.icon-wifi{
+	background: url(../../../img/admin/widget/icon/one-six.png) -238px -75px no-repeat;
+}
+.icon-play{
+	background: url(../../../img/admin/widget/icon/one-six.png) -334px -75px no-repeat;
+}
+.icon-pause{
+	background: url(../../../img/admin/widget/icon/one-six.png) -366px -75px no-repeat;
+}
+.icon-bug{
+	background: url(../../../img/admin/widget/icon/one-six.png) -14px -108px no-repeat;
+}
+.icon-dos{
+	background: url(../../../img/admin/widget/icon/one-six.png) -47px -108px no-repeat;
+}
+.icon-word{
+	background: url(../../../img/admin/widget/icon/one-six.png) -110px -108px no-repeat;
+}
+.icon-index{
+	background: url(../../../img/admin/widget/icon/one-six.png) -142px -108px no-repeat;
+}
+.icon-earth{
+	background: url(../../../img/admin/widget/icon/one-six.png) -174px -108px no-repeat;
+}
+.icon-position{
+	background: url(../../../img/admin/widget/icon/one-six.png) -206px -108px no-repeat;
+}
+.icon-tip{
+	background: url(../../../img/admin/widget/icon/one-six.png) -238px -108px no-repeat;
+}
+.icon-eye{
+	background: url(../../../img/admin/widget/icon/one-six.png) -270px -108px no-repeat;
+}
+.icon-heart{
+	background: url(../../../img/admin/widget/icon/one-six.png) -302px -108px no-repeat;
+}
+.icon-fix{
+	background: url(../../../img/admin/widget/icon/one-six.png) -366px -108px no-repeat;
+}
+.icon-calendar{
+	background: url(../../../img/admin/widget/icon/one-six.png) -47px -140px no-repeat;
+}
+.icon-computer{
+	background: url(../../../img/admin/widget/icon/one-six.png) -78px -140px no-repeat;
+}
+.icon-iphone{
+	background: url(../../../img/admin/widget/icon/one-six.png) -110px -140px no-repeat;
+}
+.icon-water{
+	background: url(../../../img/admin/widget/icon/one-six.png) -142px -140px no-repeat;
+}
+.icon-mouse{
+	background: url(../../../img/admin/widget/icon/one-six.png) -174px -140px no-repeat;
+}
+.icon-refresh{
+	background: url(../../../img/admin/widget/icon/one-six.png) -206px -140px no-repeat;
+}
+.icon-location{
+	background: url(../../../img/admin/widget/icon/one-six.png) -238px -140px no-repeat;
+}
+.icon-memo{
+	background: url(../../../img/admin/widget/icon/one-six.png) -271px -140px no-repeat;
+}
+.icon-tel{
+	background: url(../../../img/admin/widget/icon/one-six.png) -302px -140px no-repeat;
+}
+.icon-arrows{
+	background: url(../../../img/admin/widget/icon/one-six.png) -366px -140px no-repeat;
+}
+.icon-good{
+	background: url(../../../img/admin/widget/icon/one-six.png) -14px -172px no-repeat;
+}
+.icon-bad{
+	background: url(../../../img/admin/widget/icon/one-six.png) -47px -172px no-repeat;
+}
+.icon-listen{
+	background: url(../../../img/admin/widget/icon/one-six.png) -78px -172px no-repeat;
+}
+.icon-right{
+	background: url(../../../img/admin/widget/icon/one-six.png) -142px -172px no-repeat;
+}
+.icon-wrong{
+	background: url(../../../img/admin/widget/icon/one-six.png) -174px -172px no-repeat;
+}
+.icon-money{
+	background: url(../../../img/admin/widget/icon/one-six.png) -206px -172px no-repeat;
+}
+.icon-gift{
+	background: url(../../../img/admin/widget/icon/one-six.png) -238px -172px no-repeat;
+}
+.icon-ring{
+	background: url(../../../img/admin/widget/icon/one-six.png) -302px -172px no-repeat;
+}
+.icon-coffee{
+	background: url(../../../img/admin/widget/icon/one-six.png) -334px -172px no-repeat;
+}
+.icon-flag{
+	background: url(../../../img/admin/widget/icon/one-six.png) -14px -203px no-repeat;
+}
+.icon-del{
+	background: url(../../../img/admin/widget/icon/one-six.png) -78px -203px no-repeat;
+}
+.icon-lighting{
+	background: url(../../../img/admin/widget/icon/one-six.png) -112px -203px no-repeat;
+}
+.icon-list{
+	background: url(../../../img/admin/widget/icon/one-six.png) -206px -203px no-repeat;
+}
+.icon-voice{
+	background: url(../../../img/admin/widget/icon/one-six.png) -302px -203px no-repeat;
+}
+.icon-tv{
+	background: url(../../../img/admin/widget/icon/one-six.png) -334px -203px no-repeat;
+}
+.icon-back{
+	background: url(../../../img/admin/widget/icon/one-six.png) -14px -235px no-repeat;
+}
+.icon-save{
+	background: url(../../../img/admin/widget/icon/one-six.png) -142px -235px no-repeat;
+}
+.icon-windows{
+	background: url(../../../img/admin/widget/icon/one-six.png) -271px -267px no-repeat;
+}
+.icon-smile{
+	background: url(../../../img/admin/widget/icon/one-six.png) -335px -235px no-repeat;
+}
+.icon-battery{
+	background: url(../../../img/admin/widget/icon/one-six.png) -335px -268px no-repeat;
+}
+.icon-tag{
+	background: url(../../../img/admin/widget/icon/one-six.png) -367px -268px no-repeat;
+}
+
+.icon-black-warn{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -14px -13px no-repeat;
+}
+.icon-black-cloud{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -46px -13px no-repeat;
+}
+.icon-black-lock{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -78px -13px no-repeat;
+}
+.icon-black-note{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -142px -13px no-repeat;
+}
+.icon-black-voice{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -175px -13px no-repeat;
+}
+.icon-black-email{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -206px -13px no-repeat;
+}
+.icon-black-package{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -238px -13px no-repeat;
+}
+.icon-black-cart{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -271px -13px no-repeat;
+}
+.icon-black-smile{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -302px -13px no-repeat;
+}
+.icon-black-clock{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -334px -13px no-repeat;
+}
+.icon-black-user{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -366px -13px no-repeat;
+}
+.icon-black-set{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -14px -44px no-repeat;
+}
+.icon-black-music{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -47px -44px no-repeat;
+}
+.icon-black-pen{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -110px -44px no-repeat;
+}
+.icon-black-power{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -174px -44px no-repeat;
+}
+.icon-black-star{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -208px -44px no-repeat;
+}
+.icon-black-key{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -238px -44px no-repeat;
+}
+.icon-black-chart{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -271px -44px no-repeat;
+}
+.icon-black-apple{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -302px -44px no-repeat;
+}
+.icon-black-file{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -334px -44px no-repeat;
+}
+.icon-black-add{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -366px -44px no-repeat;
+}
+.icon-black-sub{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -14px -75px no-repeat;
+}
+.icon-black-photo{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -46px -75px no-repeat;
+}
+.icon-black-camera{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -110px -75px no-repeat;
+}
+.icon-black-search{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -142px -75px no-repeat;
+}
+.icon-black-ball{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -174px -75px no-repeat;
+}
+.icon-black-wifi{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -238px -75px no-repeat;
+}
+.icon-black-play{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -334px -75px no-repeat;
+}
+.icon-black-pause{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -366px -75px no-repeat;
+}
+.icon-black-bug{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -14px -108px no-repeat;
+}
+.icon-black-dos{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -47px -108px no-repeat;
+}
+.icon-black-word{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -110px -108px no-repeat;
+}
+.icon-black-index{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -142px -108px no-repeat;
+}
+.icon-black-earth{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -174px -108px no-repeat;
+}
+.icon-black-position{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -206px -108px no-repeat;
+}
+.icon-black-tip{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -238px -108px no-repeat;
+}
+.icon-black-eye{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -270px -108px no-repeat;
+}
+.icon-black-heart{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -302px -108px no-repeat;
+}
+.icon-black-fix{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -366px -108px no-repeat;
+}
+.icon-black-calendar{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -47px -140px no-repeat;
+}
+.icon-black-computer{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -78px -140px no-repeat;
+}
+.icon-black-iphone{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -110px -140px no-repeat;
+}
+.icon-black-water{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -142px -140px no-repeat;
+}
+.icon-black-mouse{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -174px -140px no-repeat;
+}
+.icon-black-refresh{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -206px -140px no-repeat;
+}
+.icon-black-location{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -238px -140px no-repeat;
+}
+.icon-black-memo{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -271px -140px no-repeat;
+}
+.icon-black-tel{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -302px -140px no-repeat;
+}
+.icon-black-arrows{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -366px -140px no-repeat;
+}
+.icon-black-good{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -14px -172px no-repeat;
+}
+.icon-black-bad{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -47px -172px no-repeat;
+}
+.icon-black-listen{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -78px -172px no-repeat;
+}
+.icon-black-right{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -142px -172px no-repeat;
+}
+.icon-black-wrong{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -174px -172px no-repeat;
+}
+.icon-black-money{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -206px -172px no-repeat;
+}
+.icon-black-gift{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -238px -172px no-repeat;
+}
+.icon-black-ring{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -302px -172px no-repeat;
+}
+.icon-black-coffee{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -334px -172px no-repeat;
+}
+.icon-black-flag{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -14px -203px no-repeat;
+}
+.icon-black-del{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -78px -203px no-repeat;
+}
+.icon-black-lighting{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -112px -203px no-repeat;
+}
+.icon-black-list{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -206px -203px no-repeat;
+}
+.icon-black-voice{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -302px -203px no-repeat;
+}
+.icon-black-tv{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -334px -203px no-repeat;
+}
+.icon-black-back{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -14px -235px no-repeat;
+}
+.icon-black-save{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -142px -235px no-repeat;
+}
+.icon-black-windows{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -271px -267px no-repeat;
+}
+.icon-black-smile{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -335px -235px no-repeat;
+}
+.icon-black-battery{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -335px -268px no-repeat;
+}
+.icon-black-tag{
+	background: url(../../../img/admin/widget/icon/one-six-black.png) -367px -268px no-repeat;
+}

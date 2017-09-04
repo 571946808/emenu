@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>打印机管理</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<link rel="stylesheet" href="/resources/css/admin/base-info-management/printer-management.css" />
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+							  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+							  	<li><a href="#">基本信息管理</a></li>
+							  	<li class="active">打印机管理</li>
+							</ol>
+							<h2>打印机管理</h2>
+						</div>						
+						<div class="col-sm-12">	
+							<div class="alert alert-success J_tip" role="alert">保存成功!</div>
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>打印机列表</h4>
+								</div>	
+								<div class="panel-body clearfix">
+									<a href="#" class="btn btn-success"><i class="fa fa-plus"></i>&nbsp;添加打印机</a>
+									<div class="margin-top-20">
+										<div class="printer-classify" id="1">
+											<span>吧台打印机</span>
+											<span>192.168.1.21</span>
+											<em>1</em>
+											<div class="text-right">
+												<a href="#" class="padding-right-10"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+												<a href="javascript:;" class="J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+											</div>											
+										</div>
+										<div class="printer-classify" id="2">
+											<span>吧台打印机</span>
+											<span>192.168.1.22</span>
+											<em>2</em>
+											<div class="text-right">
+												<a href="#" class="padding-right-10"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+												<a href="javascript:;" class="J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+											</div>											
+										</div>
+										<div class="printer-classify" id="3">
+											<span>吧台打印机</span>
+											<span>192.168.1.23</span>
+											<em>3</em>
+											<div class="text-right">
+												<a href="#" class="padding-right-10"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+												<a href="javascript:;" class="J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+											</div>											
+										</div>
+									</div>
+								</div>			
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/base-info-management/printer-management-list', function(S){
+					PW.page.BaseInfoManagement.PrinterManagementList();
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<div class="footer clearfix" id="footer">
+    <ul class="clearfix menu-list">
+        <li class="active oper"><a href="#"><i class="fa fa-list list-trigger"></i><span>菜品选择</span></a></li>
+        <li class="oper J_subMenuListTrigger">
+            <i class="fa fa-heart-o list-trigger"></i><span>猜你喜欢</span>
+            <ul class="call-service-list J_subMenuList">
+                <li><a href="#">为您推荐</a></li>
+                <li><a href="#">历史消费</a></li>
+                <li><a href="#">今日特价</a></li>
+                <li><a href="#">销量排行</a></li>
+                <li><a href="#">本店特色</a></li>
+            </ul>
+        </li>
+        <li class="my-order J_myOrder oper"><a href="#"><i class="fa fa-file-text-o list-trigger"></i><span>我的订单</span><em class="dish-total-number J_dishTotalNumber hidden" data-dish-total-number="5"></em></a></li>
+        <li class="oper J_subMenuListTrigger J_getServiceList">
+            <i class="fa fa-phone list-trigger"></i><span>呼叫服务</span>
+            <ul class="call-service-list J_subMenuList">
+                <!-- <li class="J_callService">呼叫服务员</li>
+                <li class="J_callService">加水</li>
+                <li class="J_callService">加餐具</li> -->
+            </ul>
+        </li>
+    </ul>
+    <input type="hidden" class="J_tableId" name="tableId" value="123">
+    <!-- 后端套cover页的资源地址 -->
+    <input type="hidden" class="J_coverImgSrc" href="/resources/img/mobile/cover/center-icon.jpg">
+</div>
+<script type="text/javascript">
+    KISSY.ready(function(S){
+        S.use('module/footer', function(){});
+    });
+</script>
+<script type="text/javascript" src="/resources/js/mobile/module/loading.js"></script>

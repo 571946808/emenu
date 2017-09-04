@@ -1,0 +1,7 @@
+{
+	"code": 0,
+	"list": [
+		{"id": "1", "sequenceNumber": "1", "name": "tudou", "ingredientNumber": "212", "assistantCode": "td", "tagName": "蔬菜", "maxStorageQuantity": "100kg", "minStorageQuantity": "10kg", "averagePrice": "￥1.0", "realQuantity": "30.6kg", "realMoney": "￥30.6", "totalQuantity": "24瓶", "totalMoney": "￥"}
+	],
+	"dataCount": 14
+}

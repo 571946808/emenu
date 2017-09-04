@@ -1,0 +1,15 @@
+{
+	"code": 0,
+	"list": [
+		{"id":1, "name": "牛肉", "weight": 1, "unit": "斤"},
+		{"id":2, "name": "羊肉", "weight": 2, "unit": "斤"},
+		{"id":3, "name": "白菜", "weight": 3, "unit": "斤"},
+		{"id":4, "name": "蒜", "weight": 4, "unit": "斤"},
+		{"id":5, "name": "酱油", "weight": 5, "unit": "克"},
+		{"id":6, "name": "味精", "weight": 6, "unit": "克"},
+		{"id":7, "name": "葱", "weight": 7, "unit": "斤"},
+		{"id":8, "name": "油", "weight": 8, "unit": "克"},
+		{"id":9, "name": "盐", "weight": 9, "unit": "包"}
+	],
+	"errMsg": "请重新操作！"
+}

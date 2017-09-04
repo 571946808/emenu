@@ -1,0 +1,11 @@
+{
+  "code": 0,
+  "data": {
+    "money": 123,
+    "reportId": 111222333,
+    "itemNumber ": "number112233",
+    "costCardUnitName": "成本卡单位",
+    "costCardQuantity": "88888"
+  },
+  "errMsg": "错误信息"
+}

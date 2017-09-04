@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>会员积分管理</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+        <link rel="stylesheet" type="text/css" href="/resources/css/admin/vip-management/vip-management.css">
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                                </li>
+                                <li>
+                                    <a href="#">会员管理</a>
+                                </li>
+                                <li class="active">
+                                    会员积分管理
+                                </li>
+                            </ol>
+                            <h2>会员积分管理</h2>
+                            <div class="alert alert-success col-sm-12 
+                            J_msg" role="alert">添加成功！</div>
+                            <!-- <div class="alert alert-danger col-sm-12 J_msg" role="alert">添加失败！</div> -->
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>金牌会员&nbsp;积分设置</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">是否启用积分</label>
+                                            <div class="col-sm-3">
+                                                <label class="radio-inline">
+                                                    <input type="radio" class="J_startRadio" name="status" value="1"> 是
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" class="J_stopRadio" name="status"  value="0" checked> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>积分规则</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="form-horizontal operForm J_operForm" id="dataForm">
+                                        <input type="hidden" class="gradeIdInp" name="gradeId" value="123">
+                                        <div>
+                                            <h4>完善信息</h4>
+                                            <hr/>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">赠送积分</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="w180" data-valid-rule="isFloat | isNull" name="" value="" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="J_subContainer" type="0">
+                                            <h4>消费时积分设置</h4>
+                                            <hr/>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">消费方式</label>
+                                                <div class="col-sm-2">
+                                                    <select class="form-control w180">
+                                                        <option value="1" selected="selected" name="zhifubao">支付宝</option>
+                                                        <option value="2" name="xianjin">现金</option>
+                                                        <option value="3" name="yinhangka">银行卡</option>
+                                                    </select>
+                                                </div>
+                                                <button class="btn-success btn J_addBtn" type="button"><i class="fa fa-plus"></i>&nbsp;添加</button>
+                                            </div>
+                                            <div class="table-responsive">
+                                                <table class="table-list col-sm-9 table table-hover table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>消费方式</th>
+                                                            <th>积分规则</th>
+                                                            <th>操作</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="J_template">
+                                                        <tr data-type-num ="1"data-pointPlan-id="1">
+                                                            <td>支付宝</td>
+                                                            <td>
+                                                                <input type="text"  data-valid-rule="isFloat & notNull" name="" value="">&nbsp;&nbsp;元&nbsp;&nbsp;=&nbsp;&nbsp;1积分
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:;" class="label-info J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-type-num = "2"data-pointPlan-id="2">
+                                                            <td>现金</td>
+                                                            <td>
+                                                                <input type="text"  data-valid-rule="isFloat & notNull" name="" value="">&nbsp;&nbsp;元&nbsp;&nbsp;=&nbsp;&nbsp;1积分
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:;" class="label-info J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="J_subContainer" type="1">
+                                            <h4>储值时积分设置</h4>
+                                            <hr/>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">储值方式</label>
+                                                <div class="col-sm-2">
+                                                    <select class="form-control w180"  name="">
+                                                        <option value="1" selected="selected">支付宝</option>
+                                                        <option value="2">现金</option>
+                                                        <option value="3">银行卡</option>
+                                                    </select>
+                                                </div>
+                                                <button class="btn-success btn J_addBtn" type="button"><i class="fa fa-plus"></i>&nbsp;添加</button>
+                                            </div>
+                                            <div class="table-responsive">
+                                                <table class="table-list col-sm-9 table table-hover table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>储值方式</th>
+                                                            <th>积分规则</th>
+                                                            <th>操作</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="J_template">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4>积分兑换设置</h4>
+                                            <hr/>
+                                            <div class="col-sm-2 col-sm-offset-3">
+                                                <input type="text" class="form-control w180" data-valid-rule="isFloat|isNull" name="0" value="" form="dataForm">
+                                            </div>
+                                            <label class="col-sm-1 text-left control-label">分 = 1元</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <div class="btn-toolbar">
+                                                <button data-btn-loading-text="正在保存，请稍后" data-btn-type="loading" type="submit" class="btn-primary btn J_submitBtn">
+                                                    <i class="fa fa-save"></i>
+                                                    &nbsp;保存
+                                                </button>
+                                                <button type="reset" class="btn-default btn J_resetBtn"><i class="fa fa-undo"></i>&nbsp;重置
+                                                </button>
+                                                <button type="button" class="btn-default btn" onclick="history.go(-1)"><i class="fa fa-reply"></i>&nbsp;返回
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--container-->
+            </div><!--holder-->
+        </div><!--page-->
+        <!--#include file="/pages/admin/common/footer.html"-->
+        <script type="text/template" id="addTpl">
+            <tr data-type-num="&{payTypeNum}" >
+                <td>&{payType}</td>
+                <td>
+                    <input type="text" data-valid-rule="isFloat & notNull" name="&{inputName}" value="">&nbsp;&nbsp;元&nbsp;&nbsp;=&nbsp;&nbsp;1积分
+                </td>
+                <td>
+                    <a href="javascript:;" class="label-info J_cancel"><i class="fa fa-times"></i>&nbsp;取消</a>
+                </td>
+            </tr>
+        </script>
+        <script type="text/javascript">
+            KISSY.ready(function(S){
+                S.use('page/vip-management/vip-points-management',function(){
+                     PW.page.VipPointsManagement.Core();
+                })
+            });
+        </script>
+    </body>
+</html>

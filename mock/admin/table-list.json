@@ -1,0 +1,9 @@
+{
+	"code": 0,
+	"list":[
+		{"id": 1,"areaId":0, "areaName": "1楼", "name":"1号桌","seatNum":2, "status":0,"seatFee":"0.0", "tableFee":"0.00", "minCost":"0.00","mealPeriodName":"早餐，午餐"},
+		{"id": 2,"areaId":0, "areaName": "2楼", "name":"2号桌","seatNum":2, "status":1,"seatFee":"0.0", "tableFee":"0.00", "minCost":"0.00","mealPeriodName":"早餐，午餐"},
+		{"id": 3,"areaId":0, "areaName": "3楼", "name":"3号桌","seatNum":2, "status":4,"seatFee":"0.0", "tableFee":"0.00", "minCost":"0.00","mealPeriodName":"早餐，午餐"}
+	],
+	"errMsg":"暂无数据"
+}

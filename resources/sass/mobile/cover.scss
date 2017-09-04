@@ -1,0 +1,34 @@
+@import "./common/common";
+/**************************cover div***************************/
+#createCover{
+    display: block;
+    position: fixed;
+    top: (94rem / $param);  
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);  //has no influence on children element
+    z-index: 3000;  
+}
+#createCover .wait-img-border{
+    position: absolute;
+    color: #fff;
+    border-radius:50%; 
+    border: (4rem / $param) solid #fff;    
+    z-index: 3000;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #000;
+}
+.tip_info{
+    color: #fff;
+    font-size: (30rem / $param);
+    text-align: center;
+}
+.fa-hourglass{
+    font-size: (77rem / $param);
+}
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}

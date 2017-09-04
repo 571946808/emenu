@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>餐台管理页</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<style type="text/css">
+			.J_edit,.J_change,.J_del{
+				display:inline-block; 
+				width:56px;
+			}
+			.checkbox label{
+				margin-bottom: 8px;
+			} 
+		</style>
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li>
+									<a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+								</li>
+								<li>
+									<a href="#">饭店管理</a>
+								</li>
+								<li class="active">餐台管理</li>
+							</ol>
+							<h2>餐台管理-餐台列表</h2>
+							<div class="alert alert-success col-sm-12 
+							J_msg" role="alert">添加成功！</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>搜索</h4>
+								</div>
+								<div class="panel-body">
+									<form class="form-horizontal J_searchForm">
+										<div class="form-group">
+											<label class="col-sm-3 control-label">选择区域</label>
+											<div class="checkbox block col-sm-6">
+												<label>
+									     			<input class="J_selectAll"  type="checkbox" value="-1" name="areaId"> 全部区域
+									     		</label>
+									     		<label>
+									     			<input class="J_area" type="checkbox" value="2" name="areaId">一楼
+									     		</label>
+									     		<label>
+									     			<input class="J_area" type="checkbox" value="3" name="areaId">二楼
+									     		</label>
+									     		<label>
+									     			<input class="J_area" type="checkbox" value="4" name="areaId">三楼
+									     		</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">选择状态</label>
+											<div class="col-sm-3">
+												<select class="form-control" name="status">
+													<option value="-1">请选择</option>
+													<option value="0">停用</option>
+													<option value="1">可用</option>
+													<option value="2">占用已结账</option>
+													<option value="3">占用未结账</option>
+													<option value="4">已并桌</option>
+													<option value="5">已预订</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-6 col-sm-offset-3">
+							      			<div class="btn-toolbar">
+								      			<button class="btn-primary btn J_searchBtn" type="submit"><i class="fa fa-search"></i>&nbsp;搜索</button>
+							      			</div>
+						      			</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>餐台管理</h4>
+								</div>
+								<div class="panel-body">
+									<a class="btn btn-success margin-bottom-15 J_add" href="#"><i class="fa fa-plus"></i>&nbsp;添加餐台</a>
+									<a class="btn btn-danger margin-bottom-15 J_batchDelete" href="javascript:;"><i class="fa fa-times"></i>&nbsp;删除餐台</a>									
+									<form class="J_operForm" autocomplete="off">
+									  	<div class="table-responsive">
+										  	<table class="table table-hover table-bordered">
+										    	<thead>
+										    		<tr>
+										    			<th>
+										    				<input class="J_selectAllTable"type="checkbox"/>
+										    			</th>
+										    			<th>所属区域</th>
+										    			<th>餐台名称</th>
+										    			<th>标准座位数</th>
+										    			<th>使用状态</th>
+										    			<th>餐位费用</th>
+										    			<th>餐台费用</th>
+										    			<th>最低消费</th>
+										    			<th>餐段</th>
+										    			<th>操作</th>
+										    		</tr>
+										    	</thead>
+										    	<tbody id="J_template">
+										    		<tr data-table-id="1">
+										    			<td><input class="J_table" type="checkbox"/></td>
+										    			<td>一楼</td>
+										    			<td>1号桌</td>
+										    			<td>2</td>
+										    			<td class="J_status">可用</td>
+										    			<td>0.0元/人</td>
+										    			<td>0.0</td>
+										    			<td>0.0</td>
+										    			<td>早餐</td>
+										    			<td>
+										    				<a class="label-info J_edit" href="javascript:;" src="www"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+															<a class="label-info J_change" href="javascript:;"><i class="fa fa-circle"></i>&nbsp;停用</a>
+															<a class="label-info J_del" href="javascript:;"><i class="fa fa-times"></i>&nbsp;删除</a>
+										    			</td>
+										    		</tr>
+										    	</tbody>
+										  	</table>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div><!--row-->
+				</div><!--container-->
+			</div><!--holder-->
+		</div><!--page-->
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/template" id="tpl">
+			{@each list as it}			
+				<tr data-table-id="&{it.id}">
+					<td><input class="J_table" type="checkbox"/></td>
+					<td>&{it.areaName}</td>
+	    			<td>&{it.name}</td>
+	    			<td>&{it.seatNum}</td>
+	    			<td class="J_status">
+	    			{@if it.status == 0}停用
+	    				{@else if it.status == 1}可用
+	    				{@else if it.status == 2}占用已结账
+	    				{@else if it.status == 3}占用未结账
+	    				{@else if it.status == 4}已并桌
+	    				{@else if it.status == 5}已预订
+	    			{@/if}
+	    			</td>
+	    			<td>&{it.seatFee}元/人</td>
+	    			<td>&{it.tableFee}</td>
+	    			<td>&{it.minCost}</td>
+	    			<td>&{it.mealPeriodName}</td>
+	    			<td>
+	    				<a class="label-info J_edit" href="javascript:;" src=""><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+	    				{@if it.status == 0}
+							<a class="label-info J_change" href="javascript:;"><i class="fa fa-check"></i>&nbsp;启用</a>
+						{@else}
+							<a class="label-info J_change" href="javascript:;"><i class="fa fa-circle"></i>&nbsp;停用</a>
+						{@/if}
+						<a class="label-info J_del" href="javascript:;"><i class="fa fa-times"></i>&nbsp;删除</a>
+	    			</td>
+				</tr>
+			{@/each}
+		</script>
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/restaurant-management/table-management-list', function(S){
+					PW.page.TableManagement.List();
+				});
+			});
+		</script>
+	</body>
+</html>

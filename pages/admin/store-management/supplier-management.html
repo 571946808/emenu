@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>供货商管理</title>
+    <!--#include file="/pages/admin/common/head.html"-->
+</head>
+<body>
+<!--#include file="/pages/admin/common/header.html"-->
+<div class="page clearfix">
+    <!--#include file="/pages/admin/common/sidebar.html"-->
+    <div class="holder">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+                        <li><a href="#">库存管理</a></li>
+                        <li class="active">供货商管理</li>
+                    </ol>
+                    <h2>库存管理-供货商管理</h2>
+                </div>
+                <div class="col-sm-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4>供货商列表</h4>
+                        </div>
+                        <div class="panel-body">
+                            <a class="btn btn-success margin-bottom-15 J_add" href="javascript:;"><i class="fa fa-plus"></i>&nbsp;添加供货商</a>
+                            <form class="J_operForm">
+                                <input class="J_name" type="hidden" value="" name="id"/>
+                                <input class="J_name" type="hidden" value="" name="partyId"/>
+                                <input class="J_name" type="hidden" value="" name="name"/>
+                                <input class="J_name" type="hidden" value="" name="shortName"/>
+                                <input class="J_name" type="hidden" value="" name="contactPerson"/>
+                                <input class="J_name" type="hidden" value="" name="contactPhone"/>
+                                <input class="J_name" type="hidden" value="" name="address"/>
+                                <input class="J_name" type="hidden" value="" name="email"/>
+                                <input class="J_name" type="hidden" value="" name="website"/>
+                                <input class="J_name" type="hidden" value="" name="description"/>
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>名称</th>
+                                                <th>简称</th>
+                                                <th>联系人</th>
+                                                <th>联系电话</th>
+                                                <th>联系地址</th>
+                                                <th>电子邮箱</th>
+                                                <th>网址</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="J_template">
+                                            <tr data-supplier-id="1" data-party-id="11">
+                                                <td>饿了饿了</td>
+                                                <td>饿了</td>
+                                                <td>我</td>
+                                                <td>18000000000</td>
+                                                <td>就不告诉你</td>
+                                                <td>1111@qq.com</td>
+                                                <td>http://www.baidu.com</td>
+                                                <td class="hidden description">描述2222</td>
+                                                <td>
+                                                    <a href="javascript:;" class="label-info J_edit"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                                                    <a href="javascript:;" class="label-info J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+                                                </td>
+                                            </tr>
+                                            <tr data-supplier-id="2" data-party-id="22">
+                                                <td>饿了饿了2</td>
+                                                <td>饿了2</td>
+                                                <td>我22</td>
+                                                <td>18222222222</td>
+                                                <td>就不告诉你2</td>
+                                                <td>222@qq.com</td>
+                                                <td>http://www.baidu2.com</td>
+                                                <td class="hidden description">描述2222</td>
+                                                <td>
+                                                    <a href="javascript:;" class="label-info J_edit"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                                                    <a href="javascript:;" class="label-info J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--#include file="/pages/admin/common/footer.html"-->
+
+<!--对话框-->
+<script type="text/template" id="dlgTpl">
+    <form class="form-horizontal J_addForm" action="" method="">
+        <input type="hidden" value="&{id}" name="id"/>
+        <input type="hidden" value="&{partyId}" name="partyId"/>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"><span class="requires">*</span>名称</label>
+            <div class="col-sm-9">
+                <input class="w180" type="text" data-valid-tip="请输入供应商名称|名称不能为空，请重新输入" data-valid-rule="notNull" value="&{name}" name="name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">简称</label>
+            <div class="col-sm-9">
+                <input class="w180" type="text" value="&{shortName}" name="shortName" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"><span class="requires">*</span>联系人</label>
+            <div class="col-sm-9">
+                <input class="w180" type="text" data-valid-rule="notNull" data-valid-tip="请输入联系人|联系人不能为空,请重新输入" value="&{contactPerson}" name="contactPerson" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"><span class="requires">*</span>联系电话</label>
+            <div class="col-sm-9">
+                <input class="w180" type="text" data-valid-rule="isMobile" data-valid-tip="请输入联系电话|电话有误,请重新填写"  value="&{contactPhone}" name="contactPhone" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">联系地址</label>
+            <div class="col-sm-9">
+                <input class="w180" type="text" data-valid-rule="length(0,100,1)" data-valid-tip="请输入联系地址|请输入100个字符以内的地址" value="&{address}" name="address" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">电子邮箱</label>
+            <div class="col-sm-9">
+                <input class="w180" type="text" data-valid-rule="isEmail|isNull" data-valid-tip="请输入email|email有误,请重新输入" value="&{email}" name="email" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"><span class="requires">*</span>网址</label>
+            <div class="col-sm-9">
+                <input class="w180" type="text" data-valid-rule="isUrl|isNull" data-valid-tip="请输入网址|网址有误,请重新输入" value="&{website}" name="website" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"><span class="requires">*</span>描述</label>
+            <div class="col-sm-9">
+                <textarea cols="50" rows="5" name="description">&{description}</textarea>
+            </div>
+        </div>
+    </form>
+</script>
+
+<!--渲染模板-->
+<script type="text/template" id="renderTpl">
+    <tr data-supplier-id="&{id}" data-party-id="&{partyId}">
+        <td>&{name}</td>
+        <td>&{shortName}</td>
+        <td>&{contactPerson}</td>
+        <td>&{contactPhone}</td>
+        <td>&{address}</td>
+        <td>&{email}</td>
+        <td>&{website}</td>
+        <td class="hidden description">&{description}</td>
+        <td>
+            <a href="javascript:;" class="label-info J_edit"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+            <a href="javascript:;" class="label-info J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+        </td>
+    </tr>
+</script>
+<script type="text/javascript">
+    KISSY.ready(function(S){
+        S.use('page/store-management/supplier-management', function(S){
+            PW.page.StoreManagement.SupplierManagement();
+        });
+    });
+</script>
+</body>
+</html>

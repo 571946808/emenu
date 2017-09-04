@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>全局设置页</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                                </li>
+                                <li>
+                                    <a href="#">基本信息管理</a>
+                                </li>
+                                <li class="active">全局配置</li>
+                            </ol>
+                            <h2>全局配置</h2>
+                            <div class="alert alert-success col-sm-12 
+                            J_msg" role="alert">添加成功！</div>
+                            <!-- <div class="alert alert-danger col-sm-12 J_msg" role="alert">添加失败！</div> -->
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>配置列表</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="form-horizontal J_operForm" action="" method="">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label"><span class="requires">*</span>内网IP</label>
+                                            <div class="col-sm-6">
+                                                <input class="w180" type="text" value="" name="internalNetworkAddress" data-valid-rule="isIP"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label"><span class="requires">*</span>菜品打印机最多可打印的菜品数量</label>
+                                            <div class="col-sm-6">
+                                                <input class="w180" type="text" value="" name="printerPrintMaxNum" data-valid-rule="isPositiveIngeter"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label"><span class="requires">*</span>启用智能排菜</label>
+                                            <div class="col-sm-6">
+                                                <div class="radio block">
+                                                    <label>
+                                                        <input type="radio" value="1" name="autoPrintOrderDishStartStatus" checked=""> 是
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" value="0" name="autoPrintOrderDishStartStatus"> 否
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label"><span class="requires">*</span>库存计算时使用四舍五入</label>
+                                            <div class="col-sm-6">
+                                                <div class="radio block">
+                                                    <label>
+                                                        <input type="radio" value="1" name="roundingMode" checked=""> 是
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" value="0" name="roundingMode"> 否
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>         
+                                    </form>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <div class="btn-toolbar">
+                                                <button class="btn-primary btn J_submitBtn" type="submit" data-btn-type="loading" data-btn-loading-text="正在保存，请稍后">
+                                                    <i class="fa fa-save"></i>&nbsp;保存
+                                                 </button>
+                                                <button class="btn-default btn" type="reset"><i class="fa fa-undo"></i>&nbsp;重置</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--row-->
+                </div><!--container-->
+            </div><!--holder-->
+        </div><!--page-->
+        <!--#include file="/pages/admin/common/footer.html"-->
+        <script type="text/javascript">
+            KISSY.ready(function(S){
+                S.use('page/base-info-management/global-settings', function(){
+                    PW.page.BaseInfoManagement.GlobalSettings();
+                })
+            });
+        </script>
+    </body>
+</html>

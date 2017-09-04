@@ -1,0 +1,40 @@
+.classify > li{
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    padding: 15px 25px;
+}
+.classify > li:last-child{
+    border-bottom: 1px solid #ccc;
+}
+.small-tag{
+    margin-top: 3px;
+    float: left;
+}
+.oper{
+    margin-right: 5px;
+}
+.root-tag,
+.big-tag{
+    margin-right: 15px;
+}
+.last-li{
+    border-bottom: 1px solid #ccc !important;
+}
+.classify > li > ul{
+    margin-left: 80px;
+}
+.classify > li > ul li {
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    padding: 10px;
+}
+.classify > li > ul li:last-child{
+    border-bottom: 1px solid #ccc;
+}
+/*.smallClassify{*/
+    /*width: 80%;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*border: 1px solid #ccc;*/
+    /*padding: 10px;*/
+/*}*/

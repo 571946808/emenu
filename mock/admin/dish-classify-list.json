@@ -1,0 +1,39 @@
+{
+  "code": 0,
+  "list": [
+    {
+      "rootTagId": 1,
+      "rootTagName": "菜品",
+      "bigTagId": 10,
+      "bigTagName": "披萨",
+      "bigTagWeight": 10,
+      "bigTagPrintAfterConfirmOrder": 0,
+      "bigTagMaxPrintNum": 10,
+      "bigTagPrintId": 0,
+      "bigTagTimeLimit": 10
+    },
+    {
+      "rootTagId": 2,
+      "rootTagName": "商品",
+      "bigTagId": 20,
+      "bigTagName": "红酒",
+      "bigTagWeight": 20,
+      "bigTagPrintAfterConfirmOrder": 0,
+      "bigTagMaxPrintNum": 20,
+      "bigTagPrintId": 0,
+      "bigTagTimeLimit": 20,
+      "smallTagList": [
+        {
+          "smallTagId": 200,
+          "smallTagName": "好喝的红酒",
+          "smallTagWeight": 200,
+          "smallTagPrintAfterConfirmOrder": 200,
+          "smallTagMaxPrintNum": 200,
+          "smallTagPrintId": 200,
+          "smallTagTimeLimit": 200
+        }
+      ]
+    }
+  ],
+  "errMsg": "获取失败,请重新操作!"
+}

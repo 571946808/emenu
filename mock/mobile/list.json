@@ -1,0 +1,18 @@
+{
+	"code": 1,
+	"data":{
+		"list":[
+			{"sale": "5.60", "price": "8.00", "dishId": 41, "name": "青岛啤酒"},
+			{"dishId": 22, "name":"ͼƬ2"},
+			{"dishId": 33, "name":"ͼƬ3"},
+			{"dishId": 44, "name":"ͼƬ4"},
+			{"dishId": 55, "name":"ͼƬ5"},
+			{"dishId": 66, "name":"ͼƬ6"},
+			{"dishId": 77, "name":"ͼƬ7"},
+			{"dishId": 88, "name":"ͼƬ8"},
+			{"dishId": 99, "name":"ͼƬ9"},
+			{"dishId": 10, "name":"ͼƬ10"}
+		]
+	}, 
+	"errMsg": "错误信息!"
+}

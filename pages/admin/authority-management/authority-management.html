@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>权限管理编辑</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+							  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;管理员</a></li>
+							  	<li><a href="#">权限管理</a></li>
+							  	<li class="active">权限管理</li>
+							</ol>
+							<h2>权限管理-权限列表</h2>
+						</div>						
+						<div class="col-sm-12">						
+							<!-- 查询表单 start-->
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>搜索</h4>
+								</div>	
+								<div class="panel-body">
+									<form class="form-horizontal J_searchForm" action="" method="">
+										<div class="form-group">
+											<label class="control-label col-sm-3">用户状态</label>
+									    	<div class="col-sm-2">
+									    		<select class="form-control J_status" name="">
+										    		<option value="-1">全部</option>
+										    		<option value="0">禁用</option>
+										    		<option value="1">启用</option>
+										    	</select>
+									    	</div>
+										</div>
+										<div class="col-sm-6 col-sm-offset-3">
+							      			<div class="btn-toolbar">
+							      				<button type="submit" class="btn btn-primary J_search"><i class="fa fa-search"></i>&nbsp;搜索</button>
+							      			</div>
+							      		</div>
+									</form>
+								</div>			
+							</div>							
+							<!-- 查询表单 end-->
+							<!-- 查询结果 start-->
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>权限列表</h4>
+								</div>
+								<div class="panel-body">
+									<div class="table-responsive">
+										<table class="table table-hover table-bordered">
+											<thead>
+												<tr>
+													<th>用户登录名</th>
+													<th>员工姓名</th>
+													<th>用户状态</th>
+													<th>操作</th>
+												</tr>											
+											</thead>
+											<tbody id="J_template">
+												
+											</tbody>
+										</table>
+									</div>
+									<div class="J_pagination"></div>
+								</div>
+							</div>							
+							<!-- 查询结果 end-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/template" id="tpl">
+			{@each list as it}
+				<tr data-user-id="&{it.id}" data-status="&{it.status}">
+	    			<td>&{it.username}</td>
+	    			<td>&{it.name}</td>
+	    			<td>
+	    				{@if it.status == 0}禁用{@/if}
+	    				{@if it.status == 1}启用{@/if}
+	    			</td>
+	    			<td>
+	    				{@if it.status == 0}
+	    					<a class="btn btn-info btn-xs J_change" href="javascript:;"><i class="fa fa-check"></i>&nbsp;启用</a>
+	    				{@/if}
+	    				{@if it.status == 1}
+	    					<a class="btn btn-info btn-xs J_change" href="javascript:;"><i class="fa fa-close"></i>&nbsp;&nbsp;禁用</a>
+	    				{@/if}
+	    				<a class="btn btn-info btn-xs" href="#"><i class="fa fa-users"></i>&nbsp;权限组</a>
+	    			</td>
+	    		</tr>
+			{@/each}
+		</script>
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/authority-management/authority-management', function(S){
+					PW.page.AuthorityManagement.Authority({
+						renderTo: '.J_pagination',
+						juicerRender: '#tpl',
+						dataRender: '#J_template',
+						url: '/mock/admin/authority-list.json',
+						pageSize: 10,
+						configUrl: function(url,page,me,prevPaginationData){
+							return url;
+							// return url + '/' + page;
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

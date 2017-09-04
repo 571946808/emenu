@@ -1,0 +1,14 @@
+/*-----------------------------------------------------------------------------
+* @Description: 所有的按钮样式 (btn.css)
+* @Version: 	V2.0.0
+* @author: 		cuiy(361151713@qq.com)
+* @date			2015.9.17
+* ==NOTES:=============================================
+* v1.0.0(2015.9.17):
+* 	初始生成 
+* ---------------------------------------------------------------------------*/
+ .btn-loading{
+	background: url('/resources/tool/base-widget/img/common/btn-icon.png') no-repeat;
+	background-position: 9px -768px;
+	padding: 7px 12px 7px 28px;
+}

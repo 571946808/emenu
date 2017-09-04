@@ -1,0 +1,49 @@
+/*-----------------------------------------------------------------------------
+* @Description: 进度条样式 (progressbar.css)
+* @Version: 	V1.0.0
+* @author: 		huanhuan(965788210@qq.com)
+* @date			2014.05.24
+* ==NOTES:=============================================
+* v1.0.0(2014.05.24):
+* 	初始生成 
+* ---------------------------------------------------------------------------*/
+	
+.progressbar{
+	height: 20px;
+    margin: 20px 0;
+    background: linear-gradient(to bottom, #F5F5F5, #F9F9F9) #f7f7f7 repeat-x;
+    background-color: #F5F5F5\9;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+.progressbar span{
+	display: inline-block;
+	height: 100%;
+	background-color: #62C462;
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+	background-repeat: repeat-x;
+    background-size: 40px 40px;
+    color: #fff;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    transition: width 0.6s ease 0s;
+}
+.progressbar-green span{
+	background-color: #62C462;
+}
+.progressbar-blue span{
+	background-color: #4B8DF8;
+}
+.progressbar-red span{
+	background-color: #E93D3D;
+}
+.progressbar-purple span{
+	background-color: #852B99;
+}
+.progressbar-yellow span{
+	background-color: #FFB848;
+}
+.progressbar-grey span{
+	background-color: #555;
+}

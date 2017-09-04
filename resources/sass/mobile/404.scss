@@ -1,0 +1,49 @@
+@import"./common/common";
+html,body,.page{
+	background-color: #f5f5f5;
+}
+.page{
+	text-align: center;
+	font-size: (25rem/$param);
+}
+.error-img{
+	margin: 0 auto;
+	margin-top: (300rem/$param);
+	width: (250rem/$param);
+	height: (250rem/$param);
+}
+.error-img img{
+	width: (250rem/$param);
+	height: (250rem/$param);
+}
+.error{
+	margin-top: (200rem/$param);
+	font-size: (50rem/$param);
+	color: #a94442;
+}
+.error-note{
+	width: (400rem/$param);
+	margin: 0 auto;
+	margin-top: (30rem/$param);
+	font-size: (30rem/$param);
+}
+.note{
+	float: left;
+}
+.reason{
+	float: left;
+	text-align: left;
+}
+.link{
+	margin-top: (50rem/$param);
+}
+.link a{
+	display: inline-block;
+	color: #fff;
+	border: 1px solid #f8f8f8;
+	background-color: #ccc;
+	font-size: (35rem/$param);
+	border-radius: (10rem/$param);
+	margin-left: (5rem/$param);
+	padding: (10rem/$param) (20rem/$param); 
+}

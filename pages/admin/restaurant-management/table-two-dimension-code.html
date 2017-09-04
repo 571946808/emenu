@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>餐台二维码</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<link rel="stylesheet" href="/resources/css/admin/restaurant-management/restaurant-management.css"/>
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+								<li><a href="#">饭店管理</a></li>
+								<li class="active">餐台二维码</li>
+							</ol>
+							<h2>餐台二维码</h2>
+							<div class="alert alert-success col-sm-12 
+							J_msg" role="alert">添加成功！</div>
+							<div class="alert alert-danger col-sm-12 
+							J_msg" role="alert">添加失败！</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>生成二维码</h4>
+								</div>
+								<div class="panel-body create-code-box">
+									<form class="form-horizontal J_webDomain" action="" method="">
+										<div class="form-group">
+											<label class="control-label col-sm-2">原始网站域名:</label>
+											<div class="col-sm-6 initial-domain">http://192.168.1.188:8080 
+											</div>
+										</div>
+										<div class="form-group input-box">
+											<div class="col-sm-3">
+												<input class="form-control new-text" type="text" name="qrcodePath" placeholder="请输入网站域名" data-valid-rule="notNull" data-valid-tip="请输入网站域名|输入网站域名不可为空"  value="">
+											</div>
+											<div class="col-sm-3">
+							      				<div class="btn-toolbar">
+								      				<button class="btn-primary btn" type="submit"><i class="fa fa-qrcode"></i>&nbsp;生成二维码</button>
+							      				</div>
+						      				</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>餐台二维码列表</h4>
+								</div>
+								<div class="panel-body">
+									<a class="btn btn-success margin-bottom-15 J_addBtn" href="#/0" target="_blank"><i class="fa fa-download"></i>&nbsp;下载全部二维码</a>
+										<div class="col-sm-12 code-list-border">
+											<div class="row">
+												<label class="code-area pull-left text-center">2楼</label>
+												<div class="col-sm-12">
+								  					<div class="row">
+									  					<div class="col-sm-3">
+															<img class="img-responsive center-block" src="/resources/img/admin/restaurant-management/two-dimension-code.png" alt="二维码">
+															<h5 class="margin-bottom-15 text-center">001桌</h5>
+														</div>
+														<div class="col-sm-3">
+															<img class="img-responsive center-block" src="/resources/img/admin/restaurant-management/two-dimension-code.png" alt="二维码">
+															<h5 class="margin-bottom-15 text-center">001桌</h5>
+														</div>
+														<div class="col-sm-3">
+															<img class="img-responsive center-block" src="/resources/img/admin/restaurant-management/two-dimension-code.png" alt="二维码">
+															<h5 class="margin-bottom-15 text-center">001桌</h5>
+														</div>
+														<div class="col-sm-3">
+															<img class="img-responsive center-block" src="/resources/img/admin/restaurant-management/two-dimension-code.png" alt="二维码">
+															<h5 class="margin-bottom-15 text-center">001桌</h5>
+														</div>
+														<div class="col-sm-3">
+															<img class="img-responsive center-block" src="/resources/img/admin/restaurant-management/two-dimension-code.png" alt="二维码">
+															<h5 class="margin-bottom-15 text-center">001桌</h5>
+														</div>
+								  					</div>
+								  				</div>
+							  					<div class="row">
+								  					<div class="col-sm-6 col-sm-offset-3">
+								  						<div class="col-sm-6 col-sm-offset-3 margin-bottom-20">	
+									  						<a href="xxx/3" class="btn btn-info J_createBtn" target="_blank"> 
+															<i class="fa fa-download"></i>&nbsp;下载当前区域二维码
+															</a>
+														</div>
+							  						</div>
+												</div>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- holder -->
+		</div><!-- page -->
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/restaurant-management/table-two-dimension-code', function(S){
+					PW.page.CodeManagement({
+					});
+				});
+			});
+		</script>
+	</body> 
+</html>

@@ -1,0 +1,8 @@
+{
+	"code": 0,
+	"data":{ 
+        "storageUnitName": "返回的库存单位",
+        "storageQuantity": "666"
+    },	
+	"errMsg": "错误信息"
+}

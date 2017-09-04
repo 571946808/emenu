@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>权限组管理</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li>
+									<a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+								</li>
+								<li>
+									<a href="#">权限管理</a>
+								</li>
+								<li class="active">权限组管理</li>
+							</ol>
+							<h2>权限组配置</h2>
+							<div class="alert alert-success col-sm-12 
+							J_msg" role="alert">添加成功！</div>
+							<div class="alert alert-danger col-sm-12 J_msg" role="alert">添加失败！</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>权限组名称：0</h4>
+								</div>
+								<div class="panel-body">
+									<form class="form-horizontal J_addForm" action="" method="">
+										<div class="form-group">
+											<input type="hidden" value="" name="groupId">
+										    <div class="col-sm-3">
+										    	<select class="form-control J_select" name="permissionId">
+										    		<option value="-1">请选择</option>
+										    		<option value="1">权限1</option>
+										    		<option value="2">权限2</option>
+										    		<option value="3">权限3</option>
+										    	</select>
+										    </div>
+										    <button class="btn btn-success J_add" type="submit"><i class="fa fa-plus"></i>&nbsp;添加权限</button>
+									  	</div>								
+									</form>
+									<form class="J_operForm">
+									  	<div class="table-responsive">
+										  	<table class="table table-hover table-bordered">
+										    	<thead>
+										    		<tr>
+										    			<th>表达式</th>
+										    			<th>描述</th>
+										    			<th>操作</th>
+										    		</tr>
+										    	</thead>
+										    	<tbody id="J_template">
+										    		
+										    	</tbody>
+										  	</table>
+										  	<div class="J_pagination"></div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div><!--row-->
+				</div><!--container-->
+			</div><!--holder-->
+		</div><!--page-->
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<!--刷分页-->
+		<script type="text/template" id="tpl">
+			{@each list as it}
+				<tr data-authority-id="&{it.id}">
+					<td class="J_exp">&{it.exp}</td>
+					<td class="J_desc">&{it.descript}</td>
+					<td>
+						<a class="label-info J_del" href="javascript:;"><i class="fa fa-times"></i> 删除</a>
+					</td>
+				</tr>
+			{@/each}
+		</script>
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/authority-management/authority-group-config', function(S){
+					PW.page.AuthoritGroupConfig({
+						renderTo: '.J_pagination',
+						juicerRender: '#tpl',
+						dataRender: '#J_template',
+						url: '/mock/admin/authority-config.json',
+						pageSize: 10,
+						configUrl: function(url,page,me,prevPaginationData){
+							return url;
+							// return url + '/' + page;
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

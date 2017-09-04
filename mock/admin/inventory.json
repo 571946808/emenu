@@ -1,0 +1,55 @@
+{
+    "code": 0,
+    "list": [
+        {
+            "itemNumber":"itemNumber",
+            "tagName":"name",
+            "ingredientName":"item",
+            "ingredientNumber":"susan",
+            "orderUnitName":1,
+            "storageUnitName":2,
+            "costCardUnitName":2,
+            "beginQuantityStr":3,
+            "stockInQuantityStr":3,
+            "stockOutQuantityStr": 5, 
+            "incomeLossQuantityStr":7,
+            "totalQuantityStr":10,
+            "maxStorageQuantityStr":11,
+            "minStorageQuantityStr":12
+        },
+        {
+            "itemNumber":"itemNumber",
+            "tagName":"name",
+            "ingredientName":"item",
+            "ingredientNumber":"susan",
+            "orderUnitName":1,
+            "storageUnitName":2,
+            "costCardUnitName":2,
+            "beginQuantityStr":3,
+            "stockInQuantityStr":3,
+            "stockOutQuantityStr": 5, 
+            "incomeLossQuantityStr":7,
+            "totalQuantityStr":10,
+            "maxStorageQuantityStr":11,
+            "minStorageQuantityStr":12
+        },
+        {
+            "itemNumber":"itemNumber",
+            "tagName":"name",
+            "ingredientName":"item",
+            "ingredientNumber":"susan",
+            "orderUnitName":1,
+            "storageUnitName":2,
+            "costCardUnitName":2,
+            "beginQuantityStr":3,
+            "stockInQuantityStr":3,
+            "stockOutQuantityStr": 5, 
+            "incomeLossQuantityStr":7,
+            "totalQuantityStr":10,
+            "maxStorageQuantityStr":11,
+            "minStorageQuantityStr":12
+        }
+
+    ],
+    "dataCount": 14
+}

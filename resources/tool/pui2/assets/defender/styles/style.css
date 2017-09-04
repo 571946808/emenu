@@ -1,0 +1,205 @@
+/**
+ * 新版表单验证的样式表文件
+ * author: simon(406400939@qq.com)
+ * version: v2.0.0
+ * date: 2012.11.13
+ * note:
+ * 	v2.0.0(2012.11.13):
+ * 		添加3中样式的样式表
+ * 	v2.1.0(2013.03.02):
+ * 		添加聚焦样式和错误样式
+ */
+
+
+/*表单控制*/
+.pw-validation{}
+/*默认主题,在无任何配置的情况下需要保证完整显示*/
+
+.pw-validation input,
+.pw-validation textarea{
+	/* border: 1px solid #A0A0A0; */
+}
+.pw-validation .focus-field{
+	background: #ffffcc;
+	border: 1px solid #A0A0A0;
+}
+.pw-validation .error-field{
+	border: 1px solid #ff0033;
+	box-shadow: 0 0 4px #ff6666;
+}
+.pw-tip {
+	position: absolute;
+	min-width: 20px;
+	max-width: 1000px;
+	min-height: 25px;
+	height: auto;
+}
+.pw-tip .tip-arrow{
+	display: block;
+	position: absolute;
+	background:url(../img/tip-yellow_arrows.png);
+}
+.pw-tip .tip-arrow-bottom{
+	left: 50%;
+	top: -7px;
+	width: 16px;
+	height: 9px;
+	margin-left: -8px;
+	background-position: left top;
+}
+.pw-tip .tip-arrow-top{
+	left: 50%;
+	bottom: -8px;
+	width: 16px;
+	height: 9px;
+	margin-left: -8px;
+	background-position: 96px top;
+}
+.pw-tip .tip-arrow-right{
+	width: 9px;
+	height: 16px;
+	left: -8px;
+	background-position: -48px 0;
+}
+.pw-tip .tip-arrow-left{
+	width: 9px;
+	height: 16px;
+	right: -8px;
+	background-position: -18px 0;
+}
+.pw-tip .tip-content{
+	border: 1px solid #a7a7a7;
+	box-shadow: inset 0 0 3px #fff;
+	border-radius: 6px;
+	padding: 3px;
+	background: #fef9d9;	
+}
+.error-state .tip-content{
+	background: url(../img/error.gif) 5px center no-repeat;
+	padding-left: 25px;
+}
+.success-state .tip-content{
+	background: url(../img/yes.png) 5px center no-repeat;
+	padding-left: 25px;
+}
+.focus-state .tip-content{
+	background: url(../img/focus.png) 5px center no-repeat;
+	padding-left: 25px;
+}
+.loading-state .tip-content{
+	background: url(../img/loading.gif) 5px center no-repeat;
+	padding-left: 25px;
+}
+
+
+
+/*纯净主题-pure*/
+.pure.pw-tip{
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+.pure.pw-tip .tip-arrow{
+	display: none;
+	background: none;
+}
+.pure.pw-tip .tip-content{
+	border: none;
+}
+
+/*浅灰主题*/
+.gray.pw-tip{
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+.gray.pw-tip .tip-arrow{
+	display: none;
+	background: none;
+}
+.gray.pw-tip .tip-content{
+	border: none;
+	color: #888;
+}
+
+/*深灰主题-darkgray*/
+.darkgray .pw-tip{
+	border: 1px solid #888;
+	background: #999;
+	box-shadow: inset 0 0 3px #fff;
+}
+.darkgray .pw-tip .tip-arrow{
+	background-image: url(../img/tip-darkgray_arrows.png);
+}
+
+/*表单内联样式主题1，用于提示类型为inside的样式*/
+.inside .focus-field{
+	border: 1px solid #bbb;
+}
+.inside .error-field{
+	border:1px solid #ff0033;
+    color: #ff6666;
+}
+.inside .error-state{
+	padding-left: 25px;
+	background: url(../img/error.gif) 5px center no-repeat;
+	color: #ff0033;
+}
+.inside .loading-state{
+	padding-left: 25px;
+	background: url(../img/loading.gif) 5px center no-repeat;
+}
+.inside .focus-state{
+	padding-left: 25px;
+	background: url(../img/focus.png) 5px center no-repeat;
+}
+.inside .success-state{
+	padding-left: 25px;
+	background:  url(../img/yes.png) 5px center no-repeat;
+}
+.inside .hide{
+	display: none;
+}
+
+/*表单内联样式主题2，需要事先设置提示框*/
+.inside2 .error-state{
+	background: #fcf1f1 url(../img/error.gif) 5px center no-repeat;
+	padding-left: 25px;
+}
+.inside2 .loading-state{
+	padding-left: 25px;
+	background: url(../img/loading.gif) 5px center no-repeat;
+}
+.inside2 .focus-state{
+	padding-left: 25px;
+	background: url(../img/focus.png) 5px center no-repeat;
+}
+.inside2 .success-state{
+	display: none;
+	padding-left: 25px;
+	background:  url(../img/yes.png) 5px center no-repeat;
+}
+
+/*行内验证，自动添加提示节点*/
+
+.inline .pw-tip{
+	display: inline-block;
+	position: static;
+	line-height: 25px;
+}
+.inline .error-state{
+	background:  url(../img/error.gif) 5px center no-repeat;
+	padding-left: 25px;
+}
+.inline .loading-state{
+	padding-left: 25px;
+	background: url(../img/loading.gif) 5px center no-repeat;
+}
+.inline .focus-state{
+	padding-left: 25px;
+	background: url(../img/focus.png) 5px center no-repeat;
+}
+.inline .success-state{
+	padding-left: 25px;
+	background:  url(../img/yes.png) 5px center no-repeat;
+}

@@ -1,0 +1,55 @@
+/*-----------------------------------------------------------------------------
+* @Description: 表单遮罩样式 (style.css)
+* @Version: 	V1.0.0
+* @author: 		simon(406400939@qq.com)
+* @date			2013.05.31
+* ==NOTES:=============================================
+* v1.0.0(2013.05.31):
+* 	初始生成 
+* ---------------------------------------------------------------------------*/
+
+
+.pw-loading-tip{
+	display: block;
+	position: absolute;
+	width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+.loading-icon{
+	display: block;
+	position: absolute;
+	width: 31px;
+	height: 31px;
+}
+.pw-loading-tip .loading-content{
+
+}
+
+/*主题a (默认主题)*/
+.theme-a{
+	width: 200px;
+	padding-left: 20px;
+	border: 1px solid #999999;
+	border-radius: 0;
+	box-shadow: 1px 1px 5px rgba(173,161,161,.7);
+	background-color: #ffffff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e5e5e5)); /* Safari 4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #ffffff, #e5e5e5); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(top, #ffffff, #e5e5e5); /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(top, #ffffff, #e5e5e5); /* Opera 11.10-12.00 */
+    background-image:         linear-gradient(to bottom, #ffffff, #e5e5e5); /* Firefox 16+, IE10, Opera 12.50+ */
+}
+.theme-a .loading-icon{
+	left: 5px;
+	top: 50%;
+	margin-top: -8px;
+	background: url('../img/loading.gif') left top no-repeat;
+	width: 16px;
+	height: 16px;
+}
+.theme-a .loading-content{
+	margin: 5px;
+}

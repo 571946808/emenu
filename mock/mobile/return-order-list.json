@@ -1,0 +1,39 @@
+{
+  "code": 0,
+  "list":[
+    {
+      "dishId": "1",
+      "dishName": "黑胡椒牛排",
+      "dishNumber": "4.1",
+      "dishPrice": "28.05",
+      "dishRemark": "少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐",
+      "dishTaste": "不麻不辣",
+      "dishUnit": "份"
+    },{
+      "dishId": "6",
+      "dishName": "鸡公煲",
+      "dishNumber": "4.1",
+      "dishPrice": "28.05",
+      "dishRemark": "少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐",
+      "dishTaste": "不麻不辣",
+      "dishUnit": "份"
+    },{
+      "dishId": "2",
+      "dishName": "酸菜面",
+      "dishNumber": "4.1",
+      "dishPrice": "28.05",
+      "dishRemark": "少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐",
+      "dishTaste": "不麻不辣",
+      "dishUnit": "份"
+    },{
+      "dishId": "3",
+      "dishName": "土豆",
+      "dishNumber": "4.1",
+      "dishPrice": "28.05",
+      "dishRemark": "少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐,少放盐",
+      "dishTaste": "不麻不辣",
+      "dishUnit": "份"
+    }
+  ],
+  "errMsg":"暂无数据"
+}

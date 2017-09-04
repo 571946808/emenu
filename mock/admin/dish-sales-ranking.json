@@ -1,0 +1,24 @@
+{
+    "code": 0,
+    "list": [
+        {
+            "dishName": "至尊披萨",
+            "bigTag": "披萨",
+            "num": "552",
+            "consumeSum": "12355"
+        },
+        {
+            "dishName": "至尊披萨",
+            "bigTag": "披萨",
+            "num": "452",
+            "consumeSum": "2355"
+        },
+        {
+            "dishName": "至尊披萨",
+            "bigTag": "披萨",
+            "num": "352",
+            "consumeSum": "355"
+        }
+    ],
+    "dataCount": 14
+}

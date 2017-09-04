@@ -1,0 +1,107 @@
+.drop{
+    position: relative;
+}
+.drop > .render-div{
+    float: none;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    min-height: 60px;
+    padding: 5px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    text-align: left;
+    font-size: 12px;
+}
+.drop > .render-div > .caret{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -1px;
+}
+.drop > .render-div:hover{
+    background-color: #dedede;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.focusedInput,
+.focusedInput:focus{
+    border-color: rgba(82,168,236,0.8) !important;
+    outline: 0;
+    box-shadow: 0 0 8px rgba(82,168,236,0.6) !important;
+    margin-bottom: 3px;
+}
+.drop .search-box-input{
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.drop .search-box{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -9px;
+    color: #ccc;
+}
+.drop .menu{
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    float: left;
+    font-size: 14px;
+    left: 0;
+    list-style: outside none none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 1000;
+    width: 100%;
+    height: 200px;
+    overflow: scroll;
+}
+.drop .menu > li > a{
+    clear: both;
+    color: #333;
+    display: block;
+    font-weight: normal;
+    line-height: 1.42857;
+    padding: 3px 20px;
+    white-space: nowrap;
+}
+.drop .menu > li > a:hover,
+.drop .menu > li.active,
+.drop .menu > li.active > a:hover{
+    background-color: #eee;
+    text-decoration-line: none;
+}
+.drop .menu.open{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+    min-height: 300px;
+}
+.drop .select-tag,
+.select-tag{
+    background-color: #4f8edc;
+    color: #fff;
+    padding: 5px 7px 5px 10px;
+    float: left;
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.drop .select-tag > .fa{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.drop .select-tag > .fa:hover{
+    color: #ccc;
+    cursor: pointer;
+}

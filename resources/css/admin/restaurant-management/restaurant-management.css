@@ -1,0 +1,74 @@
+/*******************餐台二维码管理页面样式****************************/
+.create-code-box{
+	height: 158px;
+}
+.web-domain label{
+	margin-left:25px !important;
+}
+.initial-domain{
+	line-height: 32px;
+}
+.code-list-border{
+	border:1px solid #DDDDDD;
+	border-radius:5px;
+	margin-bottom:40px; 
+}
+.code-area{
+	width: 80px;
+    line-height: 23px;
+    height: 23px;
+	background-color: #2bbce0; 
+	color: #fff;
+	border-radius: 5px 0;
+}
+.form-group .form-control{
+	line-height:32px !important;
+}
+.form-group label.control-label{
+    margin-left: -20px;
+}
+.new-text{
+	width: 260px;
+}
+.input-box{
+	margin-left: 53px !important;
+}
+.J_createBtn{
+	display: block;
+	margin: 0px auto;
+	width:150px;
+}
+/*******************常用备注页样式****************************/
+.big-remark-tags a{
+	padding: 5px 10px;
+}
+.J_classify{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.remark-classify 
+{
+	padding-left: -5px !important;
+	border: 1px solid #dddddd;
+    color: #089dd9;
+    font-weight: bold;
+    height: 34px;
+    line-height: 30px;
+    margin-bottom: -2px;
+}
+.remark-classify  p{
+	font-size: 14px;
+	padding-right: 15px;
+}
+.remark-classify .oper{
+	display: block;
+    line-height: 19px;
+    height: 24px;
+    margin-right: 3px;
+    margin-top: 4px;
+}
+.J_foldToggle{	
+	margin-left: 15px;
+	font-size: 12px;
+	font-weight: normal;
+}

@@ -1,0 +1,10 @@
+{
+    "code":0,
+    "list":[
+        {"dishId":1, "dishNumber":"001", "dishName":"冬瓜排骨汤", "price":"30.00", "salePrice":27.00,"vipDishPrice":25.00,"difference":2,"order":0},
+        {"dishId":2, "dishNumber":"002", "dishName":"冬瓜汤", "price":"30", "salePrice":27,"vipDishPrice":25,"difference":2,"order":0},
+        {"dishId":3, "dishNumber":"003", "dishName":"排骨汤", "price":"30", "salePrice":27,"vipDishPrice":27,"difference":0,"order":1},
+        {"dishId":4, "dishNumber":"004", "dishName":"玉米排骨汤", "price":"30", "salePrice":27,"vipDishPrice":27,"difference":0,"order":2}
+    ],
+    "errMsg":"请重新操作"
+}

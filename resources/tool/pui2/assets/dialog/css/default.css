@@ -1,0 +1,192 @@
+/*---------------------------------------------------------------------------------------------
+@Filename:                style.css
+@Description:            µ¯³ö²ãµÄcssÑùÊ½
+@Version:                1.0.0
+@author:                simon
+==STRUCTURE:========================================= 
+*$__xx                xx
+==NOTES:============================================= 
+v1.0.0(2012.5.21):
+	³õÊ¼Éú³É
+--------------------------------------------------------------------------------------------*/
+
+/*控制在ie6下 fixed震动问题*/
+* html,* html body{background-image:url(about:blank);background-attachment:fixed}
+
+.cpt-dlg-outer{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-radius: 5px;
+	padding: 5px;
+	background: rgba(2,23,6,.4);
+	background: #99A29B \9;
+	overflow: hidden;
+}
+
+.cpt-dlg-outer .dlg-holder{
+	position: relative;
+	background: #fff;
+	height: 100%;
+}
+.cpt-dlg-outer .dlg-holder table{
+	width: 100%;
+	height: 100%;
+}
+.cpt-dlg-outer .header-holder{
+	height: 30px;
+	vertical-align: top;
+	/*background: yellow;*/
+}
+.cpt-dlg-outer .dlg-header{
+	position: relative;
+	height: 30px;
+	padding-right: 30px;
+	background: #00859D;
+	 background-color: #EAF2F5;
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(#EAF2F5), to(#BDC6CD)); 
+	 background-image: -webkit-linear-gradient(top, #EAF2F5, #BDC6CD); 
+	 background-image:    -moz-linear-gradient(top, #EAF2F5, #BDC6CD); 
+	 background-image:     -ms-linear-gradient(top, #EAF2F5, #BDC6CD); 
+	 background-image:      -o-linear-gradient(top, #EAF2F5, #BDC6CD); 
+	 background-image:         linear-gradient(to bottom, #EAF2F5, #BDC6CD);
+	 background-color: transparent;
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#EAF2F5,endColorstr=#BDC6CD); 
+     zoom: 1;
+      -moz-user-select:none;
+      -webkit-user-select:none;
+      user-select:none;    
+
+}
+.cpt-dlg-outer .dlg-icon{
+	display: block;
+	position: absolute;
+	left:0;
+	top: 0;
+	width: 30px;
+	height: 30px;
+	background: green;
+}
+.cpt-dlg-outer .dlg-title{
+	display:block;
+	height: 30px;
+	padding-left: 35px;
+	line-height: 30px;
+	color: #333;
+	text-shadow:5px 2px 6px #fff;
+	text-align: left;
+	/*white-space:nowrap;*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.cpt-dlg-outer .dlg-header .no-icon{
+	padding-left: 10px;
+}
+.cpt-dlg-outer .dlg-close{
+	display:block;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 3px;
+	cursor: pointer;
+	text-decoration: none;
+}
+.cpt-dlg-outer .dlg-close:hover{
+	background: darkred;
+	color: #fff;
+	box-shadow: darkred 0px 0px 3px;
+}
+.cpt-dlg-outer .content-holder{
+	vertical-align: top;
+}
+.cpt-dlg-outer .dlg-inner-frame{
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+.cpt-dlg-outer .footer-holder{
+	background: #E6ECF5;
+	height: 30px;
+}
+.cpt-dlg-outer .dlg-footer{
+	height: 100%;
+	border-top: #eeeeee 1px solid;
+	text-align: center;
+}
+.cpt-dlg-outer button{
+	margin: 0 5px;
+	padding: 0 5px;
+}
+
+/*alert*/
+.dlg-alert{
+	position: relative;
+	min-height: 20px;
+	_height: 50px;
+	padding: 25px 10px 25px 60px;
+	line-height: 20px;
+}
+.dlg-alert .alert-ico{
+	display: block;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 50px;
+	height: 51px;
+	background:  url("../img/ico.png") -50px top no-repeat;
+}
+.success .alert-ico{
+  background-position: 0px top;
+}
+.error .alert-ico{
+  background-position: -100px top;
+}
+.warn .alert-ico{
+  background-position: -50px top;
+}
+
+/*confirm*/
+.dlg-confirm{
+	position: relative;
+	min-height: 20px;
+	_height: 50px;
+	padding: 25px 10px 25px 60px;
+	line-height: 20px;
+}
+.confirm-ico{
+	display: block;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 50px;
+	height: 51px;
+	background:  url("../img/ico.png") -150px top no-repeat;
+}
+/*prompt*/
+.dlg-prompt{
+	min-height: 30px;
+	_height: 30px;
+}
+.dlg-prompt textarea{
+	display: block;
+	width: 370px;
+	height: 22px;
+	margin: 10px auto;
+	border: 1px solid #aaa;
+	line-height: 22px;
+	resize: none;
+}
+
+.dlg-prompt input{
+	display: block;
+	width: 370px;
+	height: 22px;
+	margin: 10px auto;
+	border: 1px solid #666;
+	line-height: 22px;
+}
+/*theme-a*/
+

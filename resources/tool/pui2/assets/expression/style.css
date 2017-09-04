@@ -1,0 +1,163 @@
+/**
+ * v2.0版表情组件样式
+ * author: simon(406400939@qq.com)
+ * version: v2.0.0
+ * date:2012.10.13
+ * note:
+ *  v2.0.0：
+ *      为新版的表情组件提供样式支持,使用前提是需要css reset 和clearfix(http://www.codecto.com/2011/02/css-clearfix-float/)支持
+ */
+
+
+/*--通用样式--*/
+.exp-layer{
+    position: absolute;
+    left: 110px;
+    top: 50px;
+    width: 400px;
+    border-radius: 4px;
+    padding: 4px;
+    background: url("img/layer_bg.png");
+    z-index: 102;
+}
+.exp-tgl{ /*小三角*/
+    position: absolute;
+    width: 16px; 
+    height: 12px;
+    left: 30px;
+    top: -7px;
+    background: url("img/layer_arrow.png") repeat scroll 0 0 transparent;
+    z-index: 40;
+}
+.exp-holder{
+    position: relative;
+    border: 1px solid #c3c3c3;
+    border-radius: 4px;
+    background: #fff;
+}
+.exp-close{
+    background: #F0F0F0;
+}
+.exp-close a{
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+}
+.exp-close a:hover{
+    background: #fafafa;
+    font-weight: bold;
+}
+/*- 组切换tab按钮部分-*/
+.exp-group-tab{
+    position: relative;
+    height: 30px;
+    margin: 5px 5px 0 5px;
+    padding-right: 80px;
+    line-height: 30px;
+    overflow: hidden;
+    zoom: 1;
+}
+.exp-group-tab ul{
+    position: absolute;
+    width: 3000px;
+    left: 0;
+}
+.exp-group-tab ul li{
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+.exp-group-tab ul li a{
+    display: block;
+    float: left;
+    height: 30px;
+    border-radius: 3px;
+    padding: 0 7px;
+    background: #f0f0f0;
+    color: #9ABBC8;
+    text-decoration: none;
+    line-height: 30px;
+}
+.exp-group-tab ul li.current a,
+.exp-group-tab ul li a:hover{
+    background: #e0e0e0;
+}
+.exp-tab-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 46px;
+    height: 100%;
+    background: #fff;
+    line-height: 17px;
+    zoom: 1;
+}
+.exp-tab-btn a{
+    display: block;
+    float: left;
+    width: 17px;
+    height: 17px;
+    margin: 6px 3px;
+    background: url("img/ico.png") no-repeat;
+    text-align: center;
+    text-indent: -99999px;
+    cursor: pointer;
+}
+.exp-tab-btn  .exp-pre-group{
+    background-position: 0 -1290px;
+}
+.exp-tab-btn  .exp-next-group{
+    background-position: 0 -1176px;
+}
+.exp-tab-btn .exp-pre-group.disable{
+    background-position: 0 -1367px;
+    cursor: default;
+}
+.exp-tab-btn .exp-next-group.disable{
+    background-position: 0 -1253px;
+    cursor: default;
+}
+/*-表情 -*/
+.exp-icons-holder{
+    padding: 5px;
+}
+.exp-icon-list{
+    border-left: 1px solid #e8e8e8;
+}
+.exp-icon-list li{
+    float: left;
+    width: 26px;
+    height: 22px;
+    margin: -1px 0 0 -1px;
+    border: 1px solid #E8E8E8;
+    padding: 4px 2px;
+    text-align: center;
+}
+.exp-icon-list li:hover{
+    position: relative;
+    border: 1px solid #0090FF;
+    z-index: 50;
+}
+.exp-icons-holder p{/*分页*/
+    text-align: right;
+}
+.exp-icons-holder  a{
+    font-size: 10px;
+    color: #9ABBC8;
+    text-decoration: none;
+    cursor: pointer;
+}
+.exp-icons-holder  a.current,
+.exp-icons-holder  a:hover{
+    color: #0090FF;
+}
+.exp-icons-holder p a.disable{
+    color: #c3c3c3;
+    cursor: default;
+}

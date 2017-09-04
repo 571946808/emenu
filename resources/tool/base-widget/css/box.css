@@ -1,0 +1,117 @@
+/*-----------------------------------------------------------------------------
+* @Description: 盒子组件样式 (box.css)
+* @Version: 	V1.0.0
+* @author: 		huanhuan(965788210@qq.com)
+* @date			2014.05.21
+* ==NOTES:=============================================
+* v1.0.0(2014.05.21):
+* 	初始生成 
+* ---------------------------------------------------------------------------*/
+.box{
+	margin: 10px 0 15px 0;
+	border-width: 0 1px 1px;
+	border-style: solid;
+	border-color: #9D9C9C;
+}
+.box-title{
+	/*height: 31px;*/
+	padding: 8px 10px 2px;
+	background-color: #555;
+	border-bottom: 1px solid #eee;
+    color: #fff;
+}
+.box-title span{
+	display: inline-block;
+    float: left;
+    margin: 0 0 8px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.box-title span i{
+    display: inline-block !important;
+    float: left;
+    font-size: 13px;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+.tools{
+	display: inline-block;
+    float: right;
+	padding-top: 3px;
+}
+.tools a{
+    display: inline-block;
+    height: 11px;
+    margin-left: 5px;
+}
+.tools a.collapse{
+	width: 14px;
+	background: url(../img/common/icon.png) -60px 0 no-repeat;
+}
+.tools a.expand{
+	width: 14px;
+	background: url(../img/common/icon.png) -90px 0 no-repeat;
+}
+.tools a.remove{
+	width: 14px;
+	background: url(../img/common/remove-icon.png) 0px -3px no-repeat;
+}
+.tools a.reload{
+	height:12px;
+	width: 14px;
+	background: url(../img/common/reload-icon.png) 0px -2px no-repeat;
+}
+.box-container{
+	background-color: #fff;
+    padding: 10px;
+}
+.box-red{
+	border-color: #EF8476;
+}
+.box-red .box-title{
+	background-color: #E02222;
+}
+.box-yellow{
+	border-color: #FCCB7E;
+}
+.box-yellow .box-title{
+	background-color: #FFB848;
+}
+.box-purple{
+	border-color: #AF5CC1;
+}
+.box-purple .box-title{
+	background-color: #852B99;
+}
+.box-green{
+	border-color: #77E588;
+}
+.box-green .box-title{
+	background-color: #35AA47;
+}
+.box-blue{
+	border-color: #B4CEF8;
+}
+.box-blue .box-title{
+	background-color: #4B8DF8;
+}
+.box-grey{
+	border-color: #9D9C9C;
+}
+.box-grey .box-title{
+	background-color: #555;
+}
+.box-footer{
+	margin: 0 -10px -10px -10px;
+	padding: 10px;
+	background-color: #f5f5f5;
+	border-top: 1px solid #E5E5E5;
+}
+/****************************无margin form*************************************/
+.no-margin-box{
+	margin: 0;
+}
+/****************************无margin form*************************************/
+

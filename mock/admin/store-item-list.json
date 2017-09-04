@@ -1,0 +1,8 @@
+{
+  "code": 0,
+  "list": [
+    {"id": 0, "sequenceNumber": "1", "itemNumber": 1, "assistantCode": "ghs1", "ingredientName":"土豆", "name": "haohaohaho", "tagName": "分类1", "supplierName": "供货商1", "stockOutType":"自动","totalStockInQuantityStr":"666","totalStockInMoney":"555","maxStorageQuantity": 1000, "minStorageQuantity": 100, "lastStockInPrice": 1},
+    {"id": 1, "sequenceNumber": "2", "itemNumber": 2, "assistantCode": "ghs2", "ingredientName":"醋", "name": "haohaohaho2", "tagName": "分类2", "supplierName": "供货商2", "stockOutType":"手动","totalStockInQuantityStr":"666","totalStockInMoney":"555","maxStorageQuantity": 2000, "minStorageQuantity": 200, "lastStockInPrice": 2}
+  ],
+  "dataCount": 200
+}

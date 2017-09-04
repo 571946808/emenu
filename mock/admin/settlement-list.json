@@ -1,0 +1,29 @@
+{
+	"code": 0,
+	"list":[
+		{
+			"supplierName":"大连老鲜生",
+			"totalMoney":"0.00",
+			"items":[
+				{"itemName":"螃蟹","itemQuantity":"0","itemMoney":"38.00","handlerName":"将","createdName":"代经理"},
+				{"itemName":"螃蟹","itemQuantity":"0","itemMoney":"38.00","handlerName":"代","createdName":"代经理"},
+				{"itemName":"螃蟹","itemQuantity":"0","itemMoney":"38.00","handlerName":"张","createdName":"代经理"}
+			]
+		},
+		{
+			"supplierName":"大姜片",
+			"totalMoney":"0.00",
+			"items":[
+				{"itemName":"螃蟹","itemQuantity":"0","itemMoney":"38.00","handlerName":"将","createdName":"代经理"},
+				{"itemName":"螃蟹","itemQuantity":"0","itemMoney":"38.00","handlerName":"代","createdName":"代经理"},
+				{"itemName":"螃蟹","itemQuantity":"0","itemMoney":"38.00","handlerName":"张","createdName":"代经理"}
+			]
+		},
+		{
+			"supplierName":"大姜片",
+			"totalMoney":"0.00",
+			"items":[]
+		}
+	],
+	"errMsg": "返回错误信息！"
+}

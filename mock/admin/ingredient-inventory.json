@@ -1,0 +1,24 @@
+{
+    "code": 0,
+    "list": [
+        {"tagName":"name","itemNumber":"itemNumber","itemName":"item","lastStockInPrice":"susan","costCardUnitName":"克",
+        "orderUnitName":1,"storageUnitName":2,"beginQuantity":3,
+        "beginMoney":4,"stockInQuantity":3,"stockInMoney":4,
+        "stockOutQuantity": 5,"stockOutMoney":6,"IncomeLossQuantity":7,
+        "IncomeLossMoney":8,"totalMoney":10,"totalAveragePrice":9,"totalQuantity":10,
+        "maxStorageQuantity":11,"minStorageQuantity":12},
+        {"tagName":"name","itemNumber":"itemNumber","itemName":"item","lastStockInPrice":"susan","costCardUnitName":"克",
+        "orderUnitName":1,"storageUnitName":2,"beginQuantity":3,
+        "beginMoney":4,"stockInQuantity":3,"stockInMoney":4,
+        "stockOutQuantity": 5,"stockOutMoney":6,"IncomeLossQuantity":7,
+        "IncomeLossMoney":8,"totalMoney":10,"totalAveragePrice":9,"totalQuantity":10,
+        "maxStorageQuantity":11,"minStorageQuantity":12},
+        {"tagName":"name","itemNumber":"itemNumber","itemName":"item","lastStockInPrice":"susan","costCardUnitName":"克",
+        "orderUnitName":1,"storageUnitName":2,"beginQuantity":3,
+        "beginMoney":4,"stockInQuantity":3,"stockInMoney":4,
+        "stockOutQuantity": 5,"stockOutMoney":6,"IncomeLossQuantity":7,
+        "IncomeLossMoney":8,"totalMoney":10,"totalAveragePrice":9,"totalQuantity":10,
+        "maxStorageQuantity":11,"minStorageQuantity":12}
+    ],
+    "dataCount": 14
+}

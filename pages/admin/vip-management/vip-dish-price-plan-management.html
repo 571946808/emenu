@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>会员价方案管理</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+        </style>
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                                </li>
+                                <li>
+                                    <a href="#">会员管理</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="active">会员价管理</a>
+                                </li>
+                            </ol>
+                            <h2>会员价方案管理</h2>
+                            <div class="alert alert-success col-sm-12 
+                            J_msg" role="alert">添加成功！</div>
+                            <!-- <div class="alert alert-danger col-sm-12 J_msg" role="alert">添加失败！</div> -->
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>会员价方案</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <a href="javascript:;" class="btn btn-success margin-bottom-15 J_add"><i class="fa fa-plus"></i>&nbsp;添加会员价方案</a>
+                                    <form class="J_operForm" method="" action="">
+                                        <input class="J_hidden" type="hidden" name="id" value=""/>
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>方案名称</th>
+                                                        <th>方案描述</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="J_template">
+                                                    <tr data-plan-id="1">
+                                                        <td class="J_name">1</td>
+                                                        <td class="J_desc">2</td>
+                                                        <td>
+                                                            <a href="javascript:;" class="label-info J_edit"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                                                            <a href="javascript:;" class="label-info J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+                                                            <a href="javascript:;" src="#" class="label-info J_detail"><i class="fa fa-list"></i>&nbsp;查看详情</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--container-->
+            </div><!--holder-->
+        </div><!--page-->
+        <!--#include file="/pages/admin/common/footer.html"-->
+        <!-- 编辑模板 -->
+        <script type="text/template" id="editTpl">
+            <tr data-plan-id="" data-oper-type="&{type}">
+                <td>
+                    <input type="text" class="form-control" data-valid-rule="length(0,16)" placeholder="请输入15个字符以内的方案名称" name="name" value="&{plan.name}" />
+                </td>
+                <td>
+                    <input type="text" class="form-control" name="description" value="&{plan.description}"/>
+                </td>
+                <td>
+                    <a href="javascript:;" class="label-info J_save"><i class="fa fa-save"></i>&nbsp;保存</a>
+                    <a href="javascript:;" class="label-info J_cancel"><i class="fa fa-undo"></i>&nbsp;取消</a>
+                </td>
+            </tr>
+        </script>
+        <script type="text/javascript">
+            KISSY.ready(function(S){
+                S.use('page/vip-management/vip-dish-price-plan-management',function(){
+                    PW.page.VipDishPricePlan.Core();
+                })
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+.form-horizontal .static-height{
+	height: 60px;
+	margin-bottom: 0;
+}
+/********************* 基本信息管理--首页图片 start****************************/
+.img-container{
+	position: relative;
+}
+.img-container .del i{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	background-color: red;
+	font-size: 20px;
+	color: #fff;
+}
+.img-container  .del i:hover{
+	background-color: #ff6347;
+}
+/********************* 基本信息管理--首页图片 end****************************/

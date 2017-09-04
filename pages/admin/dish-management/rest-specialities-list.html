@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>本店特色</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+								<li><a href="#">菜品管理</a></li>
+								<li class="active">本店特色</li>
+							</ol>
+							<h2>菜品管理-本店特色</h2>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>列表</h4>
+								</div>
+								<div class="panel-body">
+									<a href="#" class="btn btn-success margin-bottom-15"><i class="fa fa-plus"></i>&nbsp;添加菜品</a>
+									<div class="table-responsive">
+										<table class="table table-hover table-bordered">
+											<thead>
+												<tr>
+													<th>菜品大类</th>
+													<th>菜品小类</th>
+													<th>编号</th>
+													<th>菜品名称</th>
+													<th>单位</th>
+													<th>定价</th>
+													<th>折扣</th>
+													<th>售价</th>
+													<th>状态</th>
+													<th>上月销量</th>
+													<th>总销量</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-dish-id="1">
+													<td>套餐</td>
+													<td></td>
+													<td>nini</td>
+													<td>网团97</td>
+													<td>份</td>
+													<td>97</td>
+													<td>100</td>
+													<td>97</td>
+													<td>销售中</td>
+													<td>15.00</td>
+													<td>57.00</td>
+													<td>
+														<a href="javascript:;" class="label-info J_revoke"><i class="fa fa-undo"></i>&nbsp;撤销</a>
+													</td>
+												</tr>
+											</tbody>
+										</table> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/dish-management/rest-specialities-list',function(){
+					PW.page.DishManagement.RestSpecialitiesList();
+				});
+			});
+		</script>
+	</body>
+</html>

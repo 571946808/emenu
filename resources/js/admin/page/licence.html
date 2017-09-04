@@ -1,0 +1,135 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>餐饮管理系统注册</title>-->
+    <!--&lt;!&ndash;#include file="/pages/admin/common/head.html"&ndash;&gt;-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;#include file="/pages/admin/common/header.html"&ndash;&gt;-->
+<!--<div class="page clearfix">-->
+    <!--&lt;!&ndash;#include file="/pages/admin/common/sidebar.html"&ndash;&gt;-->
+    <!--<div class="holder">-->
+        <!--<div class="container">-->
+            <!--<div class="col-md-10">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-12">-->
+                        <!--<ol class="breadcrumb">-->
+                            <!--<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>-->
+                            <!--<li class="active">点餐注册</li>-->
+                        <!--</ol>-->
+                        <!--<h2>欢迎使用点餐系统注册 V2.0</h2>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-12">-->
+                        <!--<div class="panel panel-info">-->
+                            <!--<div class="panel-body">-->
+                                <!--<form class="form-horizontal">-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label for="" class="col-sm-3 control-label">机器指纹</label>-->
+                                        <!--<input id="" class="col-sm-3" type="text" readOnly="readOnly"/>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label for="" class="col-sm-3 control-label">注册文件：</label>-->
+                                        <!--<input id="uf" class="col-sm-3" name="uf" type="file" style="padding-top: 5px;margin-left: -15px;"/>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label for="" class="col-sm-3 control-label">管理员密码：</label>-->
+                                        <!--<input id="pwd" class="col-sm-3" name="pwd" type="password" placeholder="请输入管理员密码" />-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label class="col-sm-3 control-label">当前注册状态：</label>-->
+                                        <!--<div class="col-sm-6">-->
+                                            <!--<p class="form-control-static" style="color: red">${emsg}</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label class="col-sm-3 control-label">注意事项：</label>-->
+                                        <!--<div class="col-sm-6">-->
+                                            <!--<p class="form-control-static">${注意事项}</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="panel-footer">-->
+                                        <!--<div class="row">-->
+                                            <!--<div class="col-sm-6 col-sm-offset-3">-->
+                                                <!--<div class="btn-toolbar">-->
+                                                    <!--<button class="btn btn-primary J_submitBtn" type="submit" data-btn-type="loading" data-btn-loading-text="正在保存，请稍后">-->
+                                                        <!--<i class="fa fa-save"></i>&nbsp;保存-->
+                                                    <!--</button>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</form>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>&lt;!&ndash; row &ndash;&gt;-->
+            <!--</div>-->
+        <!--</div>&lt;!&ndash; container &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; holder &ndash;&gt;-->
+<!--</div>&lt;!&ndash; page &ndash;&gt;-->
+<!--&lt;!&ndash;#include file="/pages/admin/common/footer.html"&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户登录</title>
+    <!--#include file="/pages/admin/common/head.html"-->
+    <link rel="stylesheet" href="/resources/css/admin/login/login.css" />
+</head>
+<body class="login-background">
+<div class="page container clearfix">
+    <div class="row">
+        <div class="login-heading">
+            <h3 class="text-center">点餐系统V2.0</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="licence-body login-box">
+            <div class="title">
+                <h4 class="text-center margin-bottom-30">请注册</h4>
+            </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="" class="col-sm-5 label-control-style">机器指纹:</label>
+                    <div class="col-sm-7 padding-left-style">
+                        <p class="form-control-static">${指纹}</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-5 label-control-style">注册文件：</label>
+                    <input id="uf" class="col-sm-7" name="uf" type="file" style="padding-top: 5px;margin-left: -15px;"/>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-5 label-control-style">管理员密码：</label>
+                    <input id="pwd" class="col-sm-7" name="pwd" type="password" placeholder="请输入管理员密码" />
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-5 label-control-style">当前注册状态：</label>
+                    <div class="col-sm-7">
+                        <p class="form-control-static padding-right15" style="color: red">${emsg}</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="btn-toolbar">
+                        <button class="J_submitBtn btn btn-primary btn-block" type="submit" data-btn-type="loading" data-btn-loading-text="正在登录，请稍后..." >提交</button>
+                    </div>
+                </div>
+                <p class="licence-tip-info">
+                    <a class="first-link" href="#">返回后台登录界面</a>
+                    <a href="#">返回后厨登录界面</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    KISSY.ready(function (S) {
+        S.use('page/licence', function (S) {
+            PW.page.Licence();
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,41 @@
+html,
+body,
+.page {
+  background-color: #f0f0f0; }
+
+body {
+  overflow: hidden; }
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: 100% !important;
+  width: 100%; }
+
+#wrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 1.25333rem;
+  width: 10rem;
+  bottom: 1.50667rem; }
+
+.hidden {
+  display: none; }
+
+html, body .page {
+  background-color: #f8f8f8 !important; }
+
+.error-img {
+  width: 3.6rem;
+  height: 3.6rem;
+  margin: 2.72rem auto 1.6rem; }
+
+.error-img img {
+  width: 3.6rem;
+  height: 3.6rem; }
+
+.page {
+  text-align: center;
+  font-size: 0.46667rem; }
+
+/*# sourceMappingURL=error-scan.css.map */

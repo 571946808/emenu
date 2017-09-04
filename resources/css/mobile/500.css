@@ -1,0 +1,76 @@
+html,
+body,
+.page {
+  background-color: #f0f0f0; }
+
+body {
+  overflow: hidden; }
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: 100% !important;
+  width: 100%; }
+
+#wrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 1.25333rem;
+  width: 10rem;
+  bottom: 1.50667rem; }
+
+.hidden {
+  display: none; }
+
+html,
+body,
+.page {
+  background-color: #ffffff; }
+
+.page {
+  text-align: center;
+  font-size: 0.33333rem; }
+
+.error-img {
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 3.33333rem;
+  height: 3.33333rem; }
+
+.error-img img {
+  width: 100%;
+  height: 100%; }
+
+.error {
+  margin-top: 2.66667rem;
+  font-size: 0.66667rem;
+  color: #a94442; }
+
+.error-note {
+  width: 5.33333rem;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  margin-bottom: 0.13333rem;
+  font-size: 0.4rem; }
+
+.note {
+  float: left; }
+
+.reason {
+  float: left;
+  text-align: left; }
+
+.link {
+  margin-top: 0.66667rem; }
+
+.link a {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #f8f8f8;
+  background-color: #ccc;
+  font-size: 0.46667rem;
+  border-radius: 0.13333rem;
+  margin-left: 0.06667rem;
+  padding: 0.13333rem 0.26667rem; }
+
+/*# sourceMappingURL=500.css.map */

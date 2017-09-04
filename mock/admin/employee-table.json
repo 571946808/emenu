@@ -1,0 +1,13 @@
+{
+	"code": 0,
+	"list": [
+		{"region":"1楼", "table": "1号桌 2号桌"},
+		{"region":"2楼", "table": "1号桌 2号桌"},
+		{"region":"3楼", "table": "1号桌 2号桌"},
+		{"region":"4楼", "table": "1号桌 2号桌"},
+		{"region":"5楼", "table": "1号桌 2号桌"},
+		{"region":"6楼", "table": "1号桌 2号桌"},
+		{"region":"7楼", "table": "1号桌 2号桌"}
+	],
+	"errMsg": "返回错误信息！"
+}

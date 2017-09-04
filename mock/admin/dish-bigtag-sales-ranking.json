@@ -1,0 +1,21 @@
+{
+    "code": 0,
+    "list": [
+        {
+            "bigTag": "套餐",
+            "num": "552",
+            "consumeSum": "12355"
+        },
+        {
+            "bigTag": "披萨",
+            "num": "452",
+            "consumeSum": "2355"
+        },
+        {
+            "bigTag": "意面",
+            "num": "352",
+            "consumeSum": "355"
+        }
+    ],
+    "dataCount": 14
+}

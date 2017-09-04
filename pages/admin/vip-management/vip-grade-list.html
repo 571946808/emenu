@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>会员等级列表</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                                </li>
+                                <li>
+                                    <a href="#">会员管理</a>
+                                </li>
+                                <li class="active">
+                                    会员等级管理
+                                </li>
+                            </ol>
+                            <h2>会员等级管理</h2>
+                            <div class="alert alert-success col-sm-12 
+                            J_msg" role="alert">添加成功！</div>
+                            <!-- <div class="alert alert-danger col-sm-12 J_msg" role="alert">添加失败！</div> -->
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>会员等级</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <a href="#" class="btn btn-success margin-bottom-15"><i class="fa fa-plus"></i>&nbsp;添加会员等级</a>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>会员等级名称</th>
+                                                    <th>会员价方案</th>
+                                                    <th>最低消费金额</th>
+                                                    <th>信用额度</th>
+                                                    <th>结算周期</th>
+                                                    <th>升级预提醒额度</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="J_template">
+                                                <tr data-grade-id="1">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    <td class="J_vipDishPrice">3</td>
+                                                    <td>50</td>
+                                                    <td class="hidden J_cardPolicy">这里是卡片政策</td>
+                                                    <td><a href="#" class="label-info"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                                                    <a href="javascript:;" class="label-info J_delete"><i class="fa fa-times"></i>&nbsp;删除</a>
+                                                    <a href="javascript:;" class="label-info J_detail"><i class="fa fa-list"></i>&nbsp;查看卡片政策</a>
+                                                    <a href="#" class="label-info"><i class="fa fa-cog"></i>&nbsp;积分管理</a>
+                                                    </td>
+                                                </tr>
+                                                <tr data-grade-id="2">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    <td class="J_vipDishPrice">3</td>
+                                                    <td>50</td>
+                                                    <td class="hidden J_cardPolicy">这里是卡片政策啊啊啊啊</td>
+                                                    <td><a href="#" class="label-info"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                                                    <a href="javascript:;" class="label-info J_delete"><i class="fa fa-times"></i>&nbsp;删除</a>
+                                                    <a href="javascript:;" class="label-info J_detail"><i class="fa fa-list"></i>&nbsp;查看卡片政策</a>
+                                                    <a href="#" class="label-info"><i class="fa fa-cog"></i>&nbsp;积分管理</a>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--container-->
+            </div><!--holder-->
+        </div><!--page-->
+        <!--#include file="/pages/admin/common/footer.html"-->
+        <script type="text/javascript">
+            KISSY.ready(function(S){
+                S.use('page/vip-management/vip-grade-management',function(){
+                     PW.page.VipManagement.VipGradeManagement.List();
+                })
+            });
+        </script>
+    </body>
+</html>

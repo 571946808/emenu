@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>菜品销售排行</title>
+	<!--#include file="/pages/admin/common/head.html"-->
+	<link rel="stylesheet" type="text/css" href="/resources/css/admin/business-analysis/business-analysis.css">
+</head>
+<body> 
+	<!--#include file="/pages/admin/common/header.html"-->
+    <div class="page clearfix">
+        <!--#include file="/pages/admin/common/sidebar.html"-->
+        <div class="holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                            </li>
+                            <li>
+                                <a href="#">营业分析</a>
+                            </li>
+                            <li>
+                                <a href="#" class="active">菜品销售排行</a>
+                            </li>
+                        </ol>
+                        <h2>菜品销售排行</h2>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4>搜索</h4>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-horizontal J_searchForm col-sm-offset-1"> 
+                                    <div class="form-group">
+	                                    <label class="col-sm-2 control-label">时间段</label>
+	                                    <div class="col-sm-8">
+	                                        <input type="text" class="J_startTime w180" data-start-time="2014-8-01" readonly="readonly" name="startTime" value="2014-8-01" />
+	                                        <span class="to">~</span>
+	                                        <input type="text" class="J_endTime w180" data-end-time="2015-9-11" readonly="readonly" name="endTime" value="2015-9-11" />
+                                    	</div>
+                                	</div>
+                                	<div class="form-group " >
+                                        <label class="col-sm-2 control-label">&nbsp;</label>
+                                		<div class="col-sm-8">
+                                			<span class="timing J_shortcut" data-start-time="2015-10-01" data-end-time="2015-10-01">今天</span>
+	                                        <span class="timing J_shortcut" data-start-time="2015-09-30" data-end-time="2015-09-30">昨天</span>
+	                                        <span class="timing J_shortcut" data-start-time="2015-10-01" data-end-time="2015-10-08">本周</span>
+	                                        <span class="timing J_shortcut" data-start-time="2015-09-23" data-end-time="2015-10-01">上周</span>
+	                                        <span class="timing J_shortcut" data-start-time="2015-10-01" data-end-time="2015-10-31">本月</span>
+	                                        <span class="timing J_shortcut" data-start-time="2015-09-01" data-end-time="2015-09-30">上月</span>
+	                                        <span class="timing J_shortcut" data-start-time="2015-10-01" data-end-time="2016-10-01">整年</span>
+	                                        <span class="timing J_shortcut" data-start-time="2014-10-01" data-end-time="2015-10-01">去年</span>
+                                		</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label padding-R-17">菜品大类</label>
+                                        <div class="checkbox block col-sm-7">
+                                            <label>
+                                                <input type="checkbox" class="J_selectAll" name="tagIds" value="1">全选
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" class="J_selectType" name="tagIds"  value="2" />套餐
+                                            </label>
+                                            <label>
+                                                <input type="checkbox"  class="J_selectType"  name="tagIds" value="3" />披萨
+                                            </label>
+                                            <label>
+                                                <input type="checkbox"  class="J_selectType"  name="tagIds" value="4" />意面
+                                            </label>
+                                            <label>
+                                                <input type="checkbox"  class="J_selectType"  name="tagIds" value="5" />意面
+                                            </label>
+                                           	<label>
+                                                <input type="checkbox"  class="J_selectType"  name="tagIds" value="6" />意面
+                                            </label>
+                                        </div>
+                                    </div>
+									<div class="col-sm-6 col-sm-offset-4">
+	                                    <button class="btn-primary btn J_search" type="submit"><i class="fa fa-search"></i>&nbsp;搜索</button> 
+	                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+	                    <div class="panel panel-info">
+	                        <div class="panel-heading">
+	                            <h4>菜品销售排行</h4>
+	                        </div>
+	                        <div class="panel-body">
+                                <div class="text-right">
+                                    <a href="?sdff" class="btn btn-warning margin-bottom-15 J_export"><i class="fa fa-download"></i>&nbsp;导出Excel</a>
+                                </div>
+								<form class="J_operForm">
+	                                <div class="table-responsive">
+		                                <table class="table table-hover table-bordered">
+		                                    <thead>
+		                                        <tr>
+		                                            <th>菜品名称</th>
+		                                        	<th>菜品大类</th>
+		                                        	<th class="order pagination-reorder" data-order-key="num">销售数量</th>
+		                                        	<th class="order pagination-reorder" data-order-key="consumeSum">消费金额</th>
+		                                        </tr>
+		                                    </thead>
+		                                    <tbody id="J_template"></tbody>
+		                                </table>
+		                                <div class="J_pagination">
+	                                    </div>
+		                            </div>
+	                            </form>
+                            </div>
+	                    </div>
+	                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/pages/admin/common/footer.html"-->
+    <!--刷分页模板-->
+    <script type="text/template" id="tpl">
+        {@each list as it}
+            <tr>
+	            <td>&{it.dishName}</td><!-- 菜品名称-->
+	            <td>&{it.bigTag}</td><!-- 菜品大类-->
+	            <td>&{it.num}</td><!-- 销售数量-->
+	            <td>&{it.consumeSum}</td><!-- 消费金额-->
+	        </tr>
+        {@/each}
+    </script>
+    <script type="text/javascript">
+    	KISSY.ready(function(S){
+    		S.use('page/business-analysis/dish-sales-ranking', function(){
+    			PW.page.BusinessAnalysis.DishSalesRanking({
+    				renderTo: '.J_pagination',
+    				juicerRender: '#tpl',
+					dataRender: '#J_template',
+    				url: '/mock/admin/dish-sales-ranking.json',
+    				pageSize: 10,
+    				configUrl: function(url,page,me,prevPaginationData){
+    					return url;
+    					//return url + '/' + page;
+    				},
+    				data: '2015-11-11'
+    			});
+    		});
+    	})
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "code": 0,
+  "list": [
+    {
+        "ingredientId":1, 
+        "name": "黄瓜", 
+        "code": "hg", 
+        "ingredientNumber": "45454b545", 
+        "costCardUnitName": "克"
+    },{
+        "ingredientId":2, 
+        "name": "黄瓜2", 
+        "code": "hg", 
+        "ingredientNumber": "45454b545", 
+        "costCardUnitName": "克"
+    }
+  ],
+  "errMsg": "错误!"
+}

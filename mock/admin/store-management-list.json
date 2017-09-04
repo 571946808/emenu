@@ -1,0 +1,133 @@
+{
+  "code": 0,
+  "list": [
+    { 
+      "id": 1, 
+      "createdTime": "2015-01-01", 
+      "serialNumber": "111", 
+      "handlerPartyId": "1", 
+      "handlerName": "经手人1",
+      "auditPartyId":"1",
+      "auditName": "",
+      "isAudited": 0,
+      "isSettlemented": 0,
+      "money": 1000, 
+      "createdPartyId": "2", 
+      "createdName": "操作人2", 
+      "type": 1, 
+      "status": 0, 
+      "depotId": "2",
+      "depotName": "存放点2",
+      "comment": "这个是库存单据的总备注",
+      "reportItem": [
+          {
+            "itemId": 11, 
+            "itemName": "11item",
+            "itemNumber": "111005555",
+            "orderUnitName": "箱",
+            "orderQuantity": 1000,
+            "costCardUnitName" : "克",
+            "costCardQuantity": 108,
+            "price": "01", 
+            "count": 123.01,
+            "comment": "comment1"
+          },{
+            "itemId": 12, 
+            "itemName": "11item",
+            "itemNumber": "111005555",
+            "orderUnitName": "箱",
+            "orderQuantity": 1000,
+            "costCardUnitName" : "克",
+            "costCardQuantity": 108,
+            "price": "01", 
+            "count": 123,
+            "comment": "comment1"
+          },{ 
+            "itemId": 13, 
+            "itemName": "11item",
+            "itemNumber": "111005555",
+            "orderUnitName": "箱",
+            "orderQuantity": 1000,
+            "costCardUnitName" : "克",
+            "costCardQuantity": 108,
+            "price": "01", 
+            "count": 123.25,
+            "comment": "comment1"
+          }
+      ]
+    },{
+      "id": 2, 
+      "createdTime": "2015-01-01", 
+      "serialNumber": "333", 
+      "handlerPartyId": "2", 
+      "handlerName": "经手人2",
+      "auditPartyId": "2",
+      "auditName": "审核人1",
+      "isAudited": 1,
+      "isSettlemented": 1,
+      "createdPartyId": "2", 
+      "createdName": "操作人1", 
+      "type": 2, 
+      "status": 1, 
+      "depotId": "2",
+      "depotName": "--",
+      "comment": "这个是库存单据的总备注"
+    },{
+      "id": 3, 
+      "createdTime": "2015-01-01", 
+      "serialNumber": "333", 
+      "handlerPartyId": "3", 
+      "handlerName": "经手人3",
+      "auditPartyId":"2",
+      "auditName": "审核人（未通过）",
+      "isAudited": 2,
+      "isSettlemented": 1,
+      "createdPartyId": "2", 
+      "createdName": "操作人1", 
+      "type": 3, 
+      "status": 0, 
+      "depotId": "3",
+      "depotName": "--",
+      "comment": "这个是库存单据的总备注",
+      "reportItem": [
+          {
+            "ingredientId": 58888,
+            "ingredientName": "11item",
+            "ingredientNumber": "111005555",
+            "costCardUnitName" : "克",
+            "costCardQuantity": 108,
+            "storageUnitName":"吨",
+            "storageQuantity": "888",
+            "comment": "comment1"
+          },{
+            "ingredientId": 11, 
+            "ingredientName": "11item",
+            "ingredientNumber": "111005555",
+            "costCardUnitName" : "克",
+            "costCardQuantity": 555,
+            "storageUnitName":"吨",
+            "storageQuantity": "888",
+            "comment": "comment1"
+          }
+      ]
+    },{
+      "id": 4, 
+      "createdTime": "2015-01-01", 
+      "serialNumber": "333", 
+      "handlerPartyId": "4", 
+      "handlerName": "经手人4",
+      "auditPartyId":"2",
+      "auditName": "审核人2",
+      "isAudited": 1,
+      "isSettlemented": 0,
+      "createdPartyId": "2", 
+      "createdName": "操作人1", 
+      "type": 4, 
+      "status": 1, 
+      "depotId": "4",
+      "depotName": "--",
+      "comment": "这个是库存单据的总备注"
+    }
+  ],
+  "dataCount": 200
+}

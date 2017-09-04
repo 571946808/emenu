@@ -1,0 +1,390 @@
+@import "./common/search-list-header";
+// @import "./common/order-header";
+/*******************order css****************************/
+//let middle container scroll
+#wrapper{
+	overflow-y:scroll !important;
+	overflow-x:hidden !important;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+	//position: relative !important; //if the top part don't need to float,deleting this
+}
+.order-service{
+	position: fixed; //if the top part don't need to float,deleting this
+    z-index: 1500;  //if the top part don't need to float,deleting this
+	min-width: 100%; 
+	background-color: rgba(0, 0, 0, 0.6);
+  	color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;	
+	padding-left: (32rem / $param);
+	font-size: (28rem / $param);
+}
+.order-service form{
+	line-height: (96rem / $param);
+}
+.order-service span{
+	margin-left: (17rem / $param);
+	margin-right: (34rem / $param);
+}
+.order-service input{
+	border: (4rem / $param) solid #b5b5b5;
+	background: #fff;
+	vertical-align: middle;
+	height: (20rem / $param);
+	width: (20rem / $param);
+}
+.service-info p{
+	line-height: (37rem / $param);
+	margin-top: (5rem /$param);
+	margin-bottom: (8rem / $param);
+}
+.order-service input:checked
+{
+	border: (4rem / $param) solid #ff8822;
+	background: #fff;
+} 
+.service-info{
+	float:left; 
+	width:(445rem / $param);
+}
+.confirm-order{
+	float:left; 
+	width:(300rem / $param);
+	vertical-align: middle;
+}
+.ordering-list{
+	margin-top: (100rem/ $param); //add
+}
+.order-dish{
+	padding: (10rem / $param) (20rem / $param);
+	background: #ff8822;
+	color: #fff;
+	border-radius: (15rem / $param);	
+	margin-left: (80rem / $param); 
+	//margin-right: (2rem / $param);
+}
+.ordering-dish{
+	margin-top: (15rem / $param);
+	position: relative;
+	z-index: 1000;
+}
+.ordered-dish{
+	height: (295rem / $param);
+	margin-bottom: (5px / $param);
+}
+.ordering-dish-img,
+.ordered-dish-img{
+	float: left;
+	display: block;
+	width: (375rem / $param);
+	height: (295rem / $param);
+}
+.ordering-dish-info,
+.ordered-dish-info
+{
+	float: left;
+	width: (350rem / $param);
+	height: (295rem / $param);
+	padding-left: (25rem / $param);
+	border-top: (1rem / $param) solid #d2d2d2;
+	border-bottom: (1rem / $param) solid #d2d2d2;
+	background: #ffffff; 
+}
+/*modify*/
+/*The new border style*/
+.ordered-dish-info-box 
+{
+	float: left;
+	width: (300rem / $param);
+	height: (293rem / $param);
+}
+/*The new vertical style*/
+// .J_slideLeft 
+// {
+// 	float: left;
+// 	width: (50rem / $param);
+// 	height: (293rem / $param);
+// }
+.J_slideLeft i
+{
+	// font-size:1000%;
+	padding-top:(100rem / $param);
+	color: #666;
+	// font-weight:100;
+	margin-left:(5rem / $param);
+}
+/*modify*/
+.ordering-number{ 
+	margin-top: (18rem / $param);
+}
+
+.ordering-number-button{
+	color: #fff;
+	width: (46rem / $param);
+	height: (46rem / $param);
+	background-color: #ff8822;
+	border: none;
+}
+// Button is grey
+.to-grey{
+	background-color: #ddd;
+}
+
+.ordering-number button i{
+	font-size: (20rem / $param);
+}
+.ordering-number input{
+	color: #ff8822;
+	font-size: (26rem / $param);
+	width: (89rem / $param);
+	height: (40rem / $param);
+	border: (3rem / $param) solid #bfbfbf;
+	margin-left: (16rem / $param);
+	margin-right: (16rem / $param);
+	vertical-align: bottom;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: center;
+}
+.ordering-dish-unit,
+.ordered-dish-unit{
+	font-size: (30rem / $param);
+	margin-left: (15rem / $param);
+	vertical-align: bottom;
+	color: #000;
+}
+.info-text{
+	margin-top: (30rem / $param);
+}
+.ordering-dish-name,
+.ordered-dish-name{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display:inline-block;
+	width: (300rem / $param);
+	font-size: (30rem / $param);
+}
+.ordering-dish-price,
+.ordered-dish-price{
+	text-decoration: line-through;
+	font-size: (23rem / $param);
+	color: #666666;
+}
+.ordering-dish-sale,
+.ordered-dish-sale{
+	font-size: (30rem / $param);
+	color:#ff0000;
+}
+.ordering-remark-info,
+.ordered-remark-info{
+	padding-right: (43rem / $param); 
+	margin-top: (20rem / $param);
+	font-size: (24rem / $param);
+	color: #666666;
+	height: (77rem / $param);
+	overflow: hidden;
+}
+.ordering-consumption-total{
+	margin-top: (24rem / $param);
+	margin-bottom: (24rem / $param);  
+}
+.number{
+	color: #ff8822;
+	font-size: (24rem / $param);
+}
+.curren-custom{
+	font-size: (24rem / $param);
+	color: #404040;
+	margin: (24rem / $param) (18rem / $param) (24rem / $param) (17rem / $param);
+}
+.curren-custom span,
+.table-info li span{
+	color: #ff8822;
+}
+.ordered-dish-list{
+	border-top: (4rem / $param) solid #ff8822;
+}
+.ordered-number{
+	font-size: (28rem / $param);
+	color: #ff8822;
+	margin-top: (18rem / $param);
+	margin-bottom: (18rem / $param);
+}
+.table-info{
+	padding-top: (5rem / $param);
+	padding-bottom: (24rem /$param);
+	margin-left: (17rem / $param);
+	margin-bottom: (100rem / $param);
+}
+.table-info li{
+	font-size: (24rem / $param);
+	margin-top: (17rem / $param);
+}
+.table-info li label:first-child{
+	margin-left: 0;
+}
+.table-info li label{
+	margin-left: (15rem / $param);
+}
+.swipe-left-translate{
+	transform:translate(-(93rem / $param), 0);
+	-webkit-transition: all 0.3s Linear;
+}
+.swipe-right-translate{
+	transform:translate(0, 0);
+	-webkit-transition: all 0.3s Linear;
+}
+.J_delete{
+	display: none;
+	width: (93rem / $param);
+	background-color: red;
+	text-align: center;
+	color: #fff;
+	z-index: -1000;
+	position: absolute;
+	top:0;
+	left: (657rem / $param);
+	right: (725rem / $param);
+	height: (293rem / $param);
+	font-size: (24rem / $param);
+	vertical-align: middle;
+	border: none;
+}
+/****cover area*****/
+#createCover{
+    display: block;
+    position: fixed;
+    top: (94rem / $param);  
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);  //has no influence on children element
+    z-index: 2000;
+}
+#confirmOrderContainer{
+	position: relative;
+	bottom: (10rem / $param);
+	background-color: #fff;
+	color: #000;
+	font-family: "Microsoft YaHei";
+	border-radius: (15rem / $param);
+	padding: (42rem / $param) (27rem /$param) (28rem / $param) (27rem /$param);
+	border: (2rem / $param) solid #a6a6a6;
+	z-index: 3500;
+}
+.confirm-header{
+	font-size: (28rem / $param);
+	text-align: center;
+	padding-bottom: (28rem / $param);
+	border-bottom: (1rem / $param) solid #a6a6a6;
+}
+.confirm-content{
+	width: (526rem /$param);
+	//height: (563rem / $param);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+.confirm-footer{
+	padding: (22rem / $param) (61rem / $param) (26rem /$param) (61rem / $param);
+	position: absolute;
+	bottom: 0;
+}
+.J_butttnCancel{
+	margin-right: (125rem / $param);
+}
+.J_butttnConfirm,
+.J_butttnCancel{
+	background-color: #ff8822;
+	color: #fff;
+	padding: (15rem / $param) (30rem / $param);
+	border: none;
+	border-radius: (15rem / $param);
+	font-size: (26rem / $param);
+}
+.confirm-dish{
+	border-bottom: (1rem / $param) solid #a6a6a6;
+	padding-top: (30rem /$param); 
+}
+.confirm-dish p{
+	line-height: (26rem / $param);
+	margin-bottom: (29rem / $param);
+}
+.dish-number,.dish-number-label {
+	float: right;
+}
+.orderMainInfo{
+	width: 100%;
+}
+.orderMainInfo p{
+	text-align: right;
+	line-height: (36rem / $param);
+}
+.dish-number{
+	margin-right: (20rem / $param);
+}
+.dish-name-num
+{
+	font-size: (28rem / $param);
+}
+.dish-taste,.dish-remark,.dish-remark label, .choosed-service, .orderMainInfo p,
+.confirm-order-remark
+{
+	font-size: (24rem / $param);
+}
+.dish-name-num span,.dish-number,.dish-remark-content,.dish-remark,.choosed-service, .confirm-custom-price
+{
+	color: #ff8822;
+}
+.choosed-service, .orderMainInfo p,.confirm-order-remark{
+	font-weight: bold;
+}
+.dish-taste{
+	font-weight: normal;
+}
+.dish-taste, p.dish-remark label, .choosed-service label, .orderMainInfo p label,
+.confirm-order-remark{
+	color: #666666;
+}
+.dish-remark{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap; 
+}
+.choosed-service{
+	vertical-align: middle;
+	line-height: (36rem / $param);
+	padding: (26rem / $param) 0;
+	border-bottom: (1rem / $param) solid #a6a6a6; 
+}
+.orderMainInfo{
+	padding: (49rem / $param) 0 (31rem / $param) 0;
+	border-bottom: (2rem / $param) solid #a6a6a6; 
+}
+.confirm-order-remark{
+	padding: (25rem / $param) 0 0 0;
+	//width: (486rem / $param);
+	//height: (189rem /$param);
+	font-size: (24rem / $param);
+}
+.confirm-order-remark textarea{
+	height: (189rem /$param);
+	width: 98%;
+}
+.confirm-order-remark span{
+	display: inline-block;
+	color: #333333;
+	font-size: (24rem / $param);
+	font-weight: normal;
+	background: #dcdcdc;
+	padding: (6rem / $param) (20rem / $param) (9rem / $param) (14rem / $param);
+	margin-left: (17rem / $param);
+	margin-bottom: (17rem / $param);
+}
+.confirm-order-remark .selected{
+	background: #ff8822;
+	color: #fff;
+}

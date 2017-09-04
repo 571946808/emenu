@@ -1,0 +1,9 @@
+{
+  "code": 0,
+  "list": [
+    {"id": 100, "assistantCode":"NJXCJ", "name": "农家小炒鸡"},
+    {"id": 101, "assistantCode":"GBR", "name": "锅包肉"},
+    {"id": 102, "assistantCode":"CPS", "name": "菜品3"}
+  ],
+  "errMsg": "暂无内容!"
+}

@@ -1,0 +1,442 @@
+/*-----------------------------------------------------------------------------
+* @Description:     为dialog新增的一套自定义css
+* @Version:         2.0
+* @author:          cuiy(361151713@qq.com)
+* @date             2015.9.6
+* ==NOTES:=============================================
+* v2.0(2015.9.6):
+*   页面级别的dialog样式
+*---------------------------------------------------------------------------*/
+
+/*控制在ie6下 fixed震动问题*/
+* html,* html body{background-image:url(about:blank);background-attachment:fixed}
+
+/**
+* 默认主题样式
+*/
+
+.cpt-dlg-outer{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 2px;
+  background: #4494F8;
+  background: #4494F8 \9;
+  overflow: hidden;
+}
+
+.cpt-dlg-outer .dlg-holder{
+  position: relative;
+  background: #fff;
+  height: 100%;
+}
+.cpt-dlg-outer .dlg-holder table{
+  width: 100%;
+  height: 100%;
+}
+.cpt-dlg-outer .header-holder{
+  height: 30px;
+  vertical-align: top;
+  /*background: yellow;
+  */;
+}
+.cpt-dlg-outer .dlg-header{
+  position: relative;
+  height: 30px;
+  padding-right: 30px;
+  background: #00859D;
+  background-color: #4B8DF8;
+  color: #fff;
+}
+.cpt-dlg-outer .dlg-icon{
+  display: block;
+  position: absolute;
+  right:0;
+  top: 0;
+  color: rgba(128, 128, 128, 0.4);
+}
+.cpt-dlg-outer .dlg-title{
+  display:block;
+  height: 30px;
+  /*padding-left: 35px;*/
+  line-height: 30px;
+  text-align: left;
+  /*white-space:nowrap;
+  */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fade{
+    opacity: 0;
+    -webkit-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+}
+.fade.in {  
+  opacity: 1;  
+} 
+.cpt-dlg-outer .dlg-header .no-icon{
+  padding-left: 10px;
+}
+.cpt-dlg-outer .dlg-close{
+  display:block;
+  position: absolute;
+  zoom: 1;
+  right: 2px;
+  top: 1px;
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  text-decoration: none;
+  /*background: url(../../../tool/base-widget/img/dialog/close.png) center center no-repeat;*/
+  text-indent: -99999px;
+}
+.cpt-dlg-outer .content-holder{
+  width: auto;
+  vertical-align: top;
+}
+.cpt-dlg-outer .dlg-inner-frame{
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.cpt-dlg-outer .footer-holder{
+}
+.cpt-dlg-outer .dlg-footer{
+  height: 100%;
+  padding: 3px 0;
+  text-align: center;
+  border-top: 1px solid #E5E5E5;
+  vertical-align: middle;
+  background: #F5F5F5;
+}
+/*.cpt-dlg-outer button{
+  margin: 0 5px;
+  border: none;
+  padding: 2px 5px;
+  font-size: 14px;
+  background-color: #4D90FE;
+  color: #FFFFFF;
+  text-shadow: none;
+  cursor: pointer;
+}
+.cpt-dlg-outer button:hover{
+  background-color: #0362FD;
+  color: #FFFFFF !important;
+}*/
+
+/*alert*/
+.dlg-alert{
+  position: relative;
+  min-height: 20px;
+  font-size: 14px;
+  _height: 50px;
+  padding: 25px 10px 25px 60px;
+  color: #333;
+  font-weight: bolder;
+  line-height: 20px;
+}
+.alert-ico{
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 50px;
+  height: 51px;
+  background:  url("../../../tool/base-widget/img/dialog/ico.png") -50px top no-repeat;
+}
+.success .alert-ico{
+  background-position: 0px top;
+}
+.error .alert-ico{
+  background-position: -100px top;
+}
+.warn .alert-ico{
+  background-position: -50px top;
+}
+
+/*confirm*/
+.dlg-confirm{
+  position: relative;
+  min-height: 20px;
+  _height: 50px;
+  padding: 25px 10px 25px 60px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: #333;
+  line-height: 20px;
+}
+.confirm-ico{
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 50px;
+  height: 51px;
+  background:  url("../../../tool/base-widget/img/dialog/ico.png") -150px top no-repeat;
+}
+/*prompt*/
+.dlg-prompt{
+  min-height: 30px;
+  _height: 30px;
+  font-size: 14px;
+  color: #333;
+  font-weight: bolder;
+}
+.dlg-prompt input{
+  display: block;
+  width: 370px;
+  height: 22px;
+  margin: 10px auto;
+  border: 1px solid #666;
+  line-height: 22px;
+}
+
+/**
+* 红色主题
+*/
+
+.pw-dlg-theme-red,
+.pw-dlg-theme-red .dlg-header{
+  background: #E02222;
+}
+.pw-dlg-theme-red button{
+  margin: 0 5px;
+  border: none;
+  padding: 2px 5px;
+  background: #D84A38;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-shadow: none;
+  cursor: pointer;
+}
+.pw-dlg-theme-red .dlg-footer button:hover{
+  background: #BB2413;
+}
+
+/**
+* 绿色主题
+*/
+.pw-dlg-theme-green,
+.pw-dlg-theme-green .dlg-header{
+  background: #35AA47;
+}
+.pw-dlg-theme-green button{
+  margin: 0 5px;
+  border: none;
+  padding: 2px 5px;
+  background: #35AA47;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-shadow: none;
+  cursor: pointer;
+}
+.pw-dlg-theme-green .dlg-footer button:hover{
+  background: #1D943B;
+}
+
+/**
+* 橙色主题
+*/
+.pw-dlg-theme-yellow,
+.pw-dlg-theme-yellow .dlg-header{
+  background: #FFB848;
+}
+.pw-dlg-theme-yellow button{
+  margin: 0 5px;
+  border: none;
+  padding: 2px 5px;
+  background: #ecab44;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-shadow: none;
+  cursor: pointer;
+}
+.pw-dlg-theme-yellow button:hover{
+  background: #d79c3f;
+}
+
+/**
+* 灰色主题
+*/
+.pw-dlg-theme-grey,
+.pw-dlg-theme-grey .dlg-header{
+  background: #555555;
+}
+.pw-dlg-theme-grey button{
+  margin: 0 5px;
+  border: none;
+  padding: 2px 5px;
+  background: #ecab44;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-shadow: none;
+  cursor: pointer;
+}
+.pw-dlg-theme-grey button:hover{
+  background: #d79c3f;
+}
+/**
+* 白色主题
+*/
+.pw-dlg-theme-white{
+  padding: 0px; 
+}
+.pw-dlg-theme-white,
+.pw-dlg-theme-white .dlg-header{
+  background: #fff;
+  color:#000;
+}
+.pw-dlg-theme-white .header-holder{
+  height:26px;
+  padding: 15px;
+  font-size: 18px;
+  border-bottom:1px solid  #efefef;
+}
+.pw-dlg-theme-white .header-holder .dlg-header{
+  height:26px; 
+}
+.pw-dlg-theme-white .dlg-header .no-icon {
+    padding-left: 0px;
+}
+.pw-dlg-theme-white .header-holder .dlg-title{
+   height:26px;
+   line-height: 26px;
+   font-weight: normal;
+   font-size: 20px;
+   margin-top: 0;
+}
+.pw-dlg-theme-white .content-holder{
+  border-bottom:1px solid  #efefef;
+}
+.pw-dlg-theme-white .dlg-header a{
+  /*background: url("../../../tool/base-widget/img/dialog/close-grey.png") center -1px no-repeat;*/
+}
+.pw-dlg-theme-white .dlg-footer{
+  background: none repeat scroll 0 0 #fff;
+  padding :20px;
+}
+.pw-dlg-theme-white button{
+  float:right;
+  margin: 0 10px 0 5px;
+  border: none;
+  padding: 7px 15px;
+  background: #efefef;
+  font-size: 14px;
+  text-shadow: none;
+  cursor: pointer;
+  color:#000;
+}
+.pw-dlg-theme-white button:hover{
+  color: #333;
+  background-color: #d1d3d4;
+}
+.pw-dlg-theme-white .dlg-footer button:first-child {
+  margin-right: 0;
+ background: none repeat scroll 0 0 #4f8edc;
+ color:#fff;
+}
+.pw-dlg-theme-white .dlg-footer button:first-child:hover{
+  background-color: #2d78d5;
+}
+/*white alert*/
+.pw-dlg-theme-white .dlg-alert{
+  font-size: 13px;
+  /*padding: 25px 20px 20px 60px;*/
+  padding: 20px;
+  color: #000;
+  font-weight: normal;
+}
+.pw-dlg-theme-white i + div{
+  padding-left: 40px;
+  padding-top: 5px;
+}
+/*confirm*/
+.pw-dlg-theme-white  .dlg-confirm{
+  font-size: 13px;
+  padding: 20px;
+  color: #000;
+  font-weight: normal;
+}
+/*prompt*/
+.pw-dlg-theme-white .dlg-prompt{
+  color: #000;
+  min-height: 50px;
+}
+.pw-dlg-theme-white .dlg-prompt input{
+  padding: 5px;
+  margin: 18px auto;
+  border: 1px solid #e5e5e5;
+}
+.pw-dlg-theme-white .dlg-prompt input:focus{
+  border: 1px solid #999;
+}
+/**************************** blue button confirm start****************************/
+.pw-dlg-theme-white-confirm{
+  padding: 0px; 
+}
+.pw-dlg-theme-white-confirm,
+.pw-dlg-theme-white-confirm .dlg-header{
+  background: #fff;
+  color:#000;
+}
+.pw-dlg-theme-white-confirm .header-holder{
+  height:26px;
+  padding: 15px;
+  font-size: 18px;
+  border-bottom:1px solid  #efefef;
+}
+.pw-dlg-theme-white-confirm .header-holder .dlg-header{
+  height:26px; 
+}
+.pw-dlg-theme-white-confirm .dlg-header .no-icon {
+    padding-left: 0px;
+}
+.pw-dlg-theme-white-confirm .header-holder .dlg-title{
+   height:26px;
+   line-height: 26px;
+   font-weight: normal;
+   font-size: 20px;
+   margin-top: 0;
+}
+.pw-dlg-theme-white-confirm .content-holder{
+  border-bottom:1px solid  #efefef;
+}
+.pw-dlg-theme-white-confirm .dlg-header a{
+  /*background: url("../../../tool/base-widget/img/dialog/close-grey.png") center -1px no-repeat;*/
+}
+.pw-dlg-theme-white-confirm .dlg-footer{
+  background: none repeat scroll 0 0 #fff;
+  padding :20px 0px 0px 0px;
+}
+.pw-dlg-theme-white-confirm button{
+  float:right;
+  margin: 0 10px 20px 5px;
+  border: none;
+  padding: 7px 15px;
+  background: #efefef;
+  font-size: 14px;
+  text-shadow: none;
+  cursor: pointer;
+  color:#000;
+}
+.pw-dlg-theme-white-confirm button:hover{
+  color: #333;
+}
+
+
+/*confirm*/
+.pw-dlg-theme-white-confirm  .dlg-confirm{
+  font-size: 13px;
+  padding: 20px;
+  color: #000;
+  font-weight: normal;
+}
+.pw-dlg-theme-white-confirm  .confirm-ico{
+  display: none;
+}
+.pw-dlg-theme-white-confirm .dlg-footer button:first-child {
+  margin-right: 20px;
+ background: none repeat scroll 0 0 #4d90fe;
+ color:#fff;
+}
+/**************************** blue button confirm  end****************************/

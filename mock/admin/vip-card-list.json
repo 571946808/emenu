@@ -1,0 +1,38 @@
+{
+    "code": 0,
+    "list": [
+        {
+            "id": 1, 
+            "name": "姜雪鹅", 
+            "phone": "13065668789", 
+            "cardNumber": "58999", 
+            "createdTime": "2011-04-30",
+            "validityTime": "2016-01-15", 
+            "permanentlyEffective": "否",
+            "operator": "服务员1",  
+            "status": "可用"
+        },{
+            "id": 2, 
+            "name": "婷宝宝", 
+            "phone": "13000000000", 
+            "cardNumber": "58999", 
+            "createdTime": "2011-04-30",
+            "validityTime": "2016-01-15", 
+            "permanentlyEffective":"是",
+            "operator": "服务员2",  
+            "status": "已挂失"
+        },{
+            "id": 3, 
+            "name": "婷宝宝", 
+            "phone": "13000000000", 
+            "cardNumber": "58999", 
+            "createdTime": "2011-04-30",
+            "validityTime": "2016-01-15", 
+            "permanentlyEffective":"是",
+            "operator": "服务员2",  
+            "status": "停用"
+        }
+    ],
+    "dataCount": 200
+                    
+}

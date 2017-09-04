@@ -1,0 +1,14 @@
+{
+	"code": 0,
+	"list": [
+		{"id": 1, "dishId": 11, "name": "caucau", "rankNumber":132, "src": "/resources/img/mobile/carousel/dish2.gif", "price": "18", "sale": "15"},
+		{"id": 12, "dishId": 12, "name": "caucau", "rankNumber":132, "src": "/resources/img/mobile/carousel/dish2.gif", "price": "18", "sale": "15", "number": 3},
+		{"id": 123, "dishId": 13, "name": "caucau", "rankNumber":132, "src": "/resources/img/mobile/carousel/dish2.gif", "price": "18", "sale": "15", "number": 3},
+		{"id": 1234, "dishId": 14, "name": "caucau", "rankNumber":132, "src": "/resources/img/mobile/carousel/dish2.gif", "price": "18", "sale": "15", "number": 3},
+		{"id": 12345, "dishId": 15, "name": "caucau", "rankNumber":132, "src": "/resources/img/mobile/carousel/dish2.gif", "price": "18", "sale": "15", "number": 3},
+		{"id": 123456, "dishId": 16, "name": "caucau", "rankNumber":132, "src": "/resources/img/mobile/carousel/dish2.gif", "price": "18", "sale": "15", "number": 3},
+		{"id": 1234567, "dishId": 17, "name": "caucau", "rankNumber":132, "src": "/resources/img/mobile/carousel/dish2.gif", "price": "18", "sale": "15", "number": 3},
+		{"id": 12345678, "dishId": 18, "name": "caucau", "rankNumber":132, "src": "/resources/img/mobile/carousel/dish2.gif", "price": "18", "sale": "15", "number": 3}
+	],
+	"errMsg": "加载错误"
+}

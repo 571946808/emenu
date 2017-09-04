@@ -1,0 +1,5 @@
+{
+	"code": 0,
+	"data": {"maxStorageQuantity": "100", "minStorageQuantity": "10", "totalQuantity": "800"},
+	"errMsg": "返回错误信息"
+}

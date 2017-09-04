@@ -1,0 +1,8 @@
+{
+	"code": 0,
+	"list": [
+		{"id":"2", "vipGrade":"银", "name":"陈", "phone":"13100000000", "cardNumber":"00000002", "balance":"200", "integral":"100", "totalConsumption":"500", "usedCreditAmount":"100", "status":0},
+		{"id":"1", "vipGrade":"金", "name":"代", "phone":"13000000000", "cardNumber":"00000001", "balance":"100", "integral":"200", "totalConsumption":"1000", "usedCreditAmount":"100", "status":1}
+	],
+	"dataCount": 201
+}

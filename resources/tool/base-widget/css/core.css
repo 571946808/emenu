@@ -1,0 +1,22 @@
+/*-----------------------------------------------------------------------------
+* @Description:     统一调用的widget，后期将这个层级的所有css全部压缩到此文件
+* @Version:         1.0.0
+* @author:          simon(406400939@qq.com)
+* @date             2014.5.20
+* ==NOTES:=============================================
+* v1.0.0(2014.5.20):
+*   初始生成
+*---------------------------------------------------------------------------*/
+@import url(dialog.css);
+/*@import url(box.css);*/
+@import url(tab.css);
+/*@import url(table.css);*/
+@import url(form.css);
+@import url(btn.css);
+/*@import url(tooltip.css);*/
+@import url(panel.css);
+@import url(font-awesome.css);
+/*@import url(grid.css);*/
+@import url(dropdown.css);
+/*@import url(msg.css);*/
+/*@import url(skylo.css);*/

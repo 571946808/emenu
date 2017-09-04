@@ -1,0 +1,9 @@
+{
+  "code": 0,
+  "list": [
+    {"id": 100, "name": "原材料1", "assistantCode": "aaa33333"},
+    {"id": 200, "name": "原材料2", "assistantCode": "bbb33333"},
+    {"id": 300, "name": "原材料3", "assistantCode": "b3fff33333"}
+  ],
+  "errMsg": "暂无内容!"
+}

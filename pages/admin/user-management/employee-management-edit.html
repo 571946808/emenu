@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>员工管理添加</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<link rel="stylesheet" href="/resources/css/admin/user-management/user-management.css">
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+							  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+							  	<li><a href="#">用户管理</a></li>
+							  	<li class="active">员工管理</li>
+							</ol>
+							<h2>员工管理-添加员工</h2>
+						</div>
+						<div class="col-sm-12 margin-bottom-30">
+							<form class="form-horizontal J_operForm" action="" method="">
+								<div class="alert alert-danger J_tip" role="alert">提示信息!</div>
+								<!--data-oper-type: 1表示添加 0表示编辑-->
+								<input class="J_partyId" type="hidden" name="partyId" value="123" data-oper-type="0"/>
+								<input class="J_id" type="hidden" name="id" value="123123" />
+								<div class="panel panel-info">
+									<div class="panel-heading">
+										<h4>添加员工</h4>
+									</div>
+									<div class="panel-body">
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>用户名</label>
+										    <div class="col-sm-6">
+										     	<input class="w180 J_username" type="text" value="" name="" />
+										    </div>
+									  	</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label"><span class="requires">*</span>员工编号</label>
+											<div class="col-sm-6">
+												<input class="w180 J_employeeNo" type="text" value="" name="" />
+											</div>
+										</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>姓名</label>
+										    <div class="col-sm-6">
+										     	<input class="w180" type="text" data-valid-tip="请输入姓名|姓名不能为空，请重新输入" data-valid-rule="notNull" value="" name="" />
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>电话</label>
+										    <div class="col-sm-6">
+										     	<input class="w180 J_phone" type="text" value="" name="" />
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>密码<!-- 新密码--> </label>
+										    <div class="col-sm-6">
+										     	<input class="w180 J_passward" type="password" id="pwd" data-valid-tip="请输入密码|密码有误，请重新输入" data-valid-rule="isPassword&length(5,16)|isNull" value="" name="" />
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>确认密码 <!--确认新密码--></label>
+										    <div class="col-sm-6">
+										     	<input class="w180 J_confirmPwd" type="password" value="" name="" />
+										     	<span></span>
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>角色</label>
+										    <div class="col-sm-6">
+										     	<div class="checkbox block">
+										     		<label>
+										     			<input type="checkbox" class="J_role" value="11" name="role" checked="checked"> 吧台
+										     		</label>
+										     	</div>
+										     	<div class="checkbox block">
+										     		<label>
+										     			<input class="J_role" type="checkbox" value="12" name="role"> 后厨
+										     		</label>
+										     	</div>
+										     	<div class="checkbox block">
+										     		<label>
+										     			<input class="J_waiter J_role" type="checkbox" value="13" name="role" checked="checked"> 服务员
+										     		</label>
+													<div class="waiter-table J_waiterTable hidden">
+														<div class="area-table clearfix">
+															<span>1楼:</span>
+															<label>
+																<input type="checkbox" value="1" name="table" checked="checked"> 1号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name="table" checked="checked"> 2号桌
+															</label>
+														</div>
+														<div class="area-table clearfix">
+															<span>2楼:</span>
+															<label>
+																<input type="checkbox" value="1" name=""> 1号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+															<label>
+																<input type="checkbox" value="2" name=""> 2号桌
+															</label>
+														</div>
+													</div>
+										     	</div>
+										    </div>
+										    <div class="col-sm-3 col-sm-pull-5 error-tip hidden J_errorTip">员工角色不能为空，请重新选择</div>
+									  	</div>
+									</div>
+									<div class="panel-footer">
+								      	<div class="row">
+								      		<div class="col-sm-6 col-sm-offset-3">
+								      			<div class="btn-toolbar">
+									      			<button class="btn-primary btn J_submitBtn" type="submit" data-btn-type="loading" data-btn-loading-text="正在保存，请稍后...">
+									      				<i class="fa fa-save"></i>
+									      				&nbsp;保存
+									      			</button>
+									      			<button class="btn-default btn" type="reset"><i class="fa fa-undo"></i>&nbsp;重置</button>
+								      			</div>
+								      		</div>
+								      	</div>
+								    </div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/user-management/employee-management-add', function(S){
+						PW.page.UserManagement.EmployeeManagement.Add();
+				});
+			});
+		</script>
+	</body>
+</html>

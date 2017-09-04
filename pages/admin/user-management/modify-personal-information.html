@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>修改个人信息</title>
+	<!--#include file="/pages/admin/common/head.html"-->
+	<link rel="stylesheet" href="/resources/css/admin/user-management/user-management.css">
+</head>
+<body>
+	<!--#include file="/pages/admin/common/header.html"-->
+	<div class="page clearfix">
+	<!--#include file="/pages/admin/common/sidebar.html"-->
+		<div class="holder">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ol class="breadcrumb">
+						  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+						  	<li class="active">修改个人信息</li>
+						</ol>
+					</div>
+					<div class="col-sm-12 margin-bottom-30">
+						<!-- 添加了自动消失的DIV -->
+						<div class="alert alert-success J_tip" role="alert">保存成功！</div>
+						<!-- modify -->
+						<form class="form-horizontal J_operForm" action="" method="">
+							<input class="J_id" type="hidden" name="id" value="123123" />
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>修改个人信息</h4>
+								</div>
+								<div class="panel-body">
+								  	<div class="form-group">
+								  		<label class="col-sm-3 control-label"><span class="requires">*</span>电话</label>
+								  		<!-- 添加了手机号码验证 -->
+									    <div class="col-sm-6">
+									     	<input class="w190 J_phone" type="text" data-valid-tip="请输入电话号码|电话号码输入有误，请重新输入" data-valid-rule="notNull&isMobile" value="" name="phone" />
+									    </div>
+									    <!-- modify -->
+								  	</div>
+								  	<div class="form-group">
+								    	<label class="col-sm-3 control-label"><span class="requires">*</span>原密码</label>
+									    <div class="col-sm-6">
+									     	<input class="w180" type="password" id="oldPassword" data-valid-tip="请输入密码|密码有误，请重新输入" data-valid-rule="isPassword&length(5,16)" value="" name="" />
+									    </div>
+								  	</div>
+									<div class="form-group">
+								    	<label class="col-sm-3 control-label"><span class="requires">*</span>新密码</label>
+									    <div class="col-sm-6">
+									     	<input class="w180" type="password" id="newPassword" data-valid-tip="请输入密码|密码有误，请重新输入" data-valid-rule="isPassword&length(5,16)" value="" name="" />
+									    </div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label class="col-sm-3 control-label"><span class="requires">*</span>确认密码 <!--确认新密码--></label>
+									    <div class="col-sm-6">
+									     	<input class="w180" type="password" data-valid-tip="请再次输入一遍密码|两次密码不同，请重新输入" data-valid-rule="isPassword&require(newPassword)&equal(newPassword)" value="" name="" />
+									    </div>
+								  	</div>
+								</div>
+								<div class="panel-footer">
+							      	<div class="row">
+							      		<div class="col-sm-6 col-sm-offset-3">
+							      			<div class="btn-toolbar">
+								      			<button class="btn-primary btn J_submitBtn" type="submit" data-btn-type="loading" data-btn-loading-text="正在保存，请稍后...">
+								      				<i class="fa fa-save"></i>
+								      				&nbsp;保存
+								      			</button>
+								      			<button class="btn-default btn" type="reset"><i class="fa fa-undo"></i>&nbsp;重置</button>
+							      			</div>
+							      		</div>
+							      	</div>
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--#include file="/pages/admin/common/footer.html"-->
+	<script type="text/javascript">
+		KISSY.ready(function(S){
+			S.use('page/user-management/modify-personal-information', function(S){
+					PW.page.UserManagement.ModifyPersonalInformation.Modify();
+			});
+		});
+	</script>
+</body>
+</html>

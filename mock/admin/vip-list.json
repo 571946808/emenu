@@ -1,0 +1,8 @@
+{
+	"code": 0,
+	"list": [
+		{"id":1, "name": "代巧玲","phone":"13200445656","status":1,"cardNum":"000000001","grade":"金","money":"30"},
+		{"id":2, "name": "阿代儿","phone":"13244006565","status":2,"cardNum":"000000002","grade":"银","money":"50"}
+	],
+	"dataCount": 14
+}

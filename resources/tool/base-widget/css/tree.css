@@ -1,0 +1,36 @@
+.page-sidebar-menu > li{
+    display: block;
+}
+.page-sidebar-menu > li > a {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    border: 0 none;
+    border-top: 1px solid #5C5C5C;
+    text-decoration: none;
+}
+.page-sidebar-menu > li > a.curSelectedNode {
+    background: url(../../../img/admin/common/sidebar-menu-arrow.png) right 8px no-repeat;
+    background-color: #E02222;
+    border-top-color: rgba(0, 0, 0, 0);
+}
+.page-sidebar-menu ul > li{
+    margin-top: 1px;
+}
+.page-sidebar-menu ul > li > a{
+    display: block;
+    padding: 5px 0 5px 44px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.page-sidebar-menu ul > li > a:hover,
+.page-sidebar-menu ul > li > a:active,
+.page-sidebar-menu ul > li > a.curSelectedNode{
+    background-color: #575757;
+    text-decoration: none;
+}

@@ -1,0 +1,5 @@
+{
+	"code": 0,
+	"data": {"averagePrice": "1.2", "maxStorageQuantity": "100", "minStorageQuantity": "10", "realQuantity": "55", "totalQuantity": "800"},
+	"errMsg": "返回错误信息"
+}

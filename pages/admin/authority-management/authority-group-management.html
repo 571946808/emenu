@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>权限组管理编辑</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+							  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;管理员</a></li>
+							  	<li><a href="#">权限管理</a></li>
+							  	<li class="active">权限组管理</li>
+							</ol>
+							<h2>权限组管理-权限组列表</h2>
+						</div>						
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>用户名：houchu</h4>
+								</div>
+								<div class="panel-body">									
+									<form class="form-horizontal J_addForm" action="" method="">
+										<div class="form-group">						
+											<input type="hidden" value="123" name="id">
+										    <div class="col-sm-2">
+										    	<select class="form-control" name="groupName">
+										    		<option value="0">请选择</option>
+										    		<option value="1">权限组1</option>
+										    		<option value="2">权限组2</option>
+										    		<option value="3">权限组3</option>
+										    		<option value="4">权限组4</option>
+										    	</select>
+										    </div>
+										    <button class="btn btn-success J_add" type="submit"><i class="fa fa-plus"></i>&nbsp;添加权限组</button>
+									  	</div>								
+									</form>
+									<div class="table-responsive">
+										<table class="table table-hover table-bordered">
+											<thead>
+												<tr>
+													<th>权限组名称</th>
+													<th>描述</th>
+													<th>操作</th>
+												</tr>											
+											</thead>
+											<tbody id="J_template">
+											</tbody>
+										</table>
+									</div>
+									<div class="J_pagination"></div>
+								</div>
+							</div>			
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/template" id="tpl">
+			{@each list as it}
+				<tr data-group-id="&{it.id}">
+	    			<td>&{it.groupName}</td>
+	    			<td>&{it.discription}</td>
+	    			<td>
+	    				<a href="javascript:;" class="label-info J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+	    			</td>
+	    		</tr>
+			{@/each}
+		</script>
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/authority-management/authority-group-management', function(S){
+					PW.page.AuthorityGroupManagement.AuthorityGroup({
+						renderTo: '.J_pagination',
+						juicerRender: '#tpl',
+						dataRender: '#J_template',
+						url: '/mock/admin/authority-group.json',
+						pageSize: 10,
+						configUrl: function(url,page,me,prevPaginationData){
+							return url;
+							// return url + '/' + page;
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

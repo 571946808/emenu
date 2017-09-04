@@ -1,0 +1,100 @@
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+.webuploader-container {
+	position: relative;
+}
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	background: #00b7ee;
+	padding: 7px 12px;
+	color: #fff;
+	text-align: center;
+	border-radius: 0;
+	overflow: hidden;
+	font-size: 12px;
+}
+.webuploader-pick-hover {
+	background: #00a2d4;
+}
+
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events:none;
+}
+.uploader-list .file-item .tools{
+	width: 100%;
+	padding: 3px 6px;
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    color: #dedede;
+    font-size: 14px;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+.uploader-list .file-item .tools i:hover{
+	color: #fff;
+}
+.uploader-list .file-item {
+	float: left;
+    font-size: 12px;
+    margin-right: 15px;
+    position: relative;
+    width: 30%;
+}
+.uploader-list .file-item:hover{
+	cursor: pointer;
+}
+.uploader-list .upload-wait,
+.uploader-list .upload-error,
+.uploader-list .upload-success{
+	position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(204, 51, 0, 0.8) none repeat scroll 0 0;
+    color: #fff;
+    padding: 4px 6px;
+    width: 100%;
+    text-align: center;
+}
+.uploader-list .upload-wait{
+    background: rgba(51, 204, 255, 0.8) none repeat scroll 0 0;
+}
+.uploader-list .info{
+	margin-top: 10px;
+    margin-bottom: 0;
+}
+.uploader-list .upload-success{
+    background: rgba(51, 204, 153, 0.8) none repeat scroll 0 0;
+}
+.uploader{
+    position: relative;
+}
+.uploader .placeholder {
+    background: rgba(0, 0, 0, 0) url("../img/image.png") no-repeat scroll center 70px;
+    border: 3px dashed #e6e6e6;
+    color: #cccccc;
+    font-size: 18px;
+    min-height: 238px;
+    /*padding-top: 158px;*/
+    position: relative;
+    text-align: center;
+}

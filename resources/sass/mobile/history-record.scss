@@ -1,0 +1,89 @@
+@import "./common/search-list-header";
+.history-list{
+    padding-bottom: (120rem / $param);
+    margin-top: (94rem / $param);
+}
+.history-item{
+    margin-bottom: (18rem / $param);
+    background: #ffffff;
+}
+.history-item .item-info{
+    height: (81rem / $param);
+    border-bottom: (2rem / $param) solid #cecccd;
+    border-top: (2rem / $param) solid #cecccd;
+    font-size: (26rem / $param);
+    line-height: (83rem / $param);
+    padding: 0 (23rem / $param) 0 (26rem / $param);
+}
+.item-info p{
+    display: inline-block;
+}
+.item-info i{
+    color: #666666;
+    transition: transform 0.1s linear 0s;
+    font-size: (34rem / $param);
+}
+.item-info p.totle-price{
+    width: (431rem / $param);
+    margin-right: (28rem / $param);
+    text-align: right;
+}
+.totle-price span{
+    color: #ff8724;
+}
+
+.dish-item{
+    font-size: (26rem / $param);
+    padding: (21rem / $param)  (39rem / $param) (23rem / $param)  (31rem / $param);
+    border-bottom: (2rem / $param) dashed #a6a6a6;
+}
+.dish-item img{
+    height: (120rem/ $param);
+    width: (158rem /$param);
+}
+.dish-item .dish-info{
+    color: #666666;
+    width: (370rem / $param);
+    // height: (120rem/ $param); 
+    padding-left: (23rem / $param);
+    display: inline-block;
+    vertical-align: top;
+    .dish-name{
+        font-size: (32rem / $param);
+        color: #333333;
+        // margin-top: (22rem / $param);
+    }
+    .dish-sale{
+        color: #ff0000;
+    }
+    .dish-price{
+        text-decoration: line-through;
+    }
+}
+.dish-item .add-dish{
+    height: (120rem/ $param);
+    line-height: (120rem/ $param);
+    width: (120rem/ $param);
+    background:#ff8822;
+    float: right;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 50%;
+}
+.toggle{
+    transform: rotate(90deg);
+    transition: transform 0.1s linear 0s;
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+.dish-item .sold-out{
+    background:#a9a8af;
+}
+.tip{
+    height: (120rem/ $param);
+    text-align: center;
+    font-size: (28rem/ $param);
+    list-style: none;
+}

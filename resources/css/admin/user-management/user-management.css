@@ -1,0 +1,41 @@
+/********************* 员工管理start****************************/
+.waiter-table{
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    padding: 15px 10px;
+    margin-top: 5px;
+}
+.area-table{
+    line-height: 20px;
+    padding: 5px;
+}
+.area-table span{
+    margin-right: 10px;
+}
+.error-tip{
+    color: #B94A48;
+    padding-top: 7px;
+}
+/********************* 员工管理end****************************/
+/********************* 会员管理start****************************/
+.panel-body.module{
+	margin-top: -5px;
+	padding-left: 1.9%;
+	margin-bottom: 10px;
+}
+.sub-module{
+	float: left;
+	width: 15.66%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 15px;
+	margin-right: 1%;
+	background: #f5f5f5;
+	font-size: 15px;
+	text-align: center;
+}
+.sub-module a{
+	display: inline-block;
+	padding: 10px;
+}
+/********************* 会员管理end****************************/

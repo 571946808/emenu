@@ -1,0 +1,11 @@
+{
+	"code":0,
+	"list": [
+		{"dishId":1, "name":"树胶土豆丝树胶土豆丝树胶土豆丝树胶土豆丝树胶土豆丝", "price":"100.00", "sale":"100.00","number":3},
+        {"dishId":2, "name":"清炒油麦菜", "price":18, "sale":"15","number":3},
+        {"dishId":3, "name":"大虾", "price":18, "sale":"15","number":3},
+        {"dishId":4, "name":"生蚝", "price":18, "sale":"15","number":3},
+        {"dishId":5, "name":"扇贝", "price":18, "sale":"15","number":3}
+	],
+	"errMsg":"加载错误"
+}

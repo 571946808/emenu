@@ -1,0 +1,238 @@
+/*-----------------------------------------------------------------------------
+* @Description:     后厨自定义样式
+* @Version:         1.0.0
+* @author:          simon(406400939@qq.com)
+* @date             2013.12.18
+* ==NOTES:=============================================
+* v1.0.0(2013.12.18):
+*   初始生成
+* ---------------------------------------------------------------------------*/
+
+
+/* ==========================================================================
+--餐台管理页样式
+========================================================================== */
+
+body{
+    background: url(../../../img/cook/jpeg.jpg) center center fixed;
+}
+.ing-warn{
+    margin: 8px 0px 0 20px;
+}
+.scan-dish{
+    margin: 8px 5px 0;
+}
+.grid{
+    width: 400px;
+}
+.additional-fns{
+    margin: 8px 0px 0;
+}
+.additional-fns .dropdown-toggle{
+    margin-right: 20px;
+}
+.waterfall-container{
+    position: relative;
+    margin: 60px 10px 0 10px;
+}
+.table-info-container{
+    padding: 5px;
+}
+.table-container{
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px #eee;
+}
+.table-container .time{
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px 1px #eee;
+    background: orange;
+    line-height: 23px;
+}
+.table-brief-info{
+    position: relative;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+}
+.table-brief-info .table-name{
+    display: inline-block;
+    padding-left: 35px;
+    background: url(../../../img/cook/icon-table.png) 0 0 no-repeat;
+}
+.table-inner{
+    border-radius: 5px;
+    background: #FFF;
+}
+.order-container{
+    position: relative;
+    margin: 15px 5px;
+    border: 1px solid #aaa;
+}
+.order-container .time{
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px 1px #eee;
+    padding: 0;
+    background: rgb(255,100,0);
+    line-height: 28px;
+    font-size: 10px;
+}
+.order-container table{
+    margin-bottom: 0;
+}
+.order-container table tr td{
+    height: 30px;
+    line-height: 30px;
+}
+.order-remark{
+    margin: 0 auto;
+    padding: 10px 5px;
+    line-height: 20px;
+}
+.order-brief-info{
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 0;
+}
+.order-brief-info span{
+    display: inline-block;
+    padding: 0px 10px;
+    background: #FFF;
+}
+.ordered{
+    background: #FFF;
+}
+.faster{
+    background: #ff3333;
+}
+.cooking{
+    background: #D9EDF7;
+}
+tr.changed{
+    background: #9d9c9c;
+}
+.user-reminding{
+    background: #F2DEDE;
+}
+/* 菜品状态标识 */
+.dish-state{
+    background: center center no-repeat;
+    text-indent: -10000px;
+}
+.ordered .dish-state{
+    background-image: url(../../../img/cook/ordered.png);
+}
+.cooking .dish-state{
+    background-image: url(../../../img/cook/cooking.png);
+}
+
+
+
+/* ==========================================================================
+--扫码
+========================================================================== */
+.scan-page{
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+.scan-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.scan-form{
+    margin: 0 auto;
+}
+.scan-form .form-group{
+    width: 80%;
+}
+.scan-result-container{
+    display: none;
+    width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+.scaned-dish-container{
+    margin: 20px;
+}
+.scaned-dish-container table{
+    width: 100%;
+}
+.scaned-dish-container table th,
+.scaned-dish-container table td{
+    text-align: left;
+}
+
+/* ==========================================================================
+--原材料标缺
+========================================================================== */
+.ing-warn-page{
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.ing-warn-container{
+    width: 100%;
+    margin: 0 auto;
+}
+.search-panel,
+.warn-panel{
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 20px;
+}
+.search-panel h2,
+.warn-panel h2{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+}
+.ing-item{
+}
+/* ==========================================================================
+--登录页面
+========================================================================== */
+.loginBox{
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:520px;
+    height:230px;
+    padding:0 20px;
+    border:1px solid #fff;
+    color:#000;
+    margin-top:40px;
+    border-radius:8px;
+    background: white;
+    box-shadow:0 0 15px #222;
+    background: -moz-linear-gradient(top, #fff, #efefef 8%);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#f4f4f4));
+    font:11px/1.5em 'Microsoft YaHei';
+    margin-left:-260px;
+    margin-top:-115px;
+}
+.loginBox h2{
+    height:45px;
+    font-size:20px;
+    font-weight:normal;
+}
+.loginBox .left{
+    border-right:1px solid #ccc;
+    height:100%;
+    padding-right: 20px;
+}

@@ -1,0 +1,18 @@
+{
+    "code":0,
+    "data":{
+        "billSum":"15", 
+        "cashSum":"30", 
+        "vipCardSum":"30",
+        "bankCardSum":"21",
+        "alipaySum":"21",
+        "weChatSum":"21",
+        "consumptionMoneySum":"21",
+        "wipeZeroMoneySum":"21",
+        "totalPayMoneySum":"21",
+        "changeMoneySum":"21",
+        "shouldPayMoneySum":"21",
+        "invoiceSum":"21"
+    },
+    "errMsg": "返回的提示信息"
+}

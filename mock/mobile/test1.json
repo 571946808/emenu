@@ -1,0 +1,24 @@
+{
+    "code":0,
+    "data": [
+        {
+            "orderType": 0, 
+            "orderingDishImg": "/resources/img/mobile/order/order-dish-img.gif",
+            "orderingDishName": "黑胡椒牛排",
+            "orderingDishPrice": "￥32",
+            "orderingDishSale": "￥28",
+            "orderingNumber": "5",
+            "orderingRemarkInfo": " 少放盐，多放辣椒少放盐，多辣椒少放盐，多放辣椒......" 
+        },{
+       
+            "orderType": 0, 
+            "orderingDishImg": "/resources/img/mobile/order/order-dish-img.gif",
+            "orderingDishName": "姜雪鹅",
+            "orderingDishPrice": "￥32",
+            "orderingDishSale": "￥28",
+            "orderingNumber": "5",
+            "orderingRemarkInfo": " 少放盐，多放辣椒少放盐，多辣椒少放盐，多放辣椒......"
+        }
+    ],
+    "errMsg":"加载错误"
+}

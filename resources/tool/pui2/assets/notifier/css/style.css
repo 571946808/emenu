@@ -1,0 +1,219 @@
+/*-----------------------------------------------------------------------------
+* @Description: 表单遮罩样式 (style.css)
+* @Version: 	V1.0.0
+* @author: 		simon(406400939@qq.com)
+* @date			2013.05.31
+* ==NOTES:=============================================
+* v1.0.0(2013.05.31):
+* 	初始生成 
+* ---------------------------------------------------------------------------*/
+
+/* ==========================================================================
+--默认样式
+========================================================================== */
+
+.pw-notifier{
+    opacity: 0;
+    overflow: hidden;
+    font-family: "Segoe UI",​Helvetica,​ "microsoft yahei", Arial,​sans-serif;
+}
+.pw-notifier .notifier-content{
+    margin-bottom: 5px;
+}
+.pw-notifier .notifier-close{
+    cursor: pointer;
+    z-index: 99;
+}
+
+/* ==========================================================================
+--主题-red
+========================================================================== */
+.theme-red{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    width: 250px;
+    max-height: 65px;
+    padding: 10px;
+    background: #D84A38;
+    color: #fff;
+}
+.theme-red .notifier-top{
+    position: relative;
+    height: 25px;
+    padding-right: 25px;
+    line-height: 25px;
+}
+.theme-red .notifier-close{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 25px;
+    width: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    line-height: 25px;
+}
+
+/* ==========================================================================
+--主题-yellow
+========================================================================== */
+.theme-yellow{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    width: 250px;
+    max-height: 65px;
+    padding: 10px;
+    background: #FFB848;
+    color: #fff;
+}
+.theme-yellow .notifier-top{
+    position: relative;
+    height: 25px;
+    padding-right: 25px;
+    line-height: 25px;
+}
+.theme-yellow .notifier-close{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 25px;
+    width: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    line-height: 25px;
+}
+
+
+/* ==========================================================================
+--主题-blue
+========================================================================== */
+.theme-blue{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    width: 250px;
+    max-height: 65px;
+    padding: 10px;
+    background: #4D90FE;
+    color: #fff;
+}
+.theme-blue .notifier-top{
+    position: relative;
+    height: 25px;
+    padding-right: 25px;
+    line-height: 25px;
+}
+.theme-blue .notifier-close{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 25px;
+    width: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    line-height: 25px;
+}
+
+/* ==========================================================================
+--主题-purple
+========================================================================== */
+.theme-purple{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    width: 250px;
+    max-height: 65px;
+    padding: 10px;
+    background: #AF5CC1;
+    color: #fff;
+}
+.theme-purple .notifier-top{
+    position: relative;
+    height: 25px;
+    padding-right: 25px;
+    line-height: 25px;
+}
+.theme-purple .notifier-close{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 25px;
+    width: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    line-height: 25px;
+}
+
+/* ==========================================================================
+--主题-grey
+========================================================================== */
+.theme-grey{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    width: 250px;
+    max-height: 65px;
+    padding: 10px;
+    background: #9D9C9C;
+    color: #fff;
+}
+.theme-grey .notifier-top{
+    position: relative;
+    height: 25px;
+    padding-right: 25px;
+    line-height: 25px;
+}
+.theme-grey .notifier-close{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 25px;
+    width: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    line-height: 25px;
+}
+
+/* ==========================================================================
+--主题-green
+========================================================================== */
+.theme-green{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    width: 250px;
+    max-height: 65px;
+    padding: 10px;
+    background: #35AA47;
+    color: #fff;
+}
+.theme-green .notifier-top{
+    position: relative;
+    height: 25px;
+    padding-right: 25px;
+    line-height: 25px;
+}
+.theme-green .notifier-close{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 25px;
+    width: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    line-height: 25px;
+}

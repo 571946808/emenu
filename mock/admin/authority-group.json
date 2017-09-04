@@ -1,0 +1,8 @@
+{
+	"code": 0,
+	"list": [
+		{"id":1,"groupName":"g1", "discription":"普通"},
+		{"id":2,"groupName":"g2", "discription":"普通"}
+	],
+	"dataCount": 25
+}

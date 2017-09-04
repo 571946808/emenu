@@ -1,0 +1,11 @@
+{
+    "code": 0,
+    "list":[
+        {"dishId":1, "name":"树胶土豆丝", "price":18, "sale":"15", "historyPrice":"17", "src": "/resources/img/mobile/history-record/dish-img.png", "href":"123", "statue":"0"},
+        {"dishId":2, "name":"清炒油麦菜", "price":18, "sale":"15", "historyPrice":"17", "src": "/resources/img/mobile/history-record/dish-img.png", "href":"123", "statue":"1"},
+        {"dishId":3, "name":"蛋黄肉松紫菜包饭很好吃", "price":18, "sale":"15", "historyPrice":"17", "src": "/resources/img/mobile/history-record/dish-img.png", "href":"123", "statue":"1"},
+        {"dishId":4, "name":"生蚝", "price":18, "sale":"15", "historyPrice":"17", "src": "/resources/img/mobile/history-record/dish-img.png", "href":"123", "statue":"0"},
+        {"dishId":5, "name":"扇贝", "price":18, "sale":"15", "historyPrice":"17", "src": "/resources/img/mobile/history-record/dish-img.png", "href":"123", "statue":"0"}
+    ],
+    "errMsg":"加载错误"
+}

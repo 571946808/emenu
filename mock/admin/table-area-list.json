@@ -1,0 +1,12 @@
+{
+	"code": 0,
+	"list": [
+		{"id": 1,"tableArea":"1楼"},
+		{"id": 2,"tableArea":"外卖"},
+		{"id": 3,"tableArea":"2楼"},
+		{"id": 4,"tableArea":"3楼"},
+		{"id": 5,"tableArea":"店外"},
+		{"id": 6,"tableArea":"吧台"}
+	],
+	"errMsg": "没有获取到餐台区域列表"
+}

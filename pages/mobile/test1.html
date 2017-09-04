@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>我的订单</title>
+    <!--#include file="/pages/mobile/common/head.html"-->
+    <link rel="stylesheet" href="/resources/css/mobile/order.css">
+    <link rel="stylesheet" href="/resources/css/mobile/common/footer.css">
+</head>
+<body>
+    <div class="page">
+        <!--#include file="/pages/mobile/common/order-header.html"-->
+        <div class="container">
+            <div id="wrapper" class="scroll clearfix">
+                <div class="order-service">
+                    <form action="" method="">
+                        <div class="service-info">
+                            <p>
+                                <label>上菜方式 ：</label>
+                                <input type="radio" checked="checked" name="serviceWay" value="0" /><span>即起</span>
+                                <input type="radio" name="serviceWay" value="1" /><span>叫起</span>
+                            </p>
+                            <p>
+                                <label>本次下单消费：</label><span class="curren-custom">￥200</span>
+                            </p>
+                        </div>  
+                        <p class="confirm-order">
+                            <a class="order-dish" href="#">点菜</a>
+                        </p>
+                    </form>                              
+                </div>
+                <ul class="ordering-list clearfix J_scroll">
+                    <li class="ordering-dish clearfix" data-order-type="0">
+                        <img class="ordering-dish-img lazy-load" src="/resources/img/mobile/order/order-dish-img.gif" alt="暂无菜品展示图片">
+                        <div class="ordering-dish-info">
+                            <p class="info-text">
+                                <span class="ordering-dish-name">黑胡椒牛排</span>
+                                <span class="ordering-dish-price">￥32</span>
+                                <span class="ordering-dish-sale">￥28</span>
+                            </p>
+                            <p class="ordering-number">
+                                <button><i class="fa fa-minus"></i></button>
+                                <input class="ordering-dish-number" type="tel"></input>
+                                <button><i class="fa fa-plus"></i></button>
+                            </p>
+                            <p class="ordering-remark-info">
+                                少放盐，多放辣椒少放盐，多辣椒少放盐，多放辣椒......
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+               <!--  <p class="order-record" style="margin:0 25px;"><span style="red";>已下订单记录：</span><hr style="height:5px;border:none;border-top:5px ridge green;"/></p> -->
+                <ul class="ordered-dish-list clearfix J_scroll">
+                    <li class="ordered-dish">
+                        <img class="ordered-dish-img" src="/resources/img/mobile/order/order-dish-img.gif" alt="暂无菜品展示图片">
+                        <div class="ordered-dish-info">
+                            <p class="info-text">
+                                <span class="ordered-dish-name">黑胡椒牛排</span>
+                                <span class="ordered-dish-price">￥32</span>
+                                <span class="ordered-dish-sale">￥28</span>
+                            </p>
+                            <p class="ordered-number">已下单，数量 × <span class="J_orderedDishNum">5</span></p>
+                            <p class="ordered-remark-info">
+                                少放盐，多放辣椒少放盐，多辣椒少放盐，多放辣椒......
+                            </p>
+                        </div>
+                    </li>
+                    <li class="ordered-dish">
+                        <img class="ordered-dish-img" src="/resources/img/mobile/order/order-dish-img.gif" alt="暂无菜品展示图片">
+                        <div class="ordered-dish-info">
+                            <p class="info-text">
+                                <span class="ordered-dish-name">黑胡椒牛排</span>
+                                <span class="ordered-dish-price">￥32</span>
+                                <span class="ordered-dish-sale">￥28</span>
+                            </p>
+                            <p class="ordered-number">已下单，数量 × <span class="J_orderedDishNum">5</span></p>
+                            <p class="ordered-remark-info">
+                                少放盐，多放辣椒少放盐，多辣椒少放盐，多放辣椒......
+                            </p>
+                        </div>
+                    </li>
+                    <li class="ordered-dish">
+                        <img class="ordered-dish-img" src="/resources/img/mobile/order/order-dish-img.gif" alt="暂无菜品展示图片">
+                        <div class="ordered-dish-info">
+                            <p class="info-text">
+                                <span class="ordered-dish-name">黑胡椒牛排</span>
+                                <span class="ordered-dish-price">￥32</span>
+                                <span class="ordered-dish-sale">￥28</span>
+                            </p>
+                            <p class="ordered-number">已下单，数量 × <span class="J_orderedDishNum">5</span></p>
+                            <p class="ordered-remark-info">
+                                少放盐，多放辣椒少放盐，多辣椒少放盐，多放辣椒......
+                            </p>
+                        </div>
+                    </li>
+                    <li class="ordered-dish">
+                        <img class="ordered-dish-img" src="/resources/img/mobile/order/order-dish-img.gif" alt="暂无菜品展示图片">
+                        <div class="ordered-dish-info">
+                            <p class="info-text">
+                                <span class="ordered-dish-name">黑胡椒牛排</span>
+                                <span class="ordered-dish-price">￥32</span>
+                                <span class="ordered-dish-sale">￥28</span>
+                            </p>
+                            <p class="ordered-number">已下单，数量 × <span class="J_orderedDishNum">5</span></p>
+                            <p class="ordered-remark-info">
+                                少放盐，多放辣椒少放盐，多辣椒少放盐，多放辣椒......
+                            </p>
+                        </div>
+                    </li>
+                    <li class="ordered-dish">
+                        <img class="ordered-dish-img" src="/resources/img/mobile/order/order-dish-img.gif" alt="暂无菜品展示图片">
+                        <div class="ordered-dish-info">
+                            <p class="info-text">
+                                <span class="ordered-dish-name">黑胡椒牛排</span>
+                                <span class="ordered-dish-price">￥32</span>
+                                <span class="ordered-dish-sale">￥28</span>
+                            </p>
+                            <p class="ordered-number">已下单，数量 × <span class="J_orderedDishNum">5</span></p>
+                            <p class="ordered-remark-info">
+                                少放盐，多放辣椒少放盐，多辣椒少放盐，多放辣椒......
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--#include file="/pages/mobile/common/footer.html"-->
+    </div>
+    
+    <script type="text/template" id="dishTpl">
+        {@each data as it}
+            <li class="ordering-dish clearfix" data-order-type="&{it.orderType}">
+                <img class="ordering-dish-img lazy-load" src="&{it.orderingDishImg}" data-lazy-container=".ordering-list" alt="暂无菜品展示图片">
+                <div class="ordering-dish-info">
+                    <p class="info-text">
+                        <span class="ordering-dish-name">&{it.orderingDishName}</span>
+                        <span class="ordering-dish-price">&{it.orderingDishPrice}</span>
+                        <span class="ordering-dish-sale">&{it.orderingDishSale}</span>
+                    </p>
+                    <p class="ordering-number">
+                        <button><i class="fa fa-minus"></i></button>
+                        <input class="dish-number" type="tel" value="&{it.orderingNumber}"></input>
+                        <button><i class="fa fa-plus"></i></button>
+                    </p>
+                    <p class="ordering-remark-info">&{it.orderingRemarkInfo}</p> 
+                </div>
+            </li>
+        {@/each}
+    </script>
+    <script type="text/javascript">
+        KISSY.ready(function(S){
+            S.use('page/test1', function(){
+                PW.page.Test1({});
+            });
+        });
+    </script>
+</body>
+</html>

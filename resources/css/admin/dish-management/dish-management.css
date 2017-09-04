@@ -1,0 +1,60 @@
+/********************* 菜品管理start****************************/
+.taste-list{
+	border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    min-height: 85px;
+    line-height: normal;
+    padding: 5px;
+    width: 70%;
+    margin-right: 15px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    float: left;
+}
+/********************* 菜品管理end****************************/
+
+/********************* 菜品图片管理start****************************/
+.del{
+    position: absolute;
+    padding: 10px;
+    display: block;
+    background-color: #ff0000;
+    color: #fff;
+    right: 0;
+    top: 0;
+    font-size: 16px;
+}
+.img-container{
+    position: relative;
+}
+/********************* 菜品图片管理end****************************/
+
+
+/********************* 套餐添加start****************************/
+.count{
+    font-size: 130%;
+    margin-right: 15px;
+}
+.count span{
+    color: #00a2d4;
+}
+.dish-input{
+    width: 100px;
+}
+.select-tag{
+    background-color: #4f8edc;
+    color: #fff;
+    padding: 5px 7px 5px 10px;
+    float: left;
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.select-tag > .fa {
+    font-size: 14px;
+    margin-left: 10px;
+}
+.select-tag > .fa:hover{
+    cursor: pointer;
+    color: #ddd;
+}
+/********************* 套餐添加end****************************/

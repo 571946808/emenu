@@ -1,0 +1,132 @@
+@import "./common";
+/****************************search-list start********************/
+.header{
+  background-color: #ff8822;
+  //padding: (0rem / $param) (28rem / $param);
+  border-bottom: (2rem / $param) solid #e66a00;
+  // height: (93rem / $param);
+  position: fixed;
+  width: (750rem / $param);
+  top: 0;
+  left: 0;
+  //z-index: 16; 
+  z-index: 2000;  /**have modified**/
+  h1{
+    font-size: (32rem / $param);
+    color: #fff;
+    text-align: center;
+    height: (93rem / $param);
+    line-height:(93rem / $param);
+  }
+  .search-icon{
+    font-size: (35rem / $param);
+    color: #fff;
+    position: absolute;
+    right: (30rem / $param);
+    top: (28rem / $param);
+    z-index: 2;
+    transition: right 0.1s linear 0s;
+    width: (70rem / $param);
+    height: (35rem / $param);
+    text-align: center;
+  }
+  .search-icon.in{
+    right: (30rem / $param);
+    transition: right 0.1s linear 0s;
+  }
+  .search-input{
+    position: absolute;
+    top: (14rem / $param);
+    right: (30rem / $param);
+    border-radius: (38rem / $param);
+    border: 0 none;
+    background-color: transparent;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    width: (0rem / $param);
+    height: (29rem / $param);
+    font-size: (28rem / $param);
+    padding: (18rem / $param);
+    z-index: 1;
+    transition: width 0.1s linear 0s, background-color 0.1s linear 0.05s, padding 0.1s linear 0s;
+  }
+  .search-input.in{
+    width: (656rem / $param);
+    padding: (18rem / $param);
+    background-color: #ed6d00;
+    transition: width 0.1s linear 0s, background-color 0.1s linear 0s, padding 0.1s linear 0s;
+  }
+}
+.search-list-overlayer{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  position: relative;
+  left: 100%;
+  top: (94rem / $param);
+  bottom: (114rem / $param);
+  transition: left 0.1s linear 0s;
+  z-index: 1800;
+}
+.search-list-overlayer.in{
+  left: 0;
+  transition: left 0.1s linear 0s;
+  z-index: 1800;
+}
+.search-list{
+  width:100%;
+  height: (760rem / $param);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  z-index: 1800;
+}
+.search-result{
+  line-height: (94rem / $param);
+  height: (94rem / $param);
+  border-bottom: (1rem / $param) solid #cccccc;
+  background-color: #fff;
+  padding: 0 (30rem / $param);
+  position: relative;
+  a{
+    color: #52515e;
+    font-size: (28rem / $param);
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  .icon{
+    margin-right: (15rem / $param);
+    font-size: (30rem / $param);
+    color: #52515e;
+  }
+  .fa-angle-right{
+    font-size: (30rem / $param);
+    color: #52515e;
+    position: absolute;
+    right: (30rem / $param);
+    top: 50%;
+    margin-top: -(15rem / $param);
+  }
+}
+:-moz-placeholder{
+  color: #f4b08d;
+  text-align: center;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #f4b08d;
+  text-align: center;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #f4b08d;
+  text-align: center;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #f4b08d;
+  text-align: center;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #f4b08d;
+  text-align: center;
+}
+/****************************search-list end********************/

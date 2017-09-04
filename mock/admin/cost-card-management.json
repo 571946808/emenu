@@ -1,0 +1,10 @@
+{
+    "code": 0,
+    "list": [
+        {"costCardNumber":"123","id":1,"name":"锅包肉","assistantNumber":"GBR","mainCost":"18","assistCost":"4","deliciousCost":"1","standardCost":"23"},
+        {"costCardNumber":"124","id":2,"name":"小炒鸡","assistantNumber":"XCJ","mainCost":"13","assistCost":"4","deliciousCost":"1","standardCost":"18"},
+        {"costCardNumber":"125","id":3,"name":"锅包肉","assistantNumber":"GBR","mainCost":"18","assistCost":"4","deliciousCost":"1","standardCost":"23"},
+        {"costCardNumber":"126","id":4,"name":"锅包肉","assistantNumber":"GBR","mainCost":"18","assistCost":"4","deliciousCost":"1","standardCost":"23"}
+    ],
+    "dataCount": 25
+}

@@ -1,0 +1,17 @@
+@import"./common/common";
+html,body .page{
+	background-color: #f8f8f8 !important;
+}
+.error-img{
+	width: (270rem/$param);
+	height: (270rem/$param);
+	margin: (204rem/$param) auto (120rem/$param);
+}
+.error-img img{
+	width: (270rem/$param);
+	height: (270rem/$param);
+}
+.page{
+	text-align: center;
+	font-size: (35rem/$param);
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>餐段管理</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<style type="text/css">
+			.control-label{
+				padding-top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li>
+									<a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+								</li>
+								<li>
+									<a href="#">饭店管理</a>
+								</li>
+								<li class="active">餐段管理</li>
+							</ol>
+							<h2>餐段管理</h2>
+							<div class="alert alert-success col-sm-12 
+							J_msg" role="alert">添加成功！</div>
+							<!-- <div class="alert alert-danger col-sm-12 J_msg" role="alert">添加失败！</div> -->
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>当前餐段设置</h4>
+								</div>
+								<div class="panel-body">
+									<div class="form-group">
+										<label class="col-sm-3 control-label">当前餐段</label>
+										<div class="col-sm-3">
+											<select class="form-control J_period" name="">
+												<option value="0" selected="selected">早餐</option>
+												<option value="1">午餐</option>
+												<option value="2">下午茶</option>
+												<option value="3">晚餐</option>
+											</select>
+										</div>
+								      	<button class="btn-primary btn J_set" type="button"><i class="fa fa-save"></i>&nbsp;保存</button>		
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>餐段管理</h4>
+								</div>
+								<div class="panel-body">
+									<a href="javascript:;" class="btn btn-success margin-bottom-15 J_add"><i class="fa fa-plus"></i>&nbsp;添加餐段</a>
+									<form class="J_operForm" method="" action="">
+										<input class="J_hidden" type="hidden" name="id" value=""/>
+										<div class="table-responsive">
+										  	<table class="table table-hover table-bordered">
+										    	<thead>
+										    		<tr>
+										    			<th>名称</th>
+										    			<th>状态</th>
+										    			<th>排序</th>
+										    			<th>操作</th>
+										    		</tr>
+										    	</thead>
+										    	<tbody id="J_template">
+										    		<tr data-period-id="1">
+										    			<td class="J_name">早餐</td>
+										    			<td class="J_status">启用</td>
+										    			<td class="J_weight">1</td>
+										    			<td>
+															<a href="javascript:;" class="label-info J_edit"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+															<a href="javascript:;" class="label-info J_change"><i class="fa fa-circle"></i>&nbsp;停用</a>
+															<!-- <a href="javascript:;" class="label-info J_change"><i class="fa fa-check"></i>&nbsp;启用</a> -->
+															<a href="javascript:;" class="label-info J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+										    			</td>
+										    		</tr>
+										    	</tbody>
+										  	</table>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--container-->
+			</div><!--holder-->
+		</div><!--page-->
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<!-- 编辑模板 -->
+		<script type="text/template" id="editTpl">
+			<tr data-period-id="&{mealPeriod.id}" data-period-oper="&{mealPeriod.oper}">
+				<td><input type="text" class="form-control" name="name" value="&{mealPeriod.name}" data-valid-tip="" data-valid-rule="notNull"/></td>
+				<td>
+					<select class="form-control" name="status">
+						{@if mealPeriod.status == 0}
+							<option value ="0">停用</option>
+							<option value ="1">启用</option>
+						{@else}
+							<option value ="1">启用</option>
+							<option value ="0">停用</option>
+						{@/if}
+					</select>
+				</td>
+				<td><input type="text" class="form-control" name="weight" value="&{mealPeriod.weight}" data-valid-tip="" data-valid-rule="isNumber"/></td>
+				<td>
+					<a href="javascript:;" class="label-info J_save"><i class="fa fa-save"></i>&nbsp;保存</a>
+					<a href="javascript:;" class="label-info J_cancel"><i class="fa fa-undo"></i>&nbsp;取消</a>
+				</td>
+			</tr>
+		</script>
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/restaurant-management/meal-period-management', function(S){
+					PW.page.MealPeriod.Management();
+				});
+			});
+		</script>
+	</body>
+</html>

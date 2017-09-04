@@ -1,0 +1,10 @@
+{
+    "code":0,
+    "data":{
+        "mainCost":"15", 
+        "assistCost":"3", 
+        "deliciousCost":"3",
+        "standardCost":"21"
+    },
+    "errMsg": "返回的提示信息"
+}

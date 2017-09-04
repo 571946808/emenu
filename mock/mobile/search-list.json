@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "data": {
+        "dishListSrc":"image?keyword=",
+        "list":[
+                {"dishId":65,"name":"红焖带鱼"},
+                {"dishId":64,"name":"无敌大套餐"},
+                {"dishId":62,"name":"好吃的肉肉"},
+                {"dishId":58,"name":"酸菜鱼"},
+                {"dishId":1,"name":"鱼香煎蛋"}
+            ],
+        "dishDetailSrc":"detail/"
+    }
+}

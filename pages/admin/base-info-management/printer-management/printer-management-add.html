@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>打印机管理</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<link rel="stylesheet" href="/resources/css/admin/base-info-management/printer-management.css" />
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+							  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+							  	<li><a href="#">基本信息管理</a></li>
+							  	<li class="active">打印机管理</li>
+							</ol>
+							<h2>打印机管理</h2>
+						</div>						
+						<div class="col-sm-12">	
+							<form class="form-horizontal J_addForm" action="" method="">
+								<div class="alert alert-danger J_tip" role="alert">添加失败!</div>
+								<div class="panel panel-info">
+									<div class="panel-heading">
+										<h4>添加</h4>
+									</div>	
+									<div class="panel-body clearfix">
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>打印机名称</label>
+										    <div class="col-sm-6">
+										     	<input class="w180 form-control" type="text" data-valid-tip="请输入长度为1~15个字的名称|名称有误，请重新输入" data-valid-rule="length(0,16)" value="" name="name" />
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>打印机品牌</label>
+										    <div class="col-sm-8">
+										     	<select class="w180 form-control J_select J_brand" value="" name="brand">
+										     		<option value="-1">请选择</option>
+											     	<option value="1">佳博(GPrinter)</option>
+											     	<option value="2">爱普生(Epson)/北洋(Beiyang)</option>
+											     	<option value="3">固网</option>
+											     	<option value="4">其他</option>
+										     	</select> 
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>打印机型号</label>
+										    <div class="col-sm-8">
+										     	<select class="w180 form-control J_select J_printerModel" value="" name="printerModel">
+										     		<option value="-1">请选择</option>
+											     	<option value="1">1-80</option>
+											     	<option value="2">2-58</option>
+										     	</select> 
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>打印机类型</label>
+										    <div class="col-sm-8">
+										     	<select class="w180 form-control J_select J_type" value="" name="type">
+										     		<option value="-1">请选择</option>
+											     	<option value="1">吧台打印机</option>
+											     	<option value="2">菜品打印机</option>
+											     	<option value="3">分类打印机</option>
+										     	</select> 
+										    </div>
+									  	</div>
+									  	<div class="form-group classify-details J_classifyDetails">
+									    	<label class="col-sm-3 control-label"></label>
+										    <div class="col-sm-6">
+										     	<div class="checkbox block">
+										     		<label>
+										     			<input type="checkbox" value="1" name="dishTagList" checked > 热菜
+										     		</label>
+										     		<label>
+										     			<input type="checkbox" value="2" name="dishTagList" > 凉菜
+										     		</label>
+										     	</div>
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label">设备编号</label>
+										    <div class="col-sm-6">
+										     	<input class="w180 form-control" type="text" data-valid-tip="请输入长度为0~15个字符的设备编号|设备编号有误，请重新输入" data-valid-rule="isNull|length(0,16)" value="" name="deviceNumber" />
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>IP地址</label>
+										    <div class="col-sm-6">
+										     	<input class="w180 form-control" type="text" data-valid-tip="请输入IP地址|IP地址有误，请重新输入" data-valid-rule="isIP" value="" name="ipAddress" />
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>是否停用</label>
+										    <div class="col-sm-6">
+										     	<div class="radio block">
+										     		<label>
+										     			<input type="radio" value="0" name="state" checked> 否
+										     		</label>
+										     		<label>
+										     			<input type="radio" value="1" name="state"> 是
+										     		</label>
+										     	</div>
+										    </div>
+									  	</div>
+									  	<div class="form-group">
+									    	<label class="col-sm-3 control-label"><span class="requires">*</span>是否收银打印机</label>
+										    <div class="col-sm-6">
+										     	<div class="radio block">
+										     		<label>
+										     			<input type="radio" value="0" name="isCashierPrinter" checked> 否
+										     		</label>
+										     		<label>
+										     			<input type="radio" value="1" name="isCashierPrinter"> 是
+										     		</label>
+										     	</div>
+										    </div>
+									  	</div>
+									</div>
+									<div class="panel-footer">
+								      	<div class="row">
+								      		<div class="col-sm-6 col-sm-offset-3">
+								      			<div class="btn-toolbar">
+									      			<button class="btn-primary btn J_submitBtn" type="submit" data-btn-type="loading" data-btn-loading-text="正在保存，请稍后">
+									      				<i class="fa fa-save"></i>
+									      				&nbsp;保存
+									      			</button>
+									      			<button class="btn-default btn" type="reset"><i class="fa fa-undo"></i>&nbsp;重置</button>
+								      			</div>
+								      		</div>
+								      	</div>
+								    </div>			
+								</div>
+							</form>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/base-info-management/printer-management-add', function(S){
+					PW.page.BaseInfoManagement.PrinterManagementAdd();
+				});
+			});
+		</script>
+	</body>
+</html>

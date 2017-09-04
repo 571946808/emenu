@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <title>欢迎首页</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+        <link rel="stylesheet" href="/resources/css/admin/welcome.css" />
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="alert alert-success col-sm-12
+							J_msg" role="alert">添加成功！</div>
+                    <div class="col-md-10 col-sm-offset-1">
+                        <h3 class="welcome-head text-center">欢迎使用餐饮后台管理系统</h3>
+                        <div class="col-md-2 module first-module">
+                            <a class="text-center" href="#">
+                                <i class="fa fa-flag fa-3x text-center"></i>
+                                <br>搜索风向标
+                            </a>
+                        </div>
+                        <div class="col-md-2 module second-module">
+                            <a class="text-center" href="#">
+                                <i class="fa fa-delicious fa-3x"></i>
+                                <br>菜品管理
+                            </a>
+                        </div>
+                        <div class="col-md-2 module third-module">
+                            <a class="text-center" href="#">
+                                <i class="fa fa-flag fa-3x text-center"></i>
+                                <br>搜索风向标
+                            </a>
+                        </div>
+                        <div class="col-md-2 module forth-module">
+                            <a class="text-center" href="#" >
+                                <i class="fa fa-cutlery fa-3x"></i>
+                                <br>餐台管理
+                            </a>
+                        </div>
+                        <div class="col-md-2 module fifth-module">
+                            <a class="text-center" href="#">
+                                <i class="fa fa-google-wallet fa-3x"></i>
+                                <br>今日特价
+                            </a>
+                        </div>
+                        <div class="col-md-2 module sixth-module">
+                            <a class="text-center" href="#">
+                                <i class="fa fa-pie-chart fa-3x"></i>
+                                <br>本店特色
+                            </a>
+                        </div>
+                        <div class="col-md-2 module seventh-module">
+                            <a class="text-center" href="#">
+                                <i class="fa fa-cloud fa-3x"></i>
+                                <br>原配料管理
+                            </a>
+                        </div>
+                        <div class="col-md-2 module eight-module">
+                            <a class="text-center" href="#">
+                                <i class="fa fa-list fa-3x"></i>
+                                <br>销售排行
+                            </a>
+                        </div>
+                        <div class="col-md-2 module ninth-module">
+                            <a class="text-center" href="#">
+                                <i class="fa fa-cogs fa-3x"></i>
+                                <br>库存管理
+                            </a>
+                        </div>
+                        <div class="col-md-2 module tenth-module">
+                            <a class="text-center" href="#">
+                                <i class="fa fa-building fa-3x"></i>
+                                <br>营收统计
+                            </a>
+                        </div>
+                    </div>
+                </div><!-- container -->
+            </div><!-- holder -->
+        </div><!-- page -->
+        <!--#include file="/pages/admin/common/footer.html"-->
+    </body>
+    <script type="text/javascript">
+        KISSY.ready(function(S){
+            S.use('page/welcome', function(){
+                PW.page.Welcome.Core();
+            });
+        });
+    </script>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>菜品分类--图片版</title>
+    <!--#include file="/pages/mobile/common/head.html"-->
+    <link rel="stylesheet" href="/resources/css/mobile/classify-img.css">
+    <link rel="stylesheet" type="text/css" href="/resources/tool/pui2/assets/carousel/css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!--#include file="/pages/mobile/common/classify-img-header.html"-->
+        <!--#include file="/pages/mobile/common/footer.html"-->
+        <!-- 后端套轮播的默认图片资源地址 -->
+        <input type="hidden" class="J_carouselDefaultImg" href="/resources/img/mobile/common/default-img.png">
+        <div class="container">
+            <div id="wrapper" class="scroll" style="overflow:scroll;">
+                <div id="carousel" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="#"><img class="carouselImg" src="" alt="今日特价"></a>
+                            <div class="carousel-caption">
+                                <p class="dish-title">今日特价</p>
+                                <p class="dish-name">鸡排</p>
+                                <p>
+                                    <span class="dish-price">￥42</span>
+                                    <span class="dish-sale">￥32</span>
+                                </p>
+                                <div class="add-dish J_addDishTrigger" data-dish-number="">
+                                    点餐
+                                    <span class="dish-number J_dishNumber hidden"></span>
+                                </div>
+                                <img src="/resources/img/mobile/classify-img/empty-circle.gif" alt="" class="empty-circle">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img class="carouselImg" src="" alt="本店特色"></a>
+                            <div class="carousel-caption">
+                                <p class="dish-title">本店特色</p>
+                                <p class="dish-name">鸡排</p>
+                                <p>
+                                    <span class="dish-price">￥42</span>
+                                    <span class="dish-sale">￥32</span>
+                                </p>
+                                <div class="add-dish J_addDishTrigger" data-dish-number="">
+                                    点餐
+                                    <span class="dish-number J_dishNumber hidden"></span>
+                                </div>
+                                <img src="/resources/img/mobile/classify-img/empty-circle.gif" alt="" class="empty-circle">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img class="carouselImg" src="" alt="本店特色"></a>
+                            <div class="carousel-caption">
+                                <p class="dish-title">本店特色</p>
+                                <p class="dish-name">鸡排</p>
+                                <p>
+                                    <span class="dish-price">￥42</span>
+                                    <span class="dish-sale">￥32</span>
+                                </p>
+                                <div class="add-dish J_addDishTrigger" data-dish-number="">
+                                    点餐
+                                    <span class="dish-number J_dishNumber hidden"></span>
+                                </div>
+                                <img src="/resources/img/mobile/classify-img/empty-circle.gif" alt="" class="empty-circle">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--菜品列表-->
+                <ul class="dish-list clearfix J_scroll">
+                    <!-- <li class="dish clearfix" data-dish-id="1">
+                        <a href="#" class="dish-img"><img src="/resources/img/mobile/classify-img/dish-img.gif" alt="菜品图片"></a>
+                        <p class="dish-name">特色披萨</p>
+                        <p class="dish-like"><i class="fa fa-thumbs-up"></i>&nbsp;<span class="dish-like-number">146</span></p>
+                        <div class="add-dish J_addDishTrigger" data-dish-number="1">
+                            点餐
+                            <span class="dish-number J_dishNumber hidden"></span>
+                        </div>
+                        <div class="dish-info clearfix">
+                            <p class="dish-price-sale">
+                                <span class="dish-price">￥42</span>
+                                <span class="dish-sale">￥32</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="dish clearfix" data-dish-id="2">
+                        <a href="#" class="dish-img"><img src="/resources/img/mobile/classify-img/dish-img.gif" alt="菜品图片"></a>
+                        <p class="dish-name">特色披萨</p>
+                        <p class="dish-like"><i class="fa fa-thumbs-up"></i>&nbsp;<span class="dish-like-number">146</span></p>
+                        <div class="add-dish J_addDishTrigger" data-dish-number="2">
+                            点餐
+                            <span class="dish-number J_dishNumber hidden"></span>
+                        </div>
+                        <div class="dish-info clearfix">
+                            <p class="dish-price-sale">
+                                <span class="dish-price">￥42</span>
+                                <span class="dish-sale">￥32</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="dish clearfix"  data-dish-id="3">
+                        <a href="#" class="dish-img"><img src="/resources/img/mobile/classify-img/dish-img.gif" alt="菜品图片"></a>
+                        <p class="dish-name">特色披萨</p>
+                        <p class="dish-like"><i class="fa fa-thumbs-up"></i>&nbsp;<span class="dish-like-number">146</span></p>
+                        <div class="add-dish J_addDishTrigger" data-dish-number="">
+                            点餐
+                            <span class="dish-number J_dishNumber hidden"></span>
+                        </div>
+                        <div class="dish-info clearfix">
+                            <p class="dish-price-sale">
+                                <span class="dish-price">￥42</span>
+                                <span class="dish-sale">￥32</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="dish clearfix"  data-dish-id="4">
+                        <a href="#" class="dish-img"><img src="/resources/img/mobile/classify-img/dish-img.gif" alt="菜品图片"></a>
+                        <p class="dish-name">特色披萨</p>
+                        <p class="dish-like"><i class="fa fa-thumbs-up"></i>&nbsp;<span class="dish-like-number">146</span></p>
+                        <div class="add-dish J_addDishTrigger" data-dish-number="">
+                            点餐
+                            <span class="dish-number J_dishNumber hidden"></span>
+                        </div>
+                        <div class="dish-info clearfix">
+                            <p class="dish-price-sale">
+                                <span class="dish-price">￥42</span>
+                                <span class="dish-sale">￥32</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="dish clearfix"  data-dish-id="5">
+                        <a href="#" class="dish-img"><img class="lazy-load" src="/resources/img/mobile/common/default-img.png" data-original="/resources/img/mobile/carousel/dish1.gif" data-lazy-container=".dish-list" alt="菜品图片"></a>
+                        <p class="dish-name">特色披萨</p>
+                        <p class="dish-like"><i class="fa fa-thumbs-up"></i>&nbsp;<span class="dish-like-number">146</span></p>
+                        <div class="add-dish J_addDishTrigger" data-dish-number="">
+                            点餐
+                            <span class="dish-number J_dishNumber hidden"></span>
+                        </div>
+                        <div class="dish-info clearfix">
+                            <p class="dish-price-sale">
+                                <span class="dish-price">￥42</span>
+                                <span class="dish-sale">￥32</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="dish clearfix" data-dish-id="6">
+                        <a href="#" class="dish-img"><img class="lazy-load" src="/resources/img/mobile/common/default-img.png" data-original="/resources/img/mobile/carousel/dish1.gif" data-lazy-container=".dish-list" alt="菜品图片"></a>
+                        <p class="dish-name">特色披萨</p>
+                        <p class="dish-like"><i class="fa fa-thumbs-up"></i>&nbsp;<span class="dish-like-number">146</span></p>
+                        <div class="add-dish J_addDishTrigger" data-dish-number="">
+                            点餐
+                            <span class="dish-number J_dishNumber hidden"></span>
+                        </div>
+                        <div class="dish-info clearfix">
+                            <p class="dish-price-sale">
+                                <span class="dish-price">￥42</span>
+                                <span class="dish-sale">￥32</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="dish clearfix" data-dish-id="7">
+                        <a href="#" class="dish-img"><img class="lazy-load" src="/resources/img/mobile/common/default-img.png" data-original="/resources/img/mobile/carousel/dish1.gif" data-lazy-container=".dish-list" alt="菜品图片"></a>
+                        <p class="dish-name">特色披萨</p>
+                        <p class="dish-like"><i class="fa fa-thumbs-up"></i>&nbsp;<span class="dish-like-number">146</span></p>
+                        <div class="add-dish J_addDishTrigger" data-dish-number="">
+                            点餐
+                            <span class="dish-number J_dishNumber hidden"></span>
+                        </div>
+                        <div class="dish-info clearfix">
+                            <p class="dish-price-sale">
+                                <span class="dish-price">￥42.00</span>
+                                <span class="dish-sale">￥32.56</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="dish clearfix"  data-dish-id="8">
+                        <a href="#" class="dish-img"><img class="lazy-load" src="/resources/img/mobile/common/default-img.png" data-original="/resources/img/mobile/carousel/dish1.gif" data-lazy-container=".dish-list" alt="菜品图片"></a>
+                        <p class="dish-name">特色披萨</p>
+                        <p class="dish-like"><i class="fa fa-thumbs-up"></i>&nbsp;<span class="dish-like-number">146</span></p>
+                        <div class="add-dish J_addDishTrigger" data-dish-number="">
+                            点餐
+                            <span class="dish-number J_dishNumber hidden"></span>
+                        </div>
+                        <div class="dish-info clearfix">
+                            <p class="dish-price-sale">
+                                <span class="dish-price">￥42</span>
+                                <span class="dish-sale">￥32</span>
+                            </p>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/template" id="dishTpl">
+        {@each list as it}
+            <li class="dish clearfix"  data-dish-id="&{it.dishId}">
+                <a href="#" class="dish-img"><img class="lazy-load" src="/resources/img/mobile/common/default-img.png" data-original="&{it.src}" data-lazy-container=".dish-list" alt="菜品图片"></a>
+                <p class="dish-name">&{it.name}</p>
+                <p class="dish-like"><i class="fa fa-thumbs-up"></i>&nbsp;<span class="dish-like-number">&{it.likeNums}</span></p>
+                <div class="add-dish J_addDishTrigger" data-dish-number="&{it.number}">
+                    点餐
+                    <span class="dish-number J_dishNumber hidden"></span>
+                </div>
+                <div class="dish-info clearfix">
+                    <p class="dish-price-sale">
+                        <span class="dish-price">￥&{it.price}</span>
+                        <span class="dish-sale">￥&{it.sale}</span>
+                    </p>
+                </div>
+            </li>
+        {@/each}
+    </script>
+    <script type="text/javascript">
+        KISSY.ready(function(S){
+            S.use('page/classify-img', function(){
+                PW.page.ClassifyImg({});
+            });
+        });
+    </script>
+</body>
+</html>

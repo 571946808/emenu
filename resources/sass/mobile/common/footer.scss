@@ -1,0 +1,138 @@
+@import "./common";
+.footer{
+    width: (750rem / $param);
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 2000; //modify :initial value:17
+    .menu-list{
+        border-top: (2rem / $param) solid #cccccc;
+    }
+    .oper{
+          float: left;
+          width: 25%;
+          position: relative;
+          background-color: #fff;
+          height: (114rem / $param);
+          .list-trigger{
+              font-size: (47rem / $param);
+              color: #a9a8af;
+              display: block;
+              margin-bottom: (11rem / $param);
+              margin-top: (14rem / $param);
+          }
+          span{
+              font-size: (22rem / $param);
+              color: #68676f;
+              display: block;
+          }
+          .dish-total-number{
+              position: absolute;
+              top: (0rem / $param);
+              right: (55rem / $param);
+              width: (30rem / $param);
+              height: (30rem / $param);
+              line-height: (33rem / $param);
+              border-radius: 50%;
+              background-color: #ff4242;
+              color: #fff;
+              font-size: (22rem / $param);
+              text-align: center;
+          }
+    }
+    .my-order.in{
+        -webkit-animation: twinkling 2s infinite ease-in-out;
+        -moz-animation: twinkling 2s infinite ease-in-out;
+        animation: twinkling 2s infinite ease-in-out;
+    }
+    .oper.active{
+        .list-trigger,
+        span{
+            color: #ff8822;
+        }
+    }
+    .call-service-list.in{
+        bottom: (132rem / $param);
+        transition: bottom 0.1s linear 0s;
+        -moz-transition: bottom 0.1s linear 0s;
+        -webkit-transition: bottom 0.1s linear 0s;
+        -o-transition: bottom 0.1s linear 0s;
+    }
+    .call-service-list{
+        background-color: #fff;
+        border-radius: (10rem / $param);
+        padding: (16rem / $param);
+        color: #272636;
+        font-size: (24rem / $param);
+        position: absolute;
+        bottom: -10rem;
+        left: (7rem / $param);
+        width: (140rem / $param);
+        z-index: -1;
+        transition: bottom 0.1s linear 0s;
+        -moz-transition: bottom 0.1s linear 0s;
+        -webkit-transition: bottom 0.1s linear 0s;
+        -o-transition: bottom 0.1s linear 0s;
+        li{
+            height: (70rem / $param);
+            line-height:(70rem / $param);
+            float: none;
+            border-bottom: (2rem / $param) solid #e0e0e0;
+            a{
+                color: #272636;
+                display: block;
+            }
+        }
+        li:last-child{
+            border-bottom: 0;
+        }
+    }
+    .call-service-list:after{
+        border-color: #fff transparent;
+        border-style: solid solid none;
+        border-width: (15rem / $param) (10rem / $param) 0;
+        bottom: -(15rem / $param);
+        content: " ";
+        display: block;
+        left: 49%;
+        margin-left: -(15rem / 2 /$param);
+        position: absolute;
+    }
+}
+@keyframes twinkling{
+    0%{
+        opacity: 0.9;
+    }
+    25%{
+        opacity: 0.7;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}
+@-webkit-keyframes twinkling{
+    0%{
+        opacity: 0.9;
+    }
+    25%{
+        opacity: 0.7;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}

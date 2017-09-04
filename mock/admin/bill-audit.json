@@ -1,0 +1,32 @@
+{
+    "code": 0,
+    "list": [
+        {
+            "checkoutId": "123",
+            "tableName": "wind",
+            "checkerPartyId": "张三丰",
+            "checkoutTime": "2016-8-1",
+            "checkoutType": "现金",
+            "consumptionMoney": "111",
+            "wipeZeroMoney": "11",
+            "totalPayMoney": "100",
+            "changeMoney": "0",
+            "shouldPayMoney": "100",
+            "isInvoiced": 1
+        },
+        {
+            "checkoutId": "123",
+            "tableName": "wind",
+            "checkerPartyId": "张三丰",
+            "checkoutTime": "2016-8-1",
+            "checkoutType": "现金",
+            "consumptionMoney": "111",
+            "wipeZeroMoney": "11",
+            "totalPayMoney": "100",
+            "changeMoney": "0",
+            "shouldPayMoney": "100",
+            "isInvoiced": 0
+        }
+    ],
+    "dataCount": 14
+}

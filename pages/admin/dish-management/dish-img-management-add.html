@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>菜品管理-添加菜品图片</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<link rel="stylesheet" type="text/css" href="/resources/tool/webuploader/css/webuploader.css">
+		<link rel="stylesheet" type="text/css" href="/resources/css/admin/base-info-management/base-info-management.css">
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+							  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+							  	<li><a href="#">菜品管理</a></li>
+							  	<li class="active">添加菜品图片</li>
+							</ol>
+							<h2>菜品管理-添加菜品图片</h2>
+						</div>
+						<input class="J_id" type="hidden" name="id" value="112233">
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>菜品大图</h4>
+								</div>
+								<div class="panel-body J_bigPic">
+									<p class="padding-left-15">暂无,请您添加上传!</p>
+									<div class="col-sm-12 margin-top-15">
+										<div class="clearfix uploader">
+											<div id="dndArea1" class="placeholder">
+												<div id="fileList1" class="uploader-list clearfix"></div>
+											</div>
+											<div id="filePicker1" class="pull-left">选择图片</div>
+											<button id="ctlBtn1" class="btn btn-default">开始上传</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+								<div class="panel panel-info">
+									<div class="panel-heading">
+										<h4>菜品小图</h4>
+									</div>
+									<div class="panel-body J_smallPic">
+										<p class="padding-left-15">暂无,请您添加上传!</p>
+										<div class="col-sm-12 margin-top-15">
+											<div class="clearfix uploader">
+												<div id="dndArea2" class="placeholder">
+													<div id="fileList2" class="uploader-list clearfix"></div>
+												</div>
+												<div id="filePicker2" class="pull-left">选择图片</div>
+												<button id="ctlBtn2" class="btn btn-default">开始上传</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<div class="col-sm-6 col-sm-offset-3 margin-bottom-20">
+							<div class="btn-toolbar">
+								<button class="btn-default btn" type="button" onclick="history.go(-1);"><i class="fa fa-undo"></i>&nbsp;返回</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--#include file="/pages/admin/common/footer.html"-->
+		</div>
+
+
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/dish-management/dish-img-management-add', function(S){
+					 var bigUpload = PW.page.DishManagement.DishImgManagementAdd.BigPic({
+						 upload: {
+							 // 文件接收服务端
+							 uploadUrl: 'http://upload.pandawork.net/file/upload',
+							 // 文件列表
+							 fileList: '#fileList1',
+							 // 选择图片按钮
+							 pick: '#filePicker1',
+							 // 开始上传按钮
+							 ctlBtn: '#ctlBtn1',
+							 fileVal: 'file'
+						 }
+					 });
+					 var smallUpload = PW.page.DishManagement.DishImgManagementAdd.SmallPic({
+						 upload: {
+							// 文件接收服务端
+							uploadUrl: 'http://upload.pandawork.net/file/upload',
+							// 文件列表
+							fileList: '#fileList2',
+							// 选择图片按钮
+							pick: '#filePicker2',
+							// 开始上传按钮
+							ctlBtn: '#ctlBtn2',
+							fileVal: 'file'
+						}
+					});
+					var bigUploader = PW.page.DishManagement.DishImgManagementAdd.Tool(bigUpload.upload);
+					var smallUploader = PW.page.DishManagement.DishImgManagementAdd.Tool(smallUpload.upload);
+					S.Event.delegate('.uploader', 'click', '.J_removeImgOfFieldQueue_' + bigUpload.upload.guid, function(e){
+						var
+							imgEl = S.DOM.parent(e.target, '.file-item'),
+							id = S.DOM.attr(imgEl, 'id');
+
+						bigUploader.uploader.removeFile(id);
+						S.DOM.remove(imgEl);
+					});
+					S.Event.delegate('.uploader', 'click', '.J_removeImgOfFieldQueue_' + smallUpload.upload.guid, function(e){
+						var
+							imgEl = S.DOM.parent(e.target, '.file-item'),
+							id = S.DOM.attr(imgEl, 'id');
+
+						smallUploader.uploader.removeFile(id);
+						S.DOM.remove(imgEl);
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

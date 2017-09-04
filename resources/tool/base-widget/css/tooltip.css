@@ -1,0 +1,173 @@
+/*-----------------------------------------------------------------------------
+* @Description:     为下拉菜单单独建立样式
+* @Version:         1.0.0
+* @author:          simon(406400939@qq.com)
+* @date             2015.5.27
+* ==NOTES:=============================================
+* v1.0.0(2015.5.27):
+*   初始生成
+*---------------------------------------------------------------------------*/
+
+
+
+/* ==========================================================================
+--默认tooltip样式
+========================================================================== */
+
+.pw-tooltip{
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    min-width: 15px;
+    min-height: 15px;
+    box-shadow: 0 0 2px -1px #333333;
+    border: 1px solid #F1D031;
+    background: #FFFFA3;
+}
+.pw-tooltip .tip-arrow{
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: url(../../../img/admin/widget/tooltip/arrow.png) left bottom no-repeat;
+}
+.no-arrow i.tip-arrow{
+    display: none;
+}
+.pw-tooltip .tl{
+    top: -8px;
+    left: 0;
+    background-position: 0 0 ;
+}
+.pw-tooltip .tc{
+    top: -8px;
+    left: 0;
+    background-position: 0 -10px;
+}
+.pw-tooltip .tr{
+    top: -8px;
+    right: 0;
+    background-position: 0 -20px;
+}
+
+.pw-tooltip .rt{
+    background-position: -10px 0;
+}
+.pw-tooltip .rc{
+    background-position: -10px -10px;
+}
+.pw-tooltip .rb{
+    background-position: -10px -20px;
+}
+.pw-tooltip .bl{
+    background-position: -20px 0;
+}
+.pw-tooltip .bc{
+    background-position: -20px -10px;
+}
+.pw-tooltip .br{
+    background-position: -20px -20px;
+}
+.pw-tooltip .lt{
+    background-position: -30px 0;
+}
+.pw-tooltip .lc{
+    background-position: -30px -10px;
+}
+.pw-tooltip .lb{
+    background-position: -30px -20px;
+}
+
+.pw-tooltip .tip-content{
+    margin: 3px;
+}
+
+
+/* ==========================================================================
+--灰色样式
+========================================================================== */
+
+.theme-grey{
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    min-width: 15px;
+    min-height: 15px;
+    box-shadow: 0 0 2px -1px #333333;
+    border: 1px solid #a1a1a1;
+    background: #fff;
+}
+
+.theme-grey .tip-arrow{
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: url(../../../tool/base-widget/img/tooltip/arrow-grey.png) left bottom no-repeat; 
+}
+.theme-grey .tip-content{
+    margin: 3px;
+}
+
+.theme-grey .tl{
+    background-position: 0 0 ;
+}
+.theme-grey .tc{
+    background-position: 0 -10px;
+}
+.theme-grey .tr{
+    background-position: 0 -20px;
+}
+
+
+/* ==========================================================================
+--黑色
+========================================================================== */
+
+.theme-dark{
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    min-width: 15px;
+    min-height: 15px;
+    box-shadow: 0 0 2px -1px #333333;
+    border: 1px solid #a1a1a1;
+    background: #000;
+}
+
+.theme-dark .tip-arrow{
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: url(../../../img/admin/widget/tooltip/arrow-dark.png) left bottom no-repeat; 
+}
+.theme-dark .tip-content{
+    margin: 3px;
+}
+
+.theme-dark .tl{
+    background-position: 0 0 ;
+}
+.theme-dark .tc{
+    background-position: 0 -10px;
+}
+.theme-dark .tr{
+    background-position: 0 -20px;
+}
+/* ==========================================================================
+--具体内容样式
+========================================================================== */
+.tip-content p{
+    padding-top: 5px;
+}
+.tip-content p span{
+    display: inline-block;
+    width: 100px;
+    padding-right:5px; 
+    text-align: right;
+}
+

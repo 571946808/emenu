@@ -1,0 +1,79 @@
+/*-----------------------------------------------------------------------------
+* @Description: 	tooltip theme
+* @Version: 		V1.0.0
+* @author: 			simon(406400939@qq.com)
+* @date 			2013.9.4
+* ==NOTES:=============================================
+* v1.0.0(2013.9.4):
+* 	初始化样式，注意引入reset
+* 	notice：此处解决了一个css问题，当content.text查找页面中的元素时，
+* 			append效果在ie7下无法隐藏。解决方案为在juicer模版中加入style隐藏，
+* 			而不是在css中添加隐藏，因为css的异步加载问题导致其可能在ie7下失效
+* ---------------------------------------------------------------------------*/
+
+/*default style*/
+.pw-tooltip{
+	display: none;
+	position: absolute;
+	left: 100px;
+	top: 200px;
+	min-width: 15px;
+	min-height: 15px;
+	box-shadow: 0 0 2px -1px #333333;
+	border: 1px solid #F1D031;
+	background: #FFFFA3;
+}
+.pw-tooltip .tip-arrow{
+	display: block;
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: url(../img/arrow.png) left bottom no-repeat;
+}
+.pw-tooltip .tl{
+	top: -8px;
+	left: 0;
+	background-position: 0 0 ;
+}
+.pw-tooltip .tc{
+	top: -8px;
+	left: 0;
+	background-position: 0 -10px;
+}
+.pw-tooltip .tr{
+	top: -8px;
+	right: 0;
+	background-position: 0 -20px;
+}
+
+.pw-tooltip .rt{
+	background-position: -10px 0;
+}
+.pw-tooltip .rc{
+	background-position: -10px -10px;
+}
+.pw-tooltip .rb{
+	background-position: -10px -20px;
+}
+.pw-tooltip .bl{
+	background-position: -20px 0;
+}
+.pw-tooltip .bc{
+	background-position: -20px -10px;
+}
+.pw-tooltip .br{
+	background-position: -20px -20px;
+}
+.pw-tooltip .lt{
+	background-position: -30px 0;
+}
+.pw-tooltip .lc{
+	background-position: -30px -10px;
+}
+.pw-tooltip .lb{
+	background-position: -30px -20px;
+}
+
+.pw-tooltip .tip-content{
+	margin: 3px;
+}

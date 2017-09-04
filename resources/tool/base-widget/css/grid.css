@@ -1,0 +1,936 @@
+/*-----------------------------------------------------------------------------
+* @Description:     模拟栅格系统
+* @Version:         1.0.0
+* @author:          simon(406400939@qq.com)
+* @date             2015.5.28
+* ==NOTES:=============================================
+* v1.0.0(2015.5.28):
+*   notes detail
+*---------------------------------------------------------------------------*/
+
+
+.container{
+  
+}
+
+.row{
+  
+}
+.row:after, .row-fluid:after{visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;} 
+* html .row             { zoom: 1; } /* IE6 */ 
+* html .row-fluid             { zoom: 1; } /* IE6 */ 
+*:first-child+html .row { zoom: 1; } /* IE7 */
+*:first-child+html .row- { zoom: 1; } /* IE7 */
+
+.row .col,
+.row-fluid .col{
+  float: left;
+}
+
+
+
+
+
+
+
+.row .span1{
+  width:9.5px
+}
+.row .span2{
+  width:19.099999999999998px
+}
+.row .span3{
+  width:28.699999999999996px
+}
+.row .span4{
+  width:38.3px
+}
+.row .span5{
+  width:47.9px
+}
+.row .span6{
+  width:57.49999999999999px
+}
+.row .span7{
+  width:67.10000000000001px
+}
+.row .span8{
+  width:76.7px
+}
+.row .span9{
+  width:86.3px
+}
+.row .span10{
+  width:95.9px
+}
+.row .span11{
+  width:105.5px
+}
+.row .span12{
+  width:115.1px
+}
+.row .span13{
+  width:124.7px
+}
+.row .span14{
+  width:134.3px
+}
+.row .span15{
+  width:143.9px
+}
+.row .span16{
+  width:153.5px
+}
+.row .span17{
+  width:163.1px
+}
+.row .span18{
+  width:172.7px
+}
+.row .span19{
+  width:182.3px
+}
+.row .span20{
+  width:191.9px
+}
+.row .span21{
+  width:201.5px
+}
+.row .span22{
+  width:211.1px
+}
+.row .span23{
+  width:220.7px
+}
+.row .span24{
+  width:230.29999999999998px
+}
+.row .span25{
+  width:239.9px
+}
+.row .span26{
+  width:249.5px
+}
+.row .span27{
+  width:259.09999999999997px
+}
+.row .span28{
+  width:268.7px
+}
+.row .span29{
+  width:278.29999999999995px
+}
+.row .span30{
+  width:287.9px
+}
+.row .span31{
+  width:297.49999999999994px
+}
+.row .span32{
+  width:307.09999999999997px
+}
+.row .span33{
+  width:316.7px
+}
+.row .span34{
+  width:326.29999999999995px
+}
+.row .span35{
+  width:335.9px
+}
+.row .span36{
+  width:345.49999999999994px
+}
+.row .span37{
+  width:355.09999999999997px
+}
+.row .span38{
+  width:364.7px
+}
+.row .span39{
+  width:374.29999999999995px
+}
+.row .span40{
+  width:383.9px
+}
+.row .span41{
+  width:393.49999999999994px
+}
+.row .span42{
+  width:403.09999999999997px
+}
+.row .span43{
+  width:412.7px
+}
+.row .span44{
+  width:422.29999999999995px
+}
+.row .span45{
+  width:431.9px
+}
+.row .span46{
+  width:441.49999999999994px
+}
+.row .span47{
+  width:451.09999999999997px
+}
+.row .span48{
+  width:460.69999999999993px
+}
+.row .span49{
+  width:470.29999999999995px
+}
+.row .span50{
+  width:479.9px
+}
+.row .span51{
+  width:489.49999999999994px
+}
+.row .span52{
+  width:499.09999999999997px
+}
+.row .span53{
+  width:508.69999999999993px
+}
+.row .span54{
+  width:518.3px
+}
+.row .span55{
+  width:527.9px
+}
+.row .span56{
+  width:537.5px
+}
+.row .span57{
+  width:547.0999999999999px
+}
+.row .span58{
+  width:556.6999999999999px
+}
+.row .span59{
+  width:566.3px
+}
+.row .span60{
+  width:575.9px
+}
+.row .span61{
+  width:585.5px
+}
+.row .span62{
+  width:595.0999999999999px
+}
+.row .span63{
+  width:604.6999999999999px
+}
+.row .span64{
+  width:614.3px
+}
+.row .span65{
+  width:623.9px
+}
+.row .span66{
+  width:633.5px
+}
+.row .span67{
+  width:643.0999999999999px
+}
+.row .span68{
+  width:652.6999999999999px
+}
+.row .span69{
+  width:662.3px
+}
+.row .span70{
+  width:671.9px
+}
+.row .span71{
+  width:681.5px
+}
+.row .span72{
+  width:691.0999999999999px
+}
+.row .span73{
+  width:700.6999999999999px
+}
+.row .span74{
+  width:710.3px
+}
+.row .span75{
+  width:719.9px
+}
+.row .span76{
+  width:729.5px
+}
+.row .span77{
+  width:739.0999999999999px
+}
+.row .span78{
+  width:748.6999999999999px
+}
+.row .span79{
+  width:758.3px
+}
+.row .span80{
+  width:767.9px
+}
+.row .span81{
+  width:777.5px
+}
+.row .span82{
+  width:787.0999999999999px
+}
+.row .span83{
+  width:796.6999999999999px
+}
+.row .span84{
+  width:806.3px
+}
+.row .span85{
+  width:815.9px
+}
+.row .span86{
+  width:825.5px
+}
+.row .span87{
+  width:835.0999999999999px
+}
+.row .span88{
+  width:844.6999999999999px
+}
+.row .span89{
+  width:854.3px
+}
+.row .span90{
+  width:863.9px
+}
+.row .span91{
+  width:873.5px
+}
+.row .span92{
+  width:883.0999999999999px
+}
+.row .span93{
+  width:892.6999999999999px
+}
+.row .span94{
+  width:902.3px
+}
+.row .span95{
+  width:911.9px
+}
+.row .span96{
+  width:921.4999999999999px
+}
+.row .span97{
+  width:931.0999999999999px
+}
+.row .span98{
+  width:940.6999999999999px
+}
+.row .span99{
+  width:950.3px
+}
+.row .span100{
+  width:959.9px
+}
+.row-fluid .span1{
+  width:0.99%
+}
+.row-fluid .span2{
+  width:1.99%
+}
+.row-fluid .span3{
+  width:2.99%
+}
+.row-fluid .span4{
+  width:3.99%
+}
+.row-fluid .span5{
+  width:4.99%
+}
+.row-fluid .span6{
+  width:5.99%
+}
+.row-fluid .span7{
+  width:6.99%
+}
+.row-fluid .span8{
+  width:7.99%
+}
+.row-fluid .span9{
+  width:8.99%
+}
+.row-fluid .span10{
+  width:9.99%
+}
+.row-fluid .span11{
+  width:10.99%
+}
+.row-fluid .span12{
+  width:11.99%
+}
+.row-fluid .span13{
+  width:12.99%
+}
+.row-fluid .span14{
+  width:13.99%
+}
+.row-fluid .span15{
+  width:14.99%
+}
+.row-fluid .span16{
+  width:15.99%
+}
+.row-fluid .span17{
+  width:16.99%
+}
+.row-fluid .span18{
+  width:17.99%
+}
+.row-fluid .span19{
+  width:18.99%
+}
+.row-fluid .span20{
+  width:19.99%
+}
+.row-fluid .span21{
+  width:20.99%
+}
+.row-fluid .span22{
+  width:21.99%
+}
+.row-fluid .span23{
+  width:22.99%
+}
+.row-fluid .span24{
+  width:23.99%
+}
+.row-fluid .span25{
+  width:24.99%
+}
+.row-fluid .span26{
+  width:25.99%
+}
+.row-fluid .span27{
+  width:26.99%
+}
+.row-fluid .span28{
+  width:27.99%
+}
+.row-fluid .span29{
+  width:28.99%
+}
+.row-fluid .span30{
+  width:29.99%
+}
+.row-fluid .span31{
+  width:30.99%
+}
+.row-fluid .span32{
+  width:31.99%
+}
+.row-fluid .span33{
+  width:32.99%
+}
+.row-fluid .span34{
+  width:33.99%
+}
+.row-fluid .span35{
+  width:34.99%
+}
+.row-fluid .span36{
+  width:35.99%
+}
+.row-fluid .span37{
+  width:36.99%
+}
+.row-fluid .span38{
+  width:37.99%
+}
+.row-fluid .span39{
+  width:38.99%
+}
+.row-fluid .span40{
+  width:39.99%
+}
+.row-fluid .span41{
+  width:40.99%
+}
+.row-fluid .span42{
+  width:41.99%
+}
+.row-fluid .span43{
+  width:42.99%
+}
+.row-fluid .span44{
+  width:43.99%
+}
+.row-fluid .span45{
+  width:44.99%
+}
+.row-fluid .span46{
+  width:45.99%
+}
+.row-fluid .span47{
+  width:46.99%
+}
+.row-fluid .span48{
+  width:47.99%
+}
+.row-fluid .span49{
+  width:48.99%
+}
+.row-fluid .span50{
+  width:49.99%
+}
+.row-fluid .span51{
+  width:50.99%
+}
+.row-fluid .span52{
+  width:51.99%
+}
+.row-fluid .span53{
+  width:52.99%
+}
+.row-fluid .span54{
+  width:53.99%
+}
+.row-fluid .span55{
+  width:54.99%
+}
+.row-fluid .span56{
+  width:55.99%
+}
+.row-fluid .span57{
+  width:56.99%
+}
+.row-fluid .span58{
+  width:57.99%
+}
+.row-fluid .span59{
+  width:58.99%
+}
+.row-fluid .span60{
+  width:59.99%
+}
+.row-fluid .span61{
+  width:60.99%
+}
+.row-fluid .span62{
+  width:61.99%
+}
+.row-fluid .span63{
+  width:62.99%
+}
+.row-fluid .span64{
+  width:63.99%
+}
+.row-fluid .span65{
+  width:64.99%
+}
+.row-fluid .span66{
+  width:65.99%
+}
+.row-fluid .span67{
+  width:66.99%
+}
+.row-fluid .span68{
+  width:67.99%
+}
+.row-fluid .span69{
+  width:68.99%
+}
+.row-fluid .span70{
+  width:69.99%
+}
+.row-fluid .span71{
+  width:70.99%
+}
+.row-fluid .span72{
+  width:71.99%
+}
+.row-fluid .span73{
+  width:72.99%
+}
+.row-fluid .span74{
+  width:73.99%
+}
+.row-fluid .span75{
+  width:74.99%
+}
+.row-fluid .span76{
+  width:75.99%
+}
+.row-fluid .span77{
+  width:76.99%
+}
+.row-fluid .span78{
+  width:77.99%
+}
+.row-fluid .span79{
+  width:78.99%
+}
+.row-fluid .span80{
+  width:79.99%
+}
+.row-fluid .span81{
+  width:80.99%
+}
+.row-fluid .span82{
+  width:81.99%
+}
+.row-fluid .span83{
+  width:82.99%
+}
+.row-fluid .span84{
+  width:83.99%
+}
+.row-fluid .span85{
+  width:84.99%
+}
+.row-fluid .span86{
+  width:85.99%
+}
+.row-fluid .span87{
+  width:86.99%
+}
+.row-fluid .span88{
+  width:87.99%
+}
+.row-fluid .span89{
+  width:88.99%
+}
+.row-fluid .span90{
+  width:89.99%
+}
+.row-fluid .span91{
+  width:90.99%
+}
+.row-fluid .span92{
+  width:91.99%
+}
+.row-fluid .span93{
+  width:92.99%
+}
+.row-fluid .span94{
+  width:93.99%
+}
+.row-fluid .span95{
+  width:94.99%
+}
+.row-fluid .span96{
+  width:95.99%
+}
+.row-fluid .span97{
+  width:96.99%
+}
+.row-fluid .span98{
+  width:97.99%
+}
+.row-fluid .span99{
+  width:98.99%
+}
+.row-fluid .span100{
+  width:99.99%
+}
+.row-fluid .offset1{
+  margin-left:1%
+}
+.row-fluid .offset2{
+  margin-left:2%
+}
+.row-fluid .offset3{
+  margin-left:3%
+}
+.row-fluid .offset4{
+  margin-left:4%
+}
+.row-fluid .offset5{
+  margin-left:5%
+}
+.row-fluid .offset6{
+  margin-left:6%
+}
+.row-fluid .offset7{
+  margin-left:7%
+}
+.row-fluid .offset8{
+  margin-left:8%
+}
+.row-fluid .offset9{
+  margin-left:9%
+}
+.row-fluid .offset10{
+  margin-left:10%
+}
+.row-fluid .offset11{
+  margin-left:11%
+}
+.row-fluid .offset12{
+  margin-left:12%
+}
+.row-fluid .offset13{
+  margin-left:13%
+}
+.row-fluid .offset14{
+  margin-left:14%
+}
+.row-fluid .offset15{
+  margin-left:15%
+}
+.row-fluid .offset16{
+  margin-left:16%
+}
+.row-fluid .offset17{
+  margin-left:17%
+}
+.row-fluid .offset18{
+  margin-left:18%
+}
+.row-fluid .offset19{
+  margin-left:19%
+}
+.row-fluid .offset20{
+  margin-left:20%
+}
+.row-fluid .offset21{
+  margin-left:21%
+}
+.row-fluid .offset22{
+  margin-left:22%
+}
+.row-fluid .offset23{
+  margin-left:23%
+}
+.row-fluid .offset24{
+  margin-left:24%
+}
+.row-fluid .offset25{
+  margin-left:25%
+}
+.row-fluid .offset26{
+  margin-left:26%
+}
+.row-fluid .offset27{
+  margin-left:27%
+}
+.row-fluid .offset28{
+  margin-left:28%
+}
+.row-fluid .offset29{
+  margin-left:29%
+}
+.row-fluid .offset30{
+  margin-left:30%
+}
+.row-fluid .offset31{
+  margin-left:31%
+}
+.row-fluid .offset32{
+  margin-left:32%
+}
+.row-fluid .offset33{
+  margin-left:33%
+}
+.row-fluid .offset34{
+  margin-left:34%
+}
+.row-fluid .offset35{
+  margin-left:35%
+}
+.row-fluid .offset36{
+  margin-left:36%
+}
+.row-fluid .offset37{
+  margin-left:37%
+}
+.row-fluid .offset38{
+  margin-left:38%
+}
+.row-fluid .offset39{
+  margin-left:39%
+}
+.row-fluid .offset40{
+  margin-left:40%
+}
+.row-fluid .offset41{
+  margin-left:41%
+}
+.row-fluid .offset42{
+  margin-left:42%
+}
+.row-fluid .offset43{
+  margin-left:43%
+}
+.row-fluid .offset44{
+  margin-left:44%
+}
+.row-fluid .offset45{
+  margin-left:45%
+}
+.row-fluid .offset46{
+  margin-left:46%
+}
+.row-fluid .offset47{
+  margin-left:47%
+}
+.row-fluid .offset48{
+  margin-left:48%
+}
+.row-fluid .offset49{
+  margin-left:49%
+}
+.row-fluid .offset50{
+  margin-left:50%
+}
+.row-fluid .offset51{
+  margin-left:51%
+}
+.row-fluid .offset52{
+  margin-left:52%
+}
+.row-fluid .offset53{
+  margin-left:53%
+}
+.row-fluid .offset54{
+  margin-left:54%
+}
+.row-fluid .offset55{
+  margin-left:55%
+}
+.row-fluid .offset56{
+  margin-left:56%
+}
+.row-fluid .offset57{
+  margin-left:57%
+}
+.row-fluid .offset58{
+  margin-left:58%
+}
+.row-fluid .offset59{
+  margin-left:59%
+}
+.row-fluid .offset60{
+  margin-left:60%
+}
+.row-fluid .offset61{
+  margin-left:61%
+}
+.row-fluid .offset62{
+  margin-left:62%
+}
+.row-fluid .offset63{
+  margin-left:63%
+}
+.row-fluid .offset64{
+  margin-left:64%
+}
+.row-fluid .offset65{
+  margin-left:65%
+}
+.row-fluid .offset66{
+  margin-left:66%
+}
+.row-fluid .offset67{
+  margin-left:67%
+}
+.row-fluid .offset68{
+  margin-left:68%
+}
+.row-fluid .offset69{
+  margin-left:69%
+}
+.row-fluid .offset70{
+  margin-left:70%
+}
+.row-fluid .offset71{
+  margin-left:71%
+}
+.row-fluid .offset72{
+  margin-left:72%
+}
+.row-fluid .offset73{
+  margin-left:73%
+}
+.row-fluid .offset74{
+  margin-left:74%
+}
+.row-fluid .offset75{
+  margin-left:75%
+}
+.row-fluid .offset76{
+  margin-left:76%
+}
+.row-fluid .offset77{
+  margin-left:77%
+}
+.row-fluid .offset78{
+  margin-left:78%
+}
+.row-fluid .offset79{
+  margin-left:79%
+}
+.row-fluid .offset80{
+  margin-left:80%
+}
+.row-fluid .offset81{
+  margin-left:81%
+}
+.row-fluid .offset82{
+  margin-left:82%
+}
+.row-fluid .offset83{
+  margin-left:83%
+}
+.row-fluid .offset84{
+  margin-left:84%
+}
+.row-fluid .offset85{
+  margin-left:85%
+}
+.row-fluid .offset86{
+  margin-left:86%
+}
+.row-fluid .offset87{
+  margin-left:87%
+}
+.row-fluid .offset88{
+  margin-left:88%
+}
+.row-fluid .offset89{
+  margin-left:89%
+}
+.row-fluid .offset90{
+  margin-left:90%
+}
+.row-fluid .offset91{
+  margin-left:91%
+}
+.row-fluid .offset92{
+  margin-left:92%
+}
+.row-fluid .offset93{
+  margin-left:93%
+}
+.row-fluid .offset94{
+  margin-left:94%
+}
+.row-fluid .offset95{
+  margin-left:95%
+}
+.row-fluid .offset96{
+  margin-left:96%
+}
+.row-fluid .offset97{
+  margin-left:97%
+}
+.row-fluid .offset98{
+  margin-left:98%
+}
+.row-fluid .offset99{
+  margin-left:99%
+}
+.row-fluid .offset100{
+  margin-left:100%
+}
+

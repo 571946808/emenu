@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>权限配置</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li>
+									<a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+								</li>
+								<li>
+									<a href="#">权限管理</a>
+								</li>
+								<li class="active">权限配置</li>
+							</ol>
+							<h2>权限配置</h2>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>权限列表</h4>
+								</div>
+								<div class="panel-body">
+									<a class="btn btn-success margin-bottom-15 J_addBtn" href="#"><i class="fa fa-plus"></i>&nbsp;添加权限</a>
+									<form class="J_operForm">
+										<input type = "hidden" class="J_id"name="id" value=""/>
+									  	<div class="table-responsive">
+										  	<table class="table table-hover table-bordered">
+										    	<thead>
+										    		<tr>
+										    			<th>表达式</th>
+										    			<th>描述</th>
+										    			<th>操作</th>
+										    		</tr>
+										    	</thead>
+										    	<tbody id="J_template">
+										    		
+										    	</tbody>
+										  	</table>
+										  	<div class="J_pagination"></div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div><!--row-->
+				</div><!--container-->
+			</div><!--holder-->
+		</div><!--page-->
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<!--刷分页-->
+		<script type="text/template" id="tpl">
+			{@each list as it}
+				<tr data-authority-id="&{it.id}">
+					<td class="J_exp">&{it.exp}</td>
+					<td class="J_desc">&{it.descript}</td>
+					<td>
+						<a class="label-info J_edit" href="javascript:;"><i class="fa fa-pencil"></i> 编辑</a>
+						<a class="label-info J_del" href="javascript:;"><i class="fa fa-times"></i> 删除</a>
+					</td>
+				</tr>
+			{@/each}
+		</script>
+		<!-- 编辑模板 -->
+	    <script type="text/template" id="editTpl">
+	        <tr data-authority-id="&{authority.id}" oper-type="&{authority.type}">
+	            <td><input type="text" class="form-control" data-valid-tip="" data-valid-rule="notNull" name="exp" value="&{authority.exp}"/></td>
+	            <td><input type="text" class="form-control" data-valid-tip="" data-valid-rule="notNull" name="desc" value="&{authority.desc}"/></td>
+	            <td>
+	                <a href="javascript:;" class="label-info J_save">
+	                    <i class="fa fa-save"></i>&nbsp;保存
+	                </a>&nbsp;
+	                <a href="javascript:;" class="label-info J_cancel">
+	                    <i class="fa fa-undo"></i>&nbsp;取消
+	                </a>&nbsp;
+	            </td>
+	        </tr>
+	    </script>
+	    <!-- 保存模板 -->
+	    <script type="text/template" id="saveTpl">
+	        <tr data-authority-id="&{authority.id}">
+	            <td class="J_exp">&{authority.exp}</td>
+	            <td class="J_desc">&{authority.desc}</td>
+	            <td>
+	                <a class="label-info J_edit" href="javascript:;"><i class="fa fa-pencil"></i> 编辑</a>
+					<a class="label-info J_del" href="javascript:;"><i class="fa fa-times"></i> 删除</a>
+	            </td>
+	        </tr>
+	    </script>
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/authority-management/base-config', function(S){
+					PW.page.AuthorityConfig({
+						renderTo: '.J_pagination',
+						juicerRender: '#tpl',
+						dataRender: '#J_template',
+						url: '/mock/admin/authority-config.json',
+						pageSize: 10,
+						configUrl: function(url,page,me,prevPaginationData){
+							return url;
+							// return url + '/' + page;
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

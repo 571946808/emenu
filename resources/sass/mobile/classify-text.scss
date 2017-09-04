@@ -1,0 +1,125 @@
+@import "./common/search-list-header";
+@import "./common/classify-header";
+/*************classify start**********************/
+.classify-icon{
+  transition: transform 0.1s linear 0s;
+}
+.classify-icon.in{
+  transform: rotate(90deg);
+  transition: transform 0.1s linear 0s;
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+.classify-container{
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: (95rem / $param);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.15s linear 0s;
+}
+.classify-list{
+  background-color: #f8f8f8;
+  padding: (40rem / $param);
+  border-top: (1rem / $param) solid #eeece9;
+}
+.classify{
+  display: inline-block;
+  border: (2rem / $param) solid #cfcdcc;
+  border-radius: (3rem / $param);
+  background-color: #fff;
+  height: (76rem / $param);
+  line-height: (76rem / $param);
+  color: #666;
+  font-size: (28rem / $param);
+  width: (195rem / $param);
+  text-align: center;
+  margin-right: (35rem / $param);
+  margin-bottom: (26rem / $param);
+}
+.classify:nth-child(3n+3){
+  margin-right: 0;
+}
+/*************classify end**********************/
+
+/*************classify content start**************/
+.dish-item{
+    padding:0 (28rem / $param);
+    line-height: (82rem /$param);
+    border-bottom: (1rem / $param) solid #c5c3c2;
+}
+.dish-item p{
+    float: left;
+    font-size: (28rem / $param);
+    line-height: (82rem /$param);
+}
+.dish-name{
+    // width: (400rem / $param);
+    // color: #666666;
+    height: 100%;
+    width: (345rem / $param);
+    color: #666666;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    margin-right: (10rem / $param);
+}
+.dish-name i{
+    font-size: (18rem / $param);
+    color: #bfbfbf;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: (18rem / $param);
+}
+.dish-name i.active{
+    color: #ff8822;
+}
+.dish-price-sale{
+    width: (213rem / $param);
+    .dish-price{
+        font-size: (20rem / $param);
+        color: #8e8e8e;
+        text-decoration: line-through;
+    }
+    .dish-sale{
+        color:#ff0000;
+    }
+}
+.dish-item .add-dish{
+    width: (122rem / $param);
+    height: (55rem / $param);
+    line-height: (55rem / $param);
+    background-color: #ff8822;
+    text-align: center;
+    margin-top: (16rem / $param);
+    color: white;
+    border-radius:(10rem / $param);
+    position: relative;
+}
+.add-dish .number-tip{
+    height: (30rem / $param);
+    line-height: (30rem / $param);
+    width: (30rem / $param);
+    font-size: (22rem / $param);
+    border-radius: (15rem / $param);
+    color: white;
+    position: absolute;
+    background-color: #ff4242;
+    text-align: center;
+    top: (-7rem / $param);
+    right:  (-4rem / $param);
+}
+.hidden{
+    display: none;
+}
+/*************fix header css**************/
+.search-group .search-img{
+    color: #fff;
+    font-size: (36rem / $param);
+    position: absolute;
+    right: (18rem / $param);
+    top: (15rem / $param);
+}

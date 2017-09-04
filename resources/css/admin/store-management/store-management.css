@@ -1,0 +1,65 @@
+/*--------------------存放点管理添加/编辑----------------------------*/
+.form-horizontal textarea.form-control {
+	height: 32px;
+	width: 300px;
+	vertical-align: middle;
+}
+/*--------------------结算中心管理----------------------------*/
+.table > tbody > tr > td[rowspan] {
+	text-align: center;
+	vertical-align: middle;
+}
+/*----------------------库存盘点，库存物品列表页--------------------------------*/
+.table .v-center > tr > th
+{
+    vertical-align: middle;
+    text-align: center;
+}
+.J_checkbox{
+    padding-top: 9px;
+}
+.padding-R{
+    padding-right: 17px;
+}
+.J_date{
+    width: 190px;
+}
+.w190{
+    width: 190px;
+}
+
+/*----------------------------库存管理------------------------------*/
+.to,
+.month{
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    display: inline-block;
+    text-align: center;
+    background-color: #eee;
+}
+.month{
+    width: 50px;
+}
+.month:hover{
+    cursor: pointer;
+    background-color: #ddd;
+}
+.drop button{
+    float: none;
+}
+.money {
+    font-size: 22px;
+    color: #4f8edc;
+}
+.width60{
+    width: 60px;
+}
+/*----------------------------库存单据------------------------------*/
+.table > thead > tr > th[rowspan],
+.table > thead > tr > th[colspan],
+.table > thead > tr > th
+{
+    text-align: center;
+    vertical-align: middle;
+}

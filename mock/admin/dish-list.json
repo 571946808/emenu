@@ -1,0 +1,8 @@
+{
+	"code": 0,
+	"list": [
+		{"id": 1, "dishNumber": "01", "assistantCode": "cp1", "name": "菜名1", "unitName": "斤", "price": 50, "salePrice": 40, "status": 0},
+		{"id": 2, "dishNumber": "02", "assistantCode": "cp2", "name": "菜名2", "unitName": "份", "price": 100, "salePrice": 50, "status": 1}
+	],
+	"dataCount": 201
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>菜品单位管理</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                                </li>
+                                <li>
+                                    <a href="#">菜品管理</a>
+                                </li>
+                                <li class="active">单位管理</li>
+                            </ol>
+                            <h2>单位管理</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>单位列表</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <a class="btn btn-success margin-bottom-15 J_addBtn" href="javascript:;">
+                                        <i class="fa fa-plus"></i>&nbsp;添加单位
+                                    </a>
+                                    <form class="J_operForm">
+                                        <input type = "hidden" class="J_id" name="id" value=""/>
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-sm-1">分类</th>
+                                                        <th class="col-sm-1">单位</th>
+                                                        <th class="col-sm-1">操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="J_template">   
+                                                </tbody>
+                                            </table>
+                                            <div class="J_pagination"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--row-->
+                </div><!--container-->
+            </div><!--holder-->
+        </div><!--page-->
+        <!--#include file="/pages/admin/common/footer.html"-->
+        <!--刷分页-->
+        <script type="text/template" id="tpl">
+            {@each list as it}
+                <tr data-unit-id="&{it.id}"> 
+                    <td class="J_sort">&{it.sort}</td>
+                    <td class="J_name">&{it.name}</td>
+                    <td>
+                        <a class="label-info J_edit" href="javascript:;"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                        <a class="label-info J_del" href="javascript:;"><i class="fa fa-times"></i>&nbsp;删除</a>
+                    </td>
+                </tr>
+            {@/each}
+        </script>
+        <!-- 添加模板 -->
+        <script type="text/template" id="editTpl">
+            <tr data-unit-id="&{unit.id}" oper-type="&{unit.operType}">
+                <td>
+                    <select class="form-control" name="type">
+                        <option value="1">重量单位</option> 
+                        <option value="2">数量单位</option> 
+                    </select> 
+                </td>
+                <td><input type="text" data-valid-tip="请输入单位|单位输入有误，请重新输入" data-valid-rule="notNull" name="name" value="&{unit.name}"/>
+                </td>
+                <td>
+                    <a href="javascript:;" class="label-info J_save">
+                        <i class="fa fa-save"></i>&nbsp;保存
+                    </a>&nbsp;
+                    <a href="javascript:;" class="label-info J_cancel">
+                        <i class="fa fa-undo"></i>&nbsp;取消
+                    </a>&nbsp;
+                </td>
+            </tr>
+        </script>
+        <!-- 编辑模板 -->
+        <script type="text/template" id="saveTpl">
+            <tr data-unit-id="&{unit.id}">
+                <td class="J_sort">
+                    {@if unit.type == 1}重量单位{@/if}
+                    {@if unit.type == 2}数量单位{@/if}
+                </td>
+                <td class="J_name">&{unit.name}</td>
+                <td>
+                    <a class="label-info J_edit" href="javascript:;"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                    <a class="label-info J_del" href="javascript:;"><i class="fa fa-times"></i>&nbsp;删除</a>
+                </td>
+            </tr>
+        </script>
+        <script type="text/javascript">
+            KISSY.ready(function(S){
+                S.use('page/dish-management/unit-management', function(S){
+                    PW.page.UnitManagement({
+                        renderTo: '.J_pagination',
+                        juicerRender: '#tpl',
+                        dataRender: '#J_template',
+                        url: '/mock/admin/unit.json',
+                        pageSize: 10,
+                        configUrl: function(url,page,me,prevPaginationData){
+                            return url;
+                            // return url + '/' + page;
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+{
+	"code": 0,
+	"list": [
+		{"id":1, "name": "猪肉", "weight": 1, "unit": "斤"},
+		{"id":2, "name": "鱼肉", "weight": 2, "unit": "斤"}
+	],
+	"errMsg": "请重新操作！"
+}

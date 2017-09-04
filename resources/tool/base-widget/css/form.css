@@ -1,0 +1,596 @@
+/*-----------------------------------------------------------------------------
+* @Description: 表单样式 (form.css)
+* @Version: 	V1.0.0
+* @author: 		huanhuan(965788210@qq.com)
+* @date			2014.05.23
+* ==NOTES:=============================================
+* v1.0.0(2014.05.23):
+* 	初始生成
+* v1.0.1(2014.08.02):
+* 	by wangjing 清除control-group 浮动; 
+* ---------------------------------------------------------------------------*/
+.control-group{
+	margin-bottom: 20px;
+	font-size: 12px;
+	vertical-align: middle;
+}
+/*by wangjing 清除浮动*/
+.control-group:after{
+	clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+/**
+ * 确保所有单选框与文字对齐
+ * by wangjing
+ * date: 2014.12.05
+ */
+.control-group input[type="radio"], .control-group input[type="checkbox"]{
+	margin-right: 3px;
+	line-height: 12px;
+	vertical-align: middle;
+}
+.control-group input[type="radio"] + label,
+.control-group input[type="radio"] + span,
+.control-group input[type="checkbox"] + label,
+.control-group input[type="checkbox"] + span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.control-label{
+	display: block;
+    float: left;
+    /*width: 160px;*/
+    height: 32px;
+    line-height: 32px;
+    margin: 0 0 5px 0;
+    padding-top: 5px;
+    font-weight: bold;
+    text-align: right;
+}
+.form-horizontal .control-label {
+    margin-bottom: 0;
+    padding-top: 0;
+    text-align: right;
+}
+.control-label .required{
+	padding-left: 2px;
+	line-height: 17px;
+    color: #E02222;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.controls{
+	line-height: 32px;
+    margin-left: 180px;
+	word-wrap: break-word;
+}
+.valid-icon{
+	background: url(../../../tool/base-widget/img/form/edit-gray1.png) 100% 50% no-repeat;
+}
+.controls textarea,
+.controls input[type="text"],
+.controls input[type="file"],
+.controls input[type="password"],
+.controls select{
+	display: inline-block;
+	/*width: 200px;*/
+	height: 18px;
+    line-height: 18px;
+    padding: 6px 20px 6px 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #333333;
+    vertical-align: top;
+    border: 1px solid #E5E5E5;
+    outline: none;
+}
+.controls input[type="file"]{
+	height: 32px;
+	padding: 0;
+	line-height: 32px;
+}
+.controls textarea{
+	height: 77px;
+}
+.controls select{
+	height:  32px;
+	width: 228px;
+}
+.controls select[multiple]{
+	height: auto;
+}
+.controls textarea:focus,
+.controls input[type="text"]:focus,
+.controls input[type="file"]:focus,
+.controls input[type="password"]:focus,
+.controls select:focus{
+	border-color: #999;
+}
+.controls .help-inline{
+	display: inline-block;
+	margin-top: 6px;
+	padding-left: 5px;
+	color: #595959;
+    vertical-align: middle;
+}
+.controls .help-block{
+	display: block;
+	margin-top: 6px;
+	color: #595959;
+}
+.controls input.w50,
+.controls textarea.w50{
+	width: 50px;
+}
+.controls input.w100,
+.controls textarea.w100{
+	width: 100px;
+}
+.controls input.w150,
+.controls textarea.w150{
+	width: 150px;
+}
+.controls input.w182,
+.controls textarea.w182{
+	width: 182px;
+}
+.controls input.w200,
+.controls textarea.w200{
+	width: 200px;
+}
+.controls input.w200,
+.controls textarea.w200{
+	width: 200px;
+}
+.controls input.w250,
+.controls textarea.w250{
+	width: 250px;
+}
+.controls input.w300,
+.controls textarea.w300{
+	width: 300px;
+}
+.controls input.w350,
+.controls textarea.w350{
+	width: 350px;
+}
+.controls input.w400,
+.controls textarea.w400{
+	width: 400px;
+}
+.controls input.w450,
+.controls textarea.w450{
+	width: 450px;
+}
+.controls input.w500,
+.controls textarea.w500{
+	width: 500px;
+}
+.controls input.w550,
+.controls textarea.w550{
+	width: 550px;
+}
+.controls input.w600,
+.controls textarea.w600{
+	width: 600px;
+}
+.controls input.w650,
+.controls textarea.w650{
+	width: 650px;
+}
+.controls input.w700,
+.controls textarea.w700{
+	width: 700px;
+}
+.controls input.w750,
+.controls textarea.w750{
+	width: 750px;
+}
+.controls input.w800,
+.controls textarea.w800{
+	width: 800px;
+}
+.controls input.w850,
+.controls textarea.w850{
+	width: 850px;
+}
+.controls input.w900,
+.controls textarea.w900{
+	width: 900px;
+}
+.controls input.w950,
+.controls textarea.w950{
+	width: 950px;
+}
+.controls input.w1000,
+.controls textarea.w1000{
+	width: 1000px;
+}
+.controls select.w50{
+	width: 64px;
+}
+.controls select.w100{
+	width: 114px;
+}
+.controls select.w150{
+	width: 164px;
+}
+.controls select.w200{
+	width: 214px;
+}
+.controls select.w250{
+	width: 264px;
+}
+.controls select.w300{
+	width: 328px;
+}
+.controls select.w332{
+	width: 332px;
+}
+.controls input.w325{
+	width: 325px;
+}
+.controls select.w350{
+	width: 364px;
+}
+.controls select.w400{
+	width: 414px;
+}
+.controls select.w450{
+	width: 464px;
+}
+.controls select.w500{
+	width: 514px;
+}
+.controls select.w550{
+	width: 564px;
+}
+.controls select.w600{
+	width: 614px;
+}
+.controls select.w650{
+	width: 664px;
+}
+.controls select.w700{
+	width: 714px;
+}
+.controls select.w750{
+	width: 764px;
+}
+.controls select.w800{
+	width: 814px;
+}
+.controls select.w850{
+	width: 864px;
+}
+.controls select.w900{
+	width: 914px;
+}
+.controls select.w950{
+	width: 964px;
+}
+.controls select.w1000{
+	width: 1014px;
+}
+/**
+ * height 高度样式
+ */
+.controls .h100{
+	height: 100px;
+}
+.controls .h200{
+	height: 200px;
+}
+.controls .h300{
+	height: 300px;
+}
+.controls .h400{
+	height: 400px;
+}
+.controls .h500{
+	height: 500px;
+}
+
+.form-footer{
+	padding-left: 200px;
+}
+.form-footer-reset{
+	margin-left: -20px;
+}
+.check-inline{
+	display: inline-block;
+}
+.check-label{
+	display: inline-block;
+	margin: 2px 15px 5px 0;
+}
+.controls input[disabled],
+.controls select[disabled],
+.controls textarea[disabled]{
+	background-color: #F4F4F4;
+    cursor: not-allowed;
+}
+
+/**
+ * 表单 输入框 的样式
+ */
+.inline .form-control{
+    border-radius: 0;
+    display: inline-block;
+    font-size: 12px;
+}
+/*.inline input{
+	border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    height: 30px;
+    line-height: normal;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}*/
+.inline select.form-control{
+    width: 100%;
+}
+.form-horizontal select.form-control.w180{
+    width: 180px;
+}
+.form-horizontal select.form-control.w190{
+    width: 190px;
+}
+.inline .input-small.success-field{
+	background: url("/resources/tool/base-widget/img/form/success-icon.png") no-repeat scroll 98% 7px rgba(0, 0, 0, 0);
+}
+.no-bgimg{
+	background-image: none;
+}
+select.form-control{
+	height: 32px;
+	width: 100%;
+}
+.form-control:focus{
+	border-color: #999;
+	box-shadow: none !important;
+}
+input.form-control[disabled]{
+	background-color: #F4F4F4;
+    cursor: not-allowed;
+}
+.input-small{
+	width: 120px;
+}
+.search-input{
+	width: 120px;
+	height: 18px;
+}
+.w50{
+	width: 50px;
+}
+.w100{
+	width: 100px;
+}
+.w150{
+	width: 150px;
+}
+.w180{
+	width: 180px !important;
+}
+.w190{
+	width: 190px !important;
+}
+.w200{
+	width: 200px;
+}
+.w400{
+	width: 400px;
+}
+.w500{
+	width: 500px;
+}
+.w600{
+	width: 600px;
+}
+.w700{
+	width: 700px;
+}
+.w800{
+	width: 800px;
+}
+.w900{
+	width: 900px;
+}
+.p80{
+	width: 80%;
+}
+.p90{
+	width: 90%;
+}
+.p95{
+	width: 95%;
+}
+.p99{
+	width: 99%;
+}
+.p100{
+	width: 100%;
+}
+/* ==========================================================================
+--表单验证部分
+========================================================================== */
+
+/*表单控制*/
+.pw-validation .focus-field{
+	background: #ffffcc;
+	border: 1px solid #A0A0A0;
+}
+.pw-validation .error-field{
+	border: 1px solid #B94A48 !important;
+	/*box-shadow: 0 0 4px #B94A48;*/
+}
+.pw-tip {
+	position: absolute;
+	min-width: 20px;
+	max-width: 1000px;
+	min-height: 25px;
+	height: auto;
+	font-size: 12px;
+}
+.pw-tip .tip-arrow{
+	display: block;
+	position: absolute;
+	background:url(../img/tip-yellow_arrows.png);
+}
+.pw-tip .tip-arrow-bottom{
+	left: 50%;
+	top: -7px;
+	width: 16px;
+	height: 9px;
+	margin-left: -8px;
+	background-position: left top;
+}
+.pw-tip .tip-arrow-top{
+	left: 50%;
+	bottom: -8px;
+	width: 16px;
+	height: 9px;
+	margin-left: -8px;
+	background-position: 96px top;
+}
+.pw-tip .tip-arrow-right{
+	width: 9px;
+	height: 16px;
+	left: -8px;
+	background-position: -48px 0;
+}
+.pw-tip .tip-arrow-left{
+	width: 9px;
+	height: 16px;
+	right: -8px;
+	background-position: -18px 0;
+}
+.pw-tip .tip-content{
+	border: 1px solid #a7a7a7;
+	box-shadow: inset 0 0 3px #fff;
+	border-radius: 6px;
+	padding: 3px;
+	background: #fef9d9;	
+}
+.pw-tip.error-state{
+	color: #B94A48;
+}
+.error-state .tip-content{
+	padding-left: 25px;
+	background: url(../../../tool/base-widget/img/form/valid-icon.png) 0 center no-repeat;
+}
+.success-state .tip-content{
+	background: url(../img/yes.png) 5px center no-repeat;
+	padding-left: 25px;
+	color: #B94A48;
+}
+.focus-state .tip-content{
+	background: url(../img/focus.png) 5px center no-repeat;
+	padding-left: 25px;
+}
+.loading-state .tip-content{
+	background: url(../img/loading.gif) 5px center no-repeat;
+	padding-left: 25px;
+}
+
+/*行内验证，自动添加提示节点*/
+
+.inline .pw-tip{
+	display: inline-block;
+	/*display:block;*/
+	/*width:300px;*/
+	position: static;
+	line-height: 25px;
+	margin-top: 3px;
+	padding-left: 10px;
+}
+
+/**
+ * by wangjing 
+ * 布局样式 pull-right
+ */
+.pull-right{
+	float: right;
+}
+/**
+ * by wangjing
+ * 标签上添加按钮样式
+ */
+.tab-btn{
+	margin-top: -5px;
+}
+/**************************** form 3列布局 start*************************/
+.form-col-3-label{
+	width:130px;
+}
+.form-col-3-controls{
+	margin-left: 150px;
+}
+/**************************** form 3列布局 end*************************/
+/**************************** form 4列布局 start*************************/
+.form-col-4-label{
+	width:90px;
+}
+.form-col-4-controls{
+	margin-left: 110px;
+}
+/**************************** form 4列布局 end*************************/
+/**************************** form中input前面的图标 start*************************/
+.input-group-addon{
+	
+	padding: 6px 14px;
+    background-color: #e5e5e5;
+}
+.input-group-addon i{
+	font-size: 14px;
+	color: #999;
+}
+/**************************** form中input前面的图标 end*************************/
+
+/****************************单选框radio属性 start***********************************/
+.controls input[type="radio"]{
+ 	margin-left:45px; 
+ }
+.inline .success-field{
+	background: url(/resources/tool/base-widget/img/form/success-icon.png) 100% 50% no-repeat;
+	
+}
+.inline select.success-field, .inline select.error-field{
+	background-image: none;
+}
+
+.inline .error-field{
+	background: url(../../../tool/base-widget/img/form/edit-red.png) 100% 50% no-repeat;
+}
+.inline .focus-field{
+	
+	background: url(../../../tool/base-widget/img/form/edit-gray.png) 100% 50% no-repeat;
+	
+}
+/**
+ * 清除IE浏览器获取焦点时删除和眼睛样式
+ * @type {[type]}
+ */
+.inline input::-ms-clear{
+	display: none;
+}
+.inline input::-ms-reveal{
+	display: none;
+}
+form.no-icon .success-field,form.no-icon .error-field,form.no-icon .focus-field{
+	
+	background: #fff;
+	
+}
+/******************************** form-footer 加margin-bottom************************************/ 
+.form-footer-margin{
+	padding-bottom: 10px;
+}
+.no-margin-left{
+	margin-left: 0;
+}
+/******************************** form-footer 加margin-bottom************************************/ 
+ 

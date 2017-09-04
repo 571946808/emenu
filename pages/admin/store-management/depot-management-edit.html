@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>存放点管理</title>
+    	<!--#include file="/pages/admin/common/head.html"-->
+    	<link rel="stylesheet" href="/resources/css/admin/store-management/store-management.css">
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+								<li><a href="#">库存管理</a></li>
+								<li class="active">存放点管理</li>
+							</ol>
+							<h2>存放点管理</h2>
+						</div>
+						<div class="col-sm-12">
+							<form class="form-horizontal J_submitForm" action="" method="">
+								<div class="alert alert-danger" role="alert">保存失败！</div>
+								<div class="panel panel-info">
+									<div class="panel-heading">
+										<h4>编辑</h4>
+									</div>
+									<div class="panel-body">
+										<input type="hidden" name="id" value="" >
+										<div class="form-group">
+											<label class="col-sm-3 control-label"><span class="requires">*</span>名称</label>
+											<div class="col-sm-6">
+												<input type="text" class="w180" data-valid-tip="请输入长度为1~15个字符的存放点名称|输入有误，请重新输入" data-valid-rule="notNull&length(0,16)" name="name" value="">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">简介</label>
+											<div class="col-sm-6">
+												<textarea class="form-control" data-valid-tip="请输入长度为0~20个字符的简介|输入有误，请重新输入" data-valid-rule="isNull|length(0,21)" name="introduction" value=""></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="panel-footer">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<div class="btn-toolbar">
+													<button class="btn btn-primary J_submitBtn" type="submit" data-btn-type="loading" data-btn-loading-text="正在保存，请稍后">
+														<i class="fa fa-save"></i>&nbsp;保存
+													</button>
+													<button class="btn btn-default" type="reset" onclick="window.history.go(-1);"><i class="fa fa-undo"></i>&nbsp;返回</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use("page/store-management/depot-management-add", function(S){
+					PW.page.StoreManagement.DepotManagementAdd();
+				});
+			});
+		</script>
+	</body>
+</html>

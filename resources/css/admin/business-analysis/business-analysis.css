@@ -1,0 +1,39 @@
+/*----------------------------菜品销售排行------------------------------*/
+.to,
+.timing{
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    display: inline-block;
+    text-align: center;
+    background-color: #eee;
+}
+.timing{
+    width: 50px;
+}
+.timing:hover{
+    cursor: pointer;
+    background-color: #ddd;
+}
+.drop button{
+    float: none;
+}
+.money {
+    font-size: 22px;
+    color: #4f8edc;
+}
+.width60{
+    width: 60px;
+}
+.table > thead > tr > th[rowspan],
+.table > thead > tr > th[colspan],
+.table > thead > tr > th
+{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.fa-long-arrow-down{
+	color: #76c4ed;
+}
+/*----------------------------菜品大类销售排行------------------------------*/

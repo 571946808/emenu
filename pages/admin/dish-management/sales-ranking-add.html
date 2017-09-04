@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>销量排行</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+								<li><a href="#">菜品管理</a></li>
+								<li class="active">销量排行</li>
+							</ol>
+							<h2>菜品管理-销量排行</h2>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>添加</h4>
+								</div>
+								<div class="panel-body">
+									<form class="form-horizontal J_selectForm" action="" method="">
+										<input type="hidden" name="tagId" value="001">
+										<div class="form-group">
+											<label class="control-label col-sm-2">选择菜品分类</label>
+											<div class="col-sm-10 checkbox block J_labels">
+												<label>
+													<input class="J_selectAll" type="checkbox" name="tagIdList" value="-1">全部
+												</label>
+												<label>
+													<input class="J_dishClassify" type="checkbox" name="tagIdList" value="1">套餐
+												</label>
+												<label>
+													<input class="J_dishClassify" type="checkbox" name="tagIdList" value="2">汤
+												</label>
+											</div>
+										</div>
+									</form>
+									<form class="form-horizontal J_addForm" action="" method="">
+										<div class="table-responsive">
+											<table class="table table-hover table-bordered">
+												<thead>
+													<tr>
+														<th>菜品大类</th>
+														<th>菜品小类</th>
+														<th>编号</th>
+														<th>菜品名称</th>
+														<th>单位</th>
+														<th>定价</th>
+														<th>折扣</th>
+														<th>售价</th>
+														<th>状态</th>
+														<th>上月销量</th>
+														<th>总销量</th>
+														<th>今日特价</th>
+													</tr>
+												</thead>
+												<tbody id="dataRender">
+												</tbody>
+											</table> 
+										</div>
+									</form>
+									<div class="col-sm-6 col-sm-offset-4">
+										<div class="btn-toolbar">
+											<button class="btn btn-primary J_save" type="submit"><i class="fa fa-save"></i>&nbsp;保存</button>
+											<button class="btn btn-default" type="button" onclick="window.history.go(-1);"><i class="fa fa-undo"></i>&nbsp;返回</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/template" id="renderTpl">
+			{@each list as it}
+				<tr>
+					<td>&{it.category}</td>
+					<td>&{it.tag}</td>
+					<td>&{it.dishNumber}</td>
+					<td>&{it.name}</td>
+					<td>&{it.unit}</td>
+					<td>&{it.price}</td>
+					<td>&{it.discount}</td>
+					<td>&{it.salePrice}</td>
+
+					{@if it.status == 0 }
+						<td>停售</td>
+					{@/if}
+
+					{@if it.status == 1 }
+						<td>销售中</td>
+					{@/if}
+
+					{@if it.status == 2 }
+						<td>标缺</td>
+					{@/if}
+
+					{@if it.status == 3 }
+						<td>已删除</td>
+					{@/if}
+
+					<td>&{it.lastMonthSales}</td>
+					<td>&{it.totalSales}</td>
+
+					{@if it.status == 0 || it.status == 2 || it.status == 3 }
+						<td></td>
+					{@/if}
+
+					{@if it.status == 1 }
+						<td>
+							<input type="checkbox" name="dishId" value=&{it.id}>
+						</td>
+					{@/if}
+				</tr>
+			{@/each}
+		</script>
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/dish-management/sales-ranking-add',function(){
+					PW.page.DishManagement.SalesRankingAdd();
+				});
+			});
+		</script>
+	</body>
+</html>

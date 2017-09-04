@@ -1,0 +1,24 @@
+@import "./common" ;
+
+/* **************details-header start******************** */
+.header{
+	background-color: #ff8822;
+	padding: (24rem / $param) (28rem / $param);
+	border-bottom: (2rem / $param) solid #e66a00;
+	position: fixed;
+	width: (694rem / $param);
+	top: 0;
+	left: 0;
+	z-index: 16;
+	color: #fff;
+}
+.back-icon{
+	float: left;
+	font-size: (38rem / $param);
+}
+.header-title{
+	text-align: center;
+	width: (682rem / $param);
+	font-size: (31rem / $param);
+	font-weight: normal;
+}

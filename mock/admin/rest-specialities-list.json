@@ -1,0 +1,11 @@
+{
+	"code": 0,
+	"list": [
+		{"id":"1","category":"套餐","tag":"small","dishNumber":"22","name":"团购97","unit":"份","price":"97","discount":"100","salePrice":"97","status":"1","lastMonthSales":"15","totalSales":"50"},
+		{"id":"2","category":"套餐","tag":"small","dishNumber":"22","name":"团购97","unit":"份","price":"97","discount":"100","salePrice":"97","status":"0","lastMonthSales":"15","totalSales":"50"},
+		{"id":"3","category":"套餐","tag":"small","dishNumber":"22","name":"团购97","unit":"份","price":"97","discount":"100","salePrice":"97","status":"2","lastMonthSales":"15","totalSales":"50"},
+		{"id":"4","category":"套餐","tag":"small","dishNumber":"22","name":"团购97","unit":"份","price":"97","discount":"100","salePrice":"97","status":"3","lastMonthSales":"15","totalSales":"50"},
+		{"id":"5","category":"套餐","tag":"small","dishNumber":"22","name":"团购97","unit":"份","price":"97","discount":"100","salePrice":"97","status":"1","lastMonthSales":"15","totalSales":"50"}
+	],
+	"errMsg": "返回错误信息！"
+}

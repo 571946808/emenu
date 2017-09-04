@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>顾客点餐平台首页管理</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<link rel="stylesheet" type="text/css" href="/resources/tool/webuploader/css/webuploader.css">
+		<link rel="stylesheet" type="text/css" href="/resources/css/admin/base-info-management/base-info-management.css">
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+							  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+							  	<li><a href="#">基本信息管理</a></li>
+							  	<li class="active">顾客点餐平台首页管理</li>
+							</ol>
+							<h2>基本信息管理-添加顾客点餐平台首页图片</h2>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>当前图片</h4>
+								</div>
+								<div class="panel-body">
+									<div class="col-sm-4 col-sm-offset-4">
+										<img class="img-responsive J_currentIndexImg" src="/resources/img/admin/base-info/index.jpg" alt="顾客点餐平台首页">
+									</div>
+								</div>
+							</div>
+						</div>	
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>修改图片</h4>
+								</div>
+								<div class="panel-body">
+									<h4>备选图片</h4>
+							  		<hr> 
+							  		<div class="col-sm-12 margin-bottom-15">
+							  			<div class="row">
+							  				<div class="col-sm-3 text-center">
+												<div class="img-container J_imgContainer J_indexImg" data-img-id="0">
+													<img class="img-responsive" src="/resources/img/admin/base-info/index.jpg" alt="顾客点餐平台首页备选图片">
+													<h5 class="margin-top-15">当前顾客点餐平台首页</h5>
+												</div>
+											</div>
+											<div class="col-sm-3 text-center">
+												<div class="img-container J_imgContainer" data-img-id="11">
+													<img class="img-responsive" src="/resources/img/admin/base-info/index1.jpg" alt="顾客点餐平台首页备选图片">
+													<a href="javascript:;" class="J_del del"><i class="fa fa-times"></i></a>
+													<a class="margin-top-15 btn btn-success J_set" href="javascript:;"><i class="fa fa-check"></i>&nbsp;点击设置为首页</a>
+												</div>
+											</div>
+											<div class="col-sm-3 text-center">
+												<div class="img-container J_imgContainer" data-img-id="22">
+													<img class="img-responsive" src="/resources/img/admin/base-info/index2.jpg" alt="顾客点餐平台首页备选图片">
+													<a href="javascript:;" class="J_del del"><i class="fa fa-times"></i></a>
+													<a class="margin-top-15 btn btn-success J_set" href="javascript:;"><i class="fa fa-check"></i>&nbsp;点击设置为首页</a>
+												</div>
+											</div>
+							  			</div>
+							  		</div>
+									<h4>上传图片</h4>
+							  		<hr> 
+									<div class="col-sm-12 margin-top-15">
+										<div id="uploader" class="clearfix">
+											<div id="dndArea" class="placeholder">
+										    	<div id="fileList" class="uploader-list clearfix"></div>
+											</div>
+										    <div id="filePicker" class="pull-left">选择图片</div>
+										    <button id="ctlBtn" class="btn btn-default">开始上传</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+							<!-- <div id="uploader" class="clearfix">
+								<div id="dndArea" class="placeholder">
+							    	<div id="fileList" class="uploader-list clearfix"></div>
+								</div>
+							    <div id="filePicker" class="pull-left">选择图片</div>
+							    <button id="ctlBtn" class="btn btn-default">开始上传</button>
+							</div> -->
+					</div>
+				</div>
+			</div>
+			<!--#include file="/pages/admin/common/footer.html"-->
+		</div>
+		<!-- 首页图片模板-->
+		<script type="text/template" id="indexImg">
+			<div class="img-container J_imgContainer J_indexImg" data-img-id="&{img.id}">
+				<img class="img-responsive" src="&{img.src}" alt="顾客点餐平台首页图片">
+				<h5 class="margin-top-15">当前顾客点餐平台首页</h5>
+			</div>
+		</script>
+		<!-- 备选图片模板-->
+		<script type="text/template" id="otherImg">
+			<div class="img-container J_imgContainer" data-img-id="&{img.id}">
+				<img class="img-responsive" src="&{img.src}" alt="顾客点餐平台首页备选图片">
+				<a href="javascript:;" class="J_del del"><i class="fa fa-times"></i></a>
+				<a class="margin-top-15 btn btn-success J_set" href="javascript:;"><i class="fa fa-check"></i>&nbsp;点击设置为首页</a>
+			</div>
+		</script>
+
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/base-info-management/index-management', function(S){
+					PW.page.BaseInfoManagement.IndexManagement({
+						upload: {
+							// 文件接收服务端
+							uploadUrl: '/mock/admin/dish.json',
+							// 文件列表
+							fileList: '#fileList',
+							// 选择图片按钮
+							pick: '#filePicker',
+							// 开始上传按钮
+							ctlBtn: '#ctlBtn',
+							fileVal: 'file'
+						}
+					});
+				});
+			});
+		</script>
+		<!--<script type="text/javascript" src="/resources/tool/jquery/jquery.org.js"></script>
+		<script type="text/javascript" src="/resources/tool/webuploader/webuploader.js"></script>
+		<script type="text/javascript"> 
+		$(document).on('mouseenter', '.file-item', function(){
+			$(this).find('.tools').slideDown(200);
+		});
+		$(document).on('mouseleave', '.file-item', function(){
+			$(this).find('.tools').slideUp(200);
+		});
+		var 
+		 	$ = jQuery,
+	        $list = $('#fileList'),
+	        $btn = $('#ctlBtn'),
+	        state = 'pending',
+
+	        // 优化retina, 在retina下这个值是2
+	        ratio = window.devicePixelRatio || 1,
+
+	        // 缩略图大小
+	        thumbnailWidth = 100 * ratio,
+	        thumbnailHeight = 100 * ratio,
+
+	        // Web Uploader实例
+	        uploader;
+			// 初始化Web Uploader
+			var uploader = WebUploader.create({
+
+			    // 选完文件后，是否自动上传。
+			    auto: false,
+
+			    // swf文件路径
+			    swf: '/resources/tool/webuploader/Uploader.swf',
+
+			    // 文件接收服务端
+			    server: '/mock/admin/dish.json',
+
+			    // 选择文件的按钮。可选。
+			    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+			    pick: '#filePicker',
+
+			    // 只允许选择图片文件。
+			    accept: {
+			        title: 'Images',
+			        extensions: 'gif,jpg,jpeg,bmp,png',
+			        mimeTypes: 'image/*'
+			    }
+			});
+			// 当有文件添加进来的时候
+			uploader.on('fileQueued', function(file) {
+			    var 
+			    	$li = $('<div id="' + file.id + '" class="file-item thumbnail">' +
+								'<img>' +
+            					'<p class="info text-center">' + file.name + '</p>' +
+            					'<p class="state upload-wait">等待上传</p>' +
+            					'<p class="tools text-right"><i class="fa fa-trash"></i></p>' +
+        					'</div>'),
+           		 	$img = $li.find('img');
+
+        		$list.append( $li );
+			    // 创建缩略图
+			    // 如果为非图片文件，可以不用调用此方法。
+			    // thumbnailWidth x thumbnailHeight 为 100 x 100
+			    uploader.makeThumb(file, function(error, src) {
+			        if (error) {
+			            $img.replaceWith('<span>不能预览</span>');
+			            return;
+			        }
+
+			        $img.attr('src', src);
+			    }, thumbnailWidth, thumbnailHeight);
+			});
+			// 文件上传过程中创建进度条实时显示。
+			uploader.on('uploadProgress', function(file, percentage) {
+			    var $li = $('#'+file.id),
+			        $percent = $li.find('.progress .progress-bar');
+
+			    // 避免重复创建
+			    if ( !$percent.length ) {
+            		$percent = $('<div class="progress progress-striped active">' +
+              						'<div class="progress-bar" role="progressbar" style="width: 0%">' +
+              						'</div>' +
+            					'</div>').appendTo( $li ).find('.progress-bar');
+        		}
+
+        		$li.find('p.state').text('上传中...');
+
+			    $percent.css('width', percentage * 100 + '%');
+			});
+
+			// 文件上传成功，给item添加成功class, 用样式标记上传成功。
+			uploader.on('uploadSuccess', function(file) {
+			    $('#'+file.id).find('p.state').removeClass('upload-wait').addClass('upload-success').text('上传成功');
+			});
+
+			// 文件上传失败，显示上传出错。
+			uploader.on('uploadError', function(file) {
+			    var $li = $('#'+file.id),
+			        $error = $li.find('div.upload-error');
+
+			    // 避免重复创建
+			    if (!$error.length) {
+			        $error = $('<div class="upload-error"></div>').appendTo($li);
+			        $li.find('p.state').remove();
+			    }
+
+			    $error.text('上传失败');
+			});
+
+			// 完成上传完了，成功或者失败，先删除进度条。
+			uploader.on('uploadComplete', function(file) {
+			    $('#'+file.id).find('.progress').remove();
+			    $('#'+file.id).find('p.upload-wait').text('');
+			});
+			uploader.on('all', function(type) {
+		        if (type === 'startUpload') {
+		            state = 'uploading';
+		        } else if (type === 'stopUpload') {
+		            state = 'paused';
+		        } else if (type === 'uploadFinished') {
+		            state = 'done';
+		        }
+
+		        if (state === 'uploading') {
+		            $btn.text('暂停上传');
+		        } else {
+		            $btn.text('开始上传');
+		        }
+		    });
+
+		    $btn.on('click', function() {
+		        if (state === 'uploading') {
+		            uploader.stop();
+		        } else {
+		            uploader.upload();
+		        }
+		    });
+		</script>-->
+	</body>
+</html>

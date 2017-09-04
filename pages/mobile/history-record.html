@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>历史消费</title>
+    <!--#include file="/pages/mobile/common/head.html"-->
+    <link rel="stylesheet" href="/resources/css/mobile/history-record.css">
+</head>
+<body>
+    <div class="page">
+        <!--#include file="/pages/mobile/common/history-record-header.html"-->
+        <!--#include file="/pages/mobile/common/footer.html"-->
+
+        <div class="container">
+            <input type="hidden" class="J_userInp" value="12345">
+            <ul class="history-list J_recordList">
+                <li class="history-item">
+                    <div class="item-info J_unfoldTrigger" data-record-id= "111">
+                        <p>2015年12月7日</p>
+                        <p class="totle-price">总金额：<span>￥49.00</span></p>
+                        <i class="fa fa-angle-right J_toggle"></i> 
+                    </div>
+                </li>
+                <li class="history-item">
+                    <div class="item-info J_unfoldTrigger" data-record-id= "111">
+                        <p>2015年12月7日</p>
+                        <p class="totle-price">总金额：<span>￥49.00</span></p>
+                        <i class="fa fa-angle-right J_toggle"></i> 
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/templet" id="dishTpl">
+        <ul class="dish-list J_dishList">
+            {@each list as it}
+                <li class="dish-item clearfix" data-dish-id="&{it.dishId}">
+                    <a href="&{it.href}">
+                        <img src="&{it.src}" alt="&{it.name}">
+                        <div class="dish-info">
+                            <p class="dish-name">&{it.name}</p>
+                            <p>历史消费价格：￥&{it.historyPrice}元</p>
+                            <p><span class="dish-price">￥&{it.price}元</span></span>&nbsp;&nbsp;现<span class="dish-sale">￥&{it.sale}元</span></p>
+                        </div>
+                    </a>
+                    {@if it.statue == 0}
+                        <div class="add-dish J_order">再来一份</div>
+                    {@else}
+                        <div class="add-dish sold-out">已售完</div>
+                    {@/if}
+                </li>
+            {@/each}
+        </ul>
+    </script>
+    <script type="text/javascript">
+        KISSY.ready(function(S){
+            S.use('page/history-record', function(){
+                PW.page.HistoryRecord();
+            })
+        });
+    </script>
+</body>
+</html>

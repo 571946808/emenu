@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>会员账户信息管理</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+								<li><a href="">会员管理</a></li>
+								<li class="active">会员账户信息管理</li>
+							</ol>
+							<h2>会员账户信息管理</h2>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>搜索</h4>
+								</div>
+								<div class="panel-body">
+									<form action="" class="form-horizontal J_searchForm">
+										<div class="form-group">
+											<label class="col-sm-3 control-label">关键字</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control w180 J_key" placeholder="请输入姓名/电话/卡号" name="keyword">
+											</div>
+										</div>
+										<!-- modify -->
+										<div class="form-group">
+	                                        <label class="col-sm-3 control-label padding-R-17">会员等级</label>
+	                                        <div class="checkbox block col-sm-7">
+	                                            <label>
+	                                                <input type="checkbox" class="J_selectAll" name="gradeIdList" value="1">全选
+	                                            </label>
+	                                            <label>
+	                                                <input type="checkbox" class="J_selectType" name="gradeIdList"  value="2" />金
+	                                            </label>
+	                                            <label>
+	                                                <input type="checkbox"  class="J_selectType"  name="gradeIdList" value="3"/>银
+	                                            </label>
+	                                        </div>
+	                                    </div>
+	                                    <!-- modify -->
+										<div class="col-sm-6 col-sm-offset-3">
+	                                        <div class="btn-toolbar">
+	                                            <button class="btn-primary btn" type="submit"><i class="fa fa-search"></i>&nbsp;搜索</button>
+	                                        </div>
+	                                    </div>
+									</form>
+								</div>
+							</div>
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>列表</h4>
+								</div>
+								<div class="panel-body">
+									<form class="J_operForm">
+										<div class="table-responsive">
+											<table class="table table-hover table-bordered">
+												<thead>
+													<tr>
+														<th>会员等级</th>
+														<th>姓名</th>
+														<th>电话</th>
+														<th>卡号</th>
+														<th class="order pagination-reorder" data-order-key="balance">卡内余额</th>
+														<th>会员积分</th>
+														<th class="order pagination-reorder" data-order-key="totalConsumption">总消费额</th>
+														<th>已挂账金额</th>
+														<th>状态</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody id="J_template">
+												</tbody>
+											</table>
+											<div class="J_pagination"></div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- container -->
+			</div><!-- holder -->
+		</div><!-- page -->
+		<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/template" id="tpl">
+			{@each list as it}
+				<tr data-account-id="&{it.id}" data-account-status="&{it.status}">
+					<td>&{it.vipGrade}</td>
+					<td>&{it.name}</td>
+					<td>&{it.phone}</td>
+					<td>&{it.cardNumber}</td>
+					<td>&{it.balance}</td>
+					<td>&{it.integral}</td>
+					<td>&{it.totalConsumption}</td>
+					<td>&{it.usedCreditAmount}</td>
+					{@if it.status == 0}
+						<td>停用</td>
+						<td>
+							<a href="javascript:;" class="label-info J_change"><i class="fa fa-check"></i>&nbsp;启用</a>
+						</td>
+					{@else}
+						<td>启用</td>
+						<td>
+							<a href="javascript:;" class="label-info J_change"><i class="fa fa-circle"></i>&nbsp;停用</a>
+						</td>
+					{@/if}
+				</tr>
+			{@/each}
+		</script>
+		<script type="text/javascript">
+			KISSY.use('page/vip-management/vip-account-info-management', function(S){
+				PW.page.VipManagement.VipAccountInfoManagement({
+					renderTo: '.J_pagination',
+					juicerRender: '#tpl',
+					dataRender: '#J_template',
+					url: '/mock/admin/vip-account-info-list.json',
+					pageSize: 10,
+					configUrl: function(url,page,me,prevPaginationData){
+						return url;
+						// return url + '/' + page;
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

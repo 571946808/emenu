@@ -1,0 +1,8 @@
+{
+	"code": 0,
+	"list": [
+		{"consumptionId":0,"consumptionTime":"2015-09-10", "type":"消费", "oldMoney":100, "consumptionMoney":49,"realMoney":49,"newMoney":51,"operName":"Joe","operId":"001"},
+		{"consumptionId":1,"consumptionTime":"2015-10-20", "type":"充值", "oldMoney":200, "consumptionMoney":49,"realMoney":49,"newMoney":151,"operName":"Jone","operId":"002"}
+	],
+	"dataCount": 25
+}

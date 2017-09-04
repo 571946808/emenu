@@ -1,0 +1,9 @@
+{
+  "code": 0,
+  "list": [
+    {"id": 100, "name": "物品1", "price": 111, "assistantCode": "ddh", "number": "33330000", "orderUnitName": "箱"},
+    {"id": 200, "name": "物品2", "price": 111, "assistantCode": "eeeh", "number": "33330000", "orderUnitName": "箱"},
+    {"id": 300, "name": "物品3", "price": 111, "assistantCode": "ttty", "number": "33330000", "orderUnitName": "箱"}
+  ],
+  "errMsg": "暂无内容!"
+}

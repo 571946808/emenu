@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>会员卡管理</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+        <link rel="stylesheet" href="/resources/css/admin/vip-management/vip-management.css"/>
+        </style>
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                                </li>
+                                <li>
+                                    <a href="#">会员管理</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="active">会员卡管理</a>
+                                </li>
+                            </ol>
+                            <h2>会员卡管理</h2>
+                        </div>
+                        <!-- 搜索面板 -->
+                        <div class="col-sm-12">
+                             <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>搜索</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="form-horizontal J_searchForm" action="" method="">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">发卡开始日期</label>
+                                            <div class="col-sm-2">
+                                                <input type="text" class="col-sm-3 form-control J_date" name="startTime" value="" readonly/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">发卡结束日期</label>
+                                            <div class="col-sm-2">
+                                                <input type="text" class="col-sm-3 form-control J_date" name="endTime" value="" readonly/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">关键字</label>
+                                            <div class="col-sm-2">
+                                                <input type="text" class="col-sm-3 form-control J_key" placeholder="请输入会员手机号/姓名" name="keyword" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <div class="btn-toolbar">
+                                                <button class="btn btn-primary J_search" type="button"><i class="fa fa-search"></i>&nbsp;搜索</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>          
+                            </div>
+                        </div>
+                        <!-- 列表展示 -->
+                        <div class="col-sm-12"> 
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>会员卡管理</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="J_operForm" method="" action="">
+                                        <input class="J_card" type="hidden" value="" name="id"/>
+                                        <input class="J_card" type="hidden" value="" name="name"/>
+                                        <input class="J_card" type="hidden" value="" name="phone"/>
+                                        <input class="J_card" type="hidden" value="" name="cardNumber"/>
+                                        <input class="J_card" type="hidden" value="" name="createdTime"/>
+                                        <input class="J_card" type="hidden" value="" name="validityTime"/>
+                                        <input class="J_card" type="hidden" value="" name="permanentlyEffective"/>
+                                        <input class="J_card" type="hidden" value="" name="operator"/>
+                                        <input class="J_card" type="hidden" value="" name="status"/>    
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>姓名</th>
+                                                        <th>电话</th>
+                                                        <th>卡号</th>
+                                                        <th>发卡日期</th>
+                                                        <th>有效期</th>
+                                                        <th>是否永久有效</th>
+                                                        <th>操作人</th>
+                                                        <th>状态</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="J_template">
+                                                    
+                                                </tbody>
+                                            </table>
+                                            <div class="J_pagination"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--container-->
+            </div><!--holder-->
+        </div><!--page-->
+        <!--#include file="/pages/admin/common/footer.html"-->
+        <!-- 刷分页 -->
+        <script type="text/template" id="tpl">
+            {@each list as it}
+                <tr vip-card-id="&{it.id}">
+                    <td class="J_name">&{it.name}</td>
+                    <td class="J_phone">&{it.phone}</td>
+                    <td class="J_cardNumber">&{it.cardNumber}</td>
+                    <td class="J_createdTime">&{it.createdTime}</td>
+                    <td class="J_validityTime">&{it.validityTime}</td>
+                    <td class="J_permanentlyEffective">&{it.permanentlyEffective}</td>
+                    <td class="J_operator">&{it.operator}</td>
+                    <td class="J_status">&{it.status}</td>
+                    <td class="J_operation">
+                        <a class="label-info J_editBtn" href="javascript:;" disabled><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                        {@if it.status == "可用"}
+                            <a class="label-info J_changeBtn" href="javascript:;"><i class="fa fa-minus-circle"></i>&nbsp;挂失</a>
+                        {@else if it.status == "已挂失"}
+                            <a class="label-info J_changeBtn" href="javascript:;"><i class="fa fa-dot-circle-o"></i>&nbsp;解挂</a>
+                        {@else}
+                        {@/if} 
+                        <a class="label-info J_delBtn" href="javascript:;"><i class="fa fa-times"></i>&nbsp;删除</a>
+                    </td>  
+                </tr>
+            {@/each}
+        </script>
+        <!-- 编辑模板 -->
+        <script type="text/template" id="editTpl">
+            <tr vip-card-id="&{card.id}">
+                <input class="J_card" type="hidden" value="" name="id"/>
+                <td class="J_name">&{card.name}</td>
+                <td class="J_phone">&{card.phone}</td>
+                <td class="J_cardNumber">&{card.cardNumber}</td>
+                <td class="J_createdTime">&{card.createdTime}</td>
+                <td class="J_validityTime">
+                    <input type="text" class="col-sm-3 form-control J_validityDate" name="validityTime" value="&{card.validityTime}"/>
+                </td>
+                <td class="J_permanentlyEffective">
+                    <select class="form-control" name="permanentlyEffective">
+                        {@if card.permanentlyEffective == "否"}
+                            <option value ="0">否</option>
+                            <option value ="1">是</option>
+                        {@else}
+                            <option value ="1">是</option>
+                            <option value ="0">否</option>
+                        {@/if}
+                    </select>
+                </td>
+                <td class="J_operator">&{card.operator}</td>
+                <td class="J_status">&{card.status}</td>
+                <td class="J_operation">
+                    <a href="javascript:;" class="label-info J_saveBtn"><i class="fa fa-save"></i>&nbsp;保存</a>
+                    <a href="javascript:;" class="label-info J_cancelBtn"><i class="fa fa-undo"></i>&nbsp;取消</a>
+                </td>  
+            </tr>
+        </script>
+        <!-- 保存模板 -->
+        <script type="text/template" id="saveTpl">
+            <tr vip-card-id="&{card.id}">
+                <td class="J_name">&{card.name}</td>
+                <td class="J_phone">&{card.phone}</td>
+                <td class="J_cardNumber">&{card.cardNumber}</td>
+                <td class="J_createdTime">&{card.createdTime}</td>
+                <td class="J_validityTime">
+                    {@if card.permanentlyEffective == "0"}&{card.validityTime}
+                    {@else if card.permanentlyEffective == "1"}
+                    {@/if}
+                </td>
+                <td class="J_permanentlyEffective">
+                    {@if card.permanentlyEffective == "0"}否
+                    {@else if card.permanentlyEffective == "1"}是
+                    {@/if}
+                </td>
+                <td class="J_operator">&{card.operator}</td>
+                <td class="J_status">&{card.status}</td>
+                <td class="J_operation">
+                    <a class="label-info J_editBtn" href="javascript:;"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                    {@if card.status == "可用"}
+                        <a class="label-info J_changeBtn" href="javascript:;"><i class="fa fa-minus-circle"></i>&nbsp;挂失</a>
+                    {@else if card.status == "已挂失"}
+                        <a class="label-info J_changeBtn" href="javascript:;"><i class="fa fa-dot-circle-o"></i>&nbsp;解挂</a>
+                    {@else}
+                    {@/if} 
+                    <a class="label-info J_delBtn" href="javascript:;"><i class="fa fa-times"></i>&nbsp;删除</a>
+                </td> 
+            </tr>
+        </script>
+        <script type="text/javascript">
+            KISSY.ready(function(S){
+                S.use('page/vip-management/vip-card-management', function(){
+                    PW.page.vipCardManagement.Core({
+                        renderTo: '.J_pagination',
+                        juicerRender: '#tpl',
+                        dataRender: '#J_template',
+                        url: '/mock/admin/vip-card-list.json',
+                        pageSize: 10,
+                        configUrl: function(url,page,me,prevPaginationData){
+                            return url;
+                        //return url + '/' + page;
+                        }
+                    });
+                })
+            });
+        </script>
+    </body>
+</html>

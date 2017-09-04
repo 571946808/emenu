@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>搜索风向标</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<link rel="stylesheet" href="/resources/css/admin/base-info-management/base-info-management.css" />
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+							  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+							  	<li><a href="#">基本信息管理</a></li>
+							  	<li class="active">搜索风向标</li>
+							</ol>
+							<h2>搜索风向标</h2>
+						</div>						
+						<div class="col-sm-12">	
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>顾客点餐平台</h4>
+								</div>	
+								<div class="panel-body clearfix">
+									<form class="form-horizontal J_addForm0" action="" method="" data-type="0">
+										<div class="form-group static-height">
+											<div class="col-sm-3">
+												<input type="text" class="form-control J_input-key" data-valid-tip="请输入1~15个关键字|关键字有误，请重新输入" data-valid-rule="length(0,16)" name="key" value="">
+										    </div>
+										    <button class="btn btn-success J_add" type="submit"><i class="fa fa-plus"></i>&nbsp;添加</button>
+										</div>
+									</form>
+									<div class="tags J_tags">
+							    	</div>
+								</div>			
+							</div>	
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>服务员系统</h4>
+								</div>	
+								<div class="panel-body clearfix">
+									<form class="form-horizontal J_addForm1" action="" method="" data-type="1">
+										<div class="form-group static-height">
+											<div class="col-sm-3">
+												<input type="text" class="form-control J_input-key" data-valid-tip="请输入1~15个关键字|关键字有误，请重新输入" data-valid-rule="length(0,16)" name="key" value="">
+										    </div>
+										    <button class="btn btn-success J_add" type="submit"><i class="fa fa-plus"></i>&nbsp;添加</button>
+										</div>
+									</form>
+									<div class="tags J_tags">
+							    	</div>
+								</div>			
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--#include file="/pages/admin/common/footer.html"-->
+		
+		<script type="text/javascript">
+			KISSY.ready(function(S){
+				S.use('page/base-info-management/search-vane', function(S){
+					PW.page.BaseInfoManagement.SearchVane();
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+{
+    "code": 0,
+    "list":[
+    {
+        "bigTagId": 2,
+        "bigTagName": "退菜备注",
+        "smallTagId": 21,
+        "smallTagName": "热菜备注",
+        "contentList":[
+             {
+                  "contentId": 211,
+                  "weight" :9,
+                  "content" :"狠辣",
+                  "relatedCharge":"2",
+                  "isCommon":1
+              },{
+                  "contentId": 221,
+                  "weight" :12,
+                  "content" :"酸甜麻辣",
+                  "relatedCharge":"1",
+                  "isCommon":0
+              }
+        ]      
+    },{
+        "bigTagId": 2,
+        "bigTagName": "退菜备注",
+        "smallTagId": 23,
+        "smallTagName": "凉菜备注",
+        "contentList":[
+           {
+               "contentId": 221,
+               "weight" :9,
+               "content" :"nothing",
+               "relatedCharge":"3",
+               "isCommon":1
+            }
+        ]   
+    },{
+        "bigTagId": 2,
+        "bigTagName": "退菜备注",
+        "smallTagId": 23,
+        "smallTagName": "热汤备注"
+    }
+  ],
+    "errMsg":"请重新操作！"
+}

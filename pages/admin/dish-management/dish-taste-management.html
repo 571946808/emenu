@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>菜品单位管理</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                                </li>
+                                <li>
+                                    <a href="#">菜品管理</a>
+                                </li>
+                                <li class="active">菜品口味管理</li>
+                            </ol>
+                            <h2>菜品口味管理</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>菜品口味列表</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <a class="btn btn-success margin-bottom-15 J_addBtn" href="javascript:;">
+                                        <i class="fa fa-plus"></i>&nbsp;添加菜品口味
+                                    </a>
+                                    <form class="J_operForm">
+                                        <!-- 隐藏域id-->
+                                        <input type = "hidden" class="J_id" name="id" value=""/>
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-sm-1">名称</th>
+                                                        <th class="col-sm-1">关联收费</th>
+                                                        <th class="col-sm-1">操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="J_template">   
+                                                </tbody>
+                                            </table>
+                                            <div class="J_pagination"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--row-->
+                </div><!--container-->
+            </div><!--holder-->
+        </div><!--page-->
+        <!--#include file="/pages/admin/common/footer.html"-->
+        <!--刷分页-->
+        <script type="text/template" id="tpl">
+            {@each list as it}
+                <tr data-taste-id="&{it.id}"> 
+                    <td class="J_name">&{it.name}</td>
+                    <td class="J_relatedCharge">&{it.relatedCharge}</td>
+                    <td>
+                        <a class="label-info J_editBtn" href="javascript:;"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                        <a class="label-info J_delBtn" href="javascript:;"><i class="fa fa-times"></i>&nbsp;删除</a>
+                    </td>
+                </tr>
+            {@/each}
+        </script>
+        <!-- 编辑模板 -->
+        <script type="text/template" id="editTpl">
+            <tr data-taste-id="&{taste.id}" oper-type="&{taste.operType}">
+                <td><input class="form-control" type="text" data-valid-tip="请输入口味名称|口味名称输入有误，请重新输入" data-valid-rule="notNull" name="name" value="&{taste.name}"/>
+                </td>
+                <td>    
+                    <input class="form-control J_relatedChargeInp" type="text" data-valid-tip="请输入关联收费内容|关联收费内容不能为非数字，请重新输入" data-valid-rule="isFloat" value="&{taste.relatedCharge}" name="relatedCharge" />
+                </td>
+                <td>
+                    <a href="javascript:;" class="label-info J_saveBtn"><i class="fa fa-save"></i>&nbsp;保存</a>
+                    <a href="javascript:;" class="label-info J_cancelBtn"><i class="fa fa-undo"></i>&nbsp;取消</a>
+                </td>
+            </tr>
+        </script>
+        <!-- 保存模板 -->
+        <script type="text/template" id="saveTpl">
+            <tr data-taste-id="&{taste.id}">
+                <td class="J_name">&{taste.name}</td>
+                <td class="J_relatedCharge">&{taste.relatedCharge}</td>
+                <td>
+                    <a class="label-info J_editBtn" href="javascript:;"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                    <a class="label-info J_delBtn" href="javasc ript:;"><i class="fa fa-times"></i>&nbsp;删除</a>
+                </td>
+            </tr>
+        </script>
+        <script type= "text/javascript">
+            KISSY.ready(function(S){
+                S.use('page/dish-management/dish-taste-management', function(){
+                    PW.page.DishManagement.List({
+                        renderTo: '.J_pagination',
+                        juicerRender: '#tpl',
+                        dataRender: '#J_template',
+                        url: '/mock/admin/dish-taste-list.json',
+                        pageSize: 10,
+                        configUrl: function(url,page,me,prevPaginationData){
+                            return url;
+                        //return url + '/' + page;
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

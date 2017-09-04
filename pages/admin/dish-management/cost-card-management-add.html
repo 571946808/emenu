@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>成本卡添加页</title>
+    <!--#include file="/pages/admin/common/head.html"-->
+    <link rel="stylesheet" type="text/css" href="/resources/css/admin/dish-management/cost-card-management-add.css">
+</head>
+<body>
+    <!--#include file="/pages/admin/common/header.html"-->
+    <div class="page clearfix">
+        <!--#include file="/pages/admin/common/sidebar.html"-->
+        <div class="holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="fa fa-home">&nbsp;首页</i></a>
+                            </li>
+                            <li>
+                                <a href="#">菜品管理</a>
+                            </li>
+                            <li class="active">菜品成本卡管理</li>
+                        </ol>
+                        <h2>添加菜品成本卡</h2>
+                        <!-- <h2>修改菜品成本卡</h2> -->
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4>添加菜品成本卡</h4>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-horizontal J_operForm">
+                                    <h4>菜品名称</h4>
+                                    <hr/>
+                                    <div class="form-group">
+                                        <label for="basic" class="col-sm-3 control-label"><span class="requires">*</span>菜品名称</label>
+                                        <!-- <div class="col-sm-3" id="basic"></div> -->
+                                        <!-- 如果是编辑页，刷下面的div -->
+                                        <div class="col-sm-3">
+                                            <input type="text" class="col-sm-11" value="锅包肉">
+                                        </div>
+                                        <a class="btn btn-success margin-bottom-15 J_add" href="javascript:;"><i class="fa fa-plus"></i>&nbsp;添加原材料</a>
+                                    </div>
+                                    <input type="hidden" name="id" Class="J_costCardId" value="成本卡Id"/>
+                                    <input type="hidden" class="J_dishId" name="dishId" value="dishId" />
+                                    <h4>原配料管理</h4>
+                                    <hr/>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>原材料</th>
+                                                    <th>材料类别</th>
+                                                    <th>单位</th>
+                                                    <th>毛料用量</th>
+                                                    <th>净料用量</th>
+                                                    <th>班结时自动出库</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="J_tbody">
+                                                <tr>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <h4>成本计算<span class="tip">（该成本根据原配料自动计算，您也可以手动修改）</span></h4>
+                                    <hr/>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">主料成本</label>
+                                        <div class="col-sm-6">
+                                            <input class="w200 J_price J_mainCost" type="text" data-valid-rule="isNull | notNegativeNumber " data-valid-tip="请输入大于0的两位小数|请输入大于0的两位小数" name="mainCost" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">辅料成本</label>
+                                        <div class="col-sm-6">
+                                            <input class="w200 J_price J_assistCost" type="text"  name="assistCost" value="2" data-valid-rule="isNull | notNegativeNumber " data-valid-tip="请输入大于0的两位小数|请输入大于0的两位小数">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">调料成本</label>
+                                        <div class="col-sm-6">
+                                            <input class="w200 J_price J_deliciousCost" type="text" data-valid-rule="isNull | notNegativeNumber " data-valid-tip="请输入大于0的两位小数|请输入大于0的两位小数"  name="deliciousCost" value="3">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">标准成本</label>
+                                        <div class="col-sm-6">
+                                            <input class="w200 J_standardCost" readonly type="text" value="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-sm-6 col-sm-offset-3">
+                                        <div class="btn-toolbar">
+                                            <button class="btn-primary btn J_submitBtn" type="submit" data-btn-type="loading" data-btn-loading-text="正在保存，请稍后">
+                                                <i class="fa fa-save"></i>
+                                                &nbsp;保存
+                                            </button>
+                                            <button class="btn-default btn" type="reset"><i class="fa fa-undo"></i>&nbsp;重置</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 页面第一个加载时，把菜品刷到这个select里面来 -->
+                    <select class="J_dishSelect show-tick form-control hidden" data-live-search="true">
+                        <!-- 把菜品id写到value里面 -->
+                        <option value="1" data-code="c">cow</option>
+                        <option value="2" data-code="b">bull</option>
+                        <option value="3" data-code="o">ox</option>
+                        <option value="4" data-code="A">ASD</option>
+                        <option value="5" data-code="B">Bla</option>
+                        <option value="6" data-code="B">Ble</option>
+                    </select>
+                    <!-- 页面一加载的时候把原配料刷在这个select里面 -->
+                    <select class="J_ingredientSelect show-tick form-control hidden" data-live-search="true">
+                        <!-- 把id写到value里面 -->
+                        <option value="1" data-code="l" data-unit="克">l</option>
+                        <option value="2" data-code="i" data-unit="克">i</option>
+                        <option value="3" data-code="a" data-unit="克">a</option>
+                        <option value="4" data-code="n" data-unit="克">n</option>
+                        <option value="5" data-code="g" data-unit="克">g</option>
+                        <option value="6" data-code="x" data-unit="克">x</option>
+                    </select>
+                </div><!--row-->
+            </div><!--container-->
+        </div><!--holder-->
+    </div><!--page-->
+    <!--#include file="/pages/admin/common/footer.html"-->
+    <script type="text/template" id="dialogTpl">
+        <form class="form-horizontal J_DialogForm"  data-oper-type="&{data.isEdit}">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">
+                    <span class="requires">*</span>原材料
+                </label>
+                <div class="col-sm-6" id="ingredient" data-result-id="&{data.ingredientId}">
+                    <div class="drop clearfix"><div class="J_renderTo render-div clearfix" style="min-height: 32px;">&{data.ingredientName}<span class="caret"></span></div></div>
+                </div>
+                <input type="hidden" class="J_ingredientId" value="&{data.ingredientId}" name="ingredientId"/>
+                <input type="hidden" class="J_ingredientName" value="&{data.ingredientName}" name="ingredientName"/>
+                <input type="hidden" class="J_ingredientUnit" value="&{data.unit}" name="unit"/>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">
+                    <span class="requires">*</span>材料类型
+                </label>
+                <div class="col-sm-6">
+                    <select class="form-control" name="itemType">
+                        <option value="0" {@if data.itemType == 0}selected{@/if}>主料</option>
+                        <option value="1" {@if data.itemType == 1}selected{@/if}>辅料</option>
+                        <option value="2" {@if data.itemType == 2}selected{@/if}>调料</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 margin-right-15 control-label">
+                    <span class="requires">*</span>毛料用量
+                </label>
+                <div class="col-sm-6 input-group">
+                    <input type="text" class="form-control" placeholder="请输入大于0的数字" data-valid-rule="notNull & notNegativeNumber" name="otherCount" value="&{data.otherCount}"/>
+                    <span class="input-group-addon">&{data.unit}</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 margin-right-15 control-label">
+                    <span class="requires">*</span>净料用量
+                </label>
+                <div class="input-group col-sm-6 ">
+                    <input type="text" class="form-control" placeholder="请输入大于0的数字" data-valid-rule="notNull & notNegativeNumber" name="netCount" value="&{data.netCount}"/>
+                    <span class="input-group-addon">&{data.unit}</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">
+                    <span class="requires">*</span>是否班结时自动出库
+                </label>
+                <div class="col-sm-6">
+                {@if data.isAutoOut ==1}
+                    <label class="radio-inline">
+                        <input type="radio" name="isAutoOut" value="0" />否
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="isAutoOut" value="1" checked/>是
+                    </label>
+                    {@else}
+                    <label class="radio-inline">
+                        <input type="radio" name="isAutoOut" value="0" checked/>否
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="isAutoOut" value="1" />是
+                    </label>
+                {@/if}
+                </div>
+            </div>
+        </form>
+    </script>
+    <script type="text/template" id="listTpl">
+        <tr data-ingredient-id="&{data.ingredientId}">
+            <th>&{data.ingredientName}</th>
+            {@if data.itemType == 0}
+                <th class="J_itemType" data-itemType="&{data.itemType}">主料</th>
+            {@else if data.itemType == 1}
+                <th class="J_itemType" data-itemType="&{data.itemType}">辅料</th>
+            {@else}
+                <th class="J_itemType" data-itemType="&{data.itemType}">调料</th>
+            {@/if}
+            <th>&{data.unit}</th>
+            <th class="J_otherCount">&{data.otherCount}</th>
+            <th>&{data.netCount}</th>
+            {@if data.isAutoOut == 0}
+                <th>否</th>
+            {@else}
+                <th>是</th>
+            {@/if}
+            <th>
+                <a href="javascript:;" class="label-info J_edit"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                <a href="javascript:;" class="label-info J_del"><i class="fa fa-times"></i>&nbsp;删除</a>
+            </th>
+            <input type="hidden" class="J_ingredientInfo" name="ingredientInfo" value="&{data.dataStr}"/>
+        </tr>
+    </script>
+    <script type="text/template" id="selectTpl">
+    <ul class="menu hidden">
+        <div class="search-box-input">
+            <input type="text" class="form-control focusedInput J_ingredientSearchInp">
+            <span class="fa fa-search search-box" aria-hidden="true"></span>
+        </div>
+        {@each list as it}
+            <li class="J_render-list" data-id="&{it.ingredientId}"data-unit="&{it.unit}"><a href="javascript:;">[&{it.code}]&nbsp;&{it.name}</a></li>
+        {@/each}
+    </ul>
+    </script>
+    <script type="text/javascript">
+        KISSY.ready(function(S){
+            S.use('page/dish-management/cost-card-management-add',function(){
+                    PW.page.DishManagement.CostCardManagementAdd();
+            })
+        })
+    </script>
+</body>
+</html>

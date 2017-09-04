@@ -1,0 +1,14 @@
+{
+	"code": 0,
+	"list": [
+		{"id": 0, "username": 123, "name": "崔元", "phone":18888888888, "role": [0,1], "status": 0},
+		{"id": 1, "username": 123, "name": "崔元", "phone":18888888888, "role": [0,2], "status": 0},
+		{"id": 2, "username": 123, "name": "崔元", "phone":18888888888, "role": [1,2], "status": 0},
+		{"id": 3, "username": 123, "name": "崔元", "phone":18888888888, "role": "0", "status": 1},
+		{"id": 4, "username": 123, "name": "崔元", "phone":18888888888, "role": "0", "status": 1},
+		{"id": 5, "username": 123, "name": "崔元", "phone":18888888888, "role": "0", "status": 1},
+		{"id": 6, "username": 123, "name": "崔元", "phone":18888888888, "role": "0", "status": 1},
+		{"id": 7, "username": 123, "name": "崔元", "phone":18888888888, "role": "0", "status": 1}
+	],
+	"dataCount": 200
+}

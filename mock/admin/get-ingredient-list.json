@@ -1,0 +1,9 @@
+{
+  "code": 0,
+  "list": [
+    {"id": 100, "assistantCode":"NR", "name": "牛肉", "unit": "斤"},
+    {"id": 101, "assistantCode":"Y", "name": "盐", "unit": "克"},
+    {"id": 102, "assistantCode":"JZG", "name": "金针菇", "unit": "袋"}
+  ],
+  "errMsg": "暂无内容!"
+}

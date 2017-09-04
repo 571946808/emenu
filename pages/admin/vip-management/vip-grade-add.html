@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>会员等级添加页</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+                                <li><a href="#">会员管理</a></li>
+                                <li class="active">会员等级添加</li>
+                            </ol>
+                            <h2>会员管理-添加等级</h2>
+                            <div class="alert alert-danger col-sm-12 J_msg" role="alert">添加失败！</div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>添加会员等级</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="form-horizontal J_gradeForm" method="" action="" autocomplete="off">
+                                        <input class="J_gradeId" type="hidden" name="id" value="123">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">
+                                                <span class="requires">*</span>会员价方案
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <select class="form-control J_PlanSelect w180" name="vipDishPricePlanId">
+                                                    <option value="0">不使用会员价方案</option>
+                                                    <option value="0">方案一</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">
+                                                <span class="requires">*</span>会员等级名称
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <input class="w180 J_tableName" type="text" name="name" value="" data-valid-tip="请输入会员等级名称|会员等级不能为空，请重新输入" data-valid-rule="notNull"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">
+                                                <span class="requires">*</span>最低消费金额
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <input class="w180 J_minConsumption" type="text" name="minConsumption" value=""/>&nbsp;元
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">
+                                                <span class="requires">*</span>信用额度
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <input class="w180 J_creditAmount" type="text" name="creditAmount" value="0" data-valid-tip="请输入信用额度|信用额度不符合规格，请重新输入" data-valid-rule="notNull&isFloat" />&nbsp;元
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">
+                                                <span class="requires">*</span>结算周期
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <input class="w180 J_settlementCycle" type="text" name="settlementCycle" value="" data-valid-tip="请输入结算周期|结算周期不符合规格，请重新输入"/>&nbsp;月
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">
+                                                <span class="requires">*</span>升级预提醒额度
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <input class="w180" type="text" name="preReminderAmount" value="" data-valid-tip="请输入升级预提醒额度|升级预提醒额度不符合规格，请重新输入" data-valid-rule="notNull&isFloat"/>&nbsp;元
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">卡片政策</label>
+                                            <div class="col-sm-6">
+                                                <textarea class="w180" name="cardPolicy"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-sm-offset-3">
+                                                    <div class="btn-toolbar">
+                                                        <button class="btn-primary btn J_save" type="submit"  data-btn-type="loading" data-btn-loading-text="正在保存，请稍后">
+                                                            <i class="fa fa-save"></i>
+                                                            &nbsp;保存
+                                                        </button>
+                                                        <button class="btn-default btn J_reset" type="reset">
+                                                            <i class="fa fa-undo"></i>
+                                                            &nbsp;重置
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--row-->
+                </div><!--container-->
+            </div><!--holder-->
+        </div><!--page--> 
+        <!--#include file="/pages/admin/common/footer.html"-->
+        <script type="text/javascript">
+            KISSY.use('page/vip-management/vip-grade-management', function(S){
+                PW.page.VipManagement.VipGradeManagement.Add();
+            });
+        </script>
+    </body>
+</html>

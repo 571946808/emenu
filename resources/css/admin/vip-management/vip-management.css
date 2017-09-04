@@ -1,0 +1,33 @@
+.J_date,
+.J_key,
+.J_validityDate{
+    width: 190px;
+}
+/*********************************会员积分管理*******************************/
+.border-top{
+    border-top: 1px solid #bce8f1;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+.form-group .text-left{
+    text-align: left;
+}
+.table-list > thead > tr > td, .table-list > tbody > tr > td, .table-list > tfoot > tr > td{
+    line-height: 30px;
+}
+.table-list{
+    width: 48%;
+    margin-left: 18%;
+}
+.operForm input[disabled],.operForm select[disabled]{
+    cursor: not-allowed;
+}
+.operForm a[disabled]:hover{
+    cursor: not-allowed;
+}
+#J_template input[type="text"]{
+    width: 20%;
+}
+.J_addBtn{
+    margin-left: 1%
+}

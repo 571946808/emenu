@@ -1,0 +1,47 @@
+html,
+body,
+.page {
+  background-color: #f0f0f0; }
+
+body {
+  overflow: hidden; }
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: 100% !important;
+  width: 100%; }
+
+#wrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 1.25333rem;
+  width: 10rem;
+  bottom: 1.50667rem; }
+
+.hidden {
+  display: none; }
+
+/* **************details-header start******************** */
+.header {
+  background-color: #ff8822;
+  padding: 0.32rem 0.37333rem;
+  border-bottom: 0.02667rem solid #e66a00;
+  position: fixed;
+  width: 9.25333rem;
+  top: 0;
+  left: 0;
+  z-index: 16;
+  color: #fff; }
+
+.back-icon {
+  float: left;
+  font-size: 0.50667rem; }
+
+.header-title {
+  text-align: center;
+  width: 9.09333rem;
+  font-size: 0.41333rem;
+  font-weight: normal; }
+
+/*# sourceMappingURL=details-header.css.map */

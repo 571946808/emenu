@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>套餐管理编辑</title>
+    <!--#include file="/pages/admin/common/head.html"-->
+    <link rel="stylesheet" href="/resources/css/admin/dish-management/dish-management.css">
+    <link rel="stylesheet" type="text/css" href="/resources/tool/webuploader/css/webuploader.css">
+</head>
+<body>
+<!--#include file="/pages/admin/common/header.html"-->
+<div class="page clearfix">
+    <!--#include file="/pages/admin/common/sidebar.html"-->
+    <div class="holder">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+                        <li><a href="#">菜品管理</a></li>
+                        <li class="active">套餐管理</li>
+                    </ol>
+                    <h2>菜品管理-编辑套餐</h2>
+                    <div class="alert alert-danger J_tip">提示信息!</div>
+                </div>
+                <div class="col-sm-12 margin-bottom-30">
+                    <form class="form-horizontal J_operForm" autocomplete="off" action="" method="">
+                        <!-- change: 加input——用于编辑页初始化时显示已有菜品的价格和数量,后台需套 -->
+                       <div class="form-group J_initialNumberAndCount">
+                            <input type="hidden" name="initalDishPrice" value="100">
+                            <input type="hidden" name="initalDishQuantity" value="3">
+                        </div>
+                        <!--菜品id-->
+                        <input class="J_id" type="hidden" name="id" value="112233">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a class="tab" data-tabpanel="#single" role="tab" data-toggle="tab">编辑套餐</a>
+                            </li>
+                            <li role="presentation">
+                            <!--如果是编辑页面, "批量添加"改为编辑图片-->
+                            <a class="tab" data-tabpanel="#batch" role="tab" data-toggle="tab">编辑套餐图片</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="single">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4>套餐编辑</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="">
+                                            <h4>编辑套餐信息</h4>
+                                            <hr>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label"><span class="requires">*</span>选择分类</label>
+                                                <div class="col-sm-2 no-padding-right">
+                                                    <select class="form-control J_rootClass w180" name="categoryId">
+                                                        <option value="-1" selected="selected">请选择</option>
+                                                        <option value="2">菜类</option>
+                                                        <option value="3">酒水类</option>
+                                                        <option value="4">不展示</option>
+                                                        <option value="5">套餐</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-2 no-padding-right">
+                                                    <select class="form-control J_rootClass w180" name="tagId">
+                                                        <option value="-1" selected="selected">请选择</option>
+                                                        <option value="2">菜类</option>
+                                                        <option value="3">酒水类</option>
+                                                        <option value="4">不展示</option>
+                                                        <option value="5">套餐</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label"><span class="requires">*</span>套餐名称</label>
+                                                <div class="col-sm-6">
+                                                    <input class="w180 J_name" type="text" data-valid-tip="请输入套餐名称|套餐名称不能为空，请重新输入" data-valid-rule="notNull" value="" name="name" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">套餐编号</label>
+                                                <div class="col-sm-6">
+                                                    <input class="w180" type="text" value="" name="dishNumber" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">助记码</label>
+                                                <div class="col-sm-6">
+                                                    <input class="w180 J_assistantCode" type="text" value="" name="assistantCode" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label"><span class="requires">*</span>定价</label>
+                                                <div class="col-sm-6">
+                                                    <input class="w180 J_price" id="price" type="text" data-valid-tip="请输入定价|定价出现非数字，请重新输入" data-valid-rule="isFloat" value="" name="price" />&nbsp;元
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="J_dishPromotion">
+                                            <h4 class="margin-top-30">促销价格</h4>
+                                            <hr>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label"><span class="requires">*</span>促销方式</label>
+                                                <div class="col-sm-2 no-padding-right">
+                                                    <select class="form-control J_promotionType J_select w180" name="saleType">
+                                                        <option value="1">无促销</option>
+                                                        <option value="2" selected="selected" data-name="discount" data-value="3.5" data-valid-rule="scale(0,10)" data-valid-tip="请输入大于0小于10的整数或小数，如6或6.5|折扣超范围，请重新输入">折扣</option>
+                                                        <option value="3" data-name="salePrice" data-value="100" data-valid-rule="isFloat" data-valid-tip="请输入售价|售价不能为空，请重新输入">售价</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <span class="J_noPromotion help-inline J_renderPosition"></span>
+                                                    <span class="help-inline J_promotionUnit"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="J_dishDetail">
+                                            <h4 class="margin-top-30">套餐详情</h4>
+                                            <hr>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label"><span class="requires">*</span>选择菜品</label>
+                                                <div class="col-sm-6 clearfix">
+                                                    <div class="taste-list J_dishList">
+                                                        <div data-result-unit="斤" data-result-price="10" data-result-name="土豆" data-result-id="2" data-result-quantity="100" class="select-tag">[2222]土豆 100斤<i class="fa fa-times J_delSelectTag"></i><input type="hidden" value="2" name="dishId"></div>
+                                                        <div data-result-unit="斤" data-result-price="20" data-result-name="白菜" data-result-id="22" data-result-quantity="200" class="select-tag">白菜<i class="fa fa-times J_delSelectTag"></i><input type="hidden" value="22" name="dishId"></div>
+                                                    </div>
+                                                    <a href="javascript:;" class="J_addDish btn btn-success"><i class="fa fa-plus">&nbsp;</i>添加菜品</a>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">上菜时限</label>
+                                                <div class="col-sm-6 clearfix">
+                                                    <input class="w180" type="text" name="timeLimit" value="0">&nbsp;(0为无限制)
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">可点餐段</label>
+                                                <div class="col-sm-6 clearfix">
+                                                    <div class="checkbox block">
+                                                        <label>
+                                                            <input class="J_selectAll"  type="checkbox" value="1" name="period" checked="checked"> 全部
+                                                        </label>
+                                                        <label>
+                                                            <input class="J_period" type="checkbox" value="11" name="period"> 早晨
+                                                        </label>
+                                                        <label>
+                                                            <input class="J_period" type="checkbox" value="12" name="period"> 中午
+                                                        </label>
+                                                        <label>
+                                                            <input class="J_period" type="checkbox" value="13" name="period"> 晚上
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">打印机</label>
+                                                <div class="col-sm-6 clearfix">
+                                                    <select class="form-control w180" name="printerId">
+                                                        <option value="-1">请选择</option>
+                                                        <option value="1">菜品打印机</option>
+                                                        <option value="2">酒水打印机</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">是否网络可点</label>
+                                                <div class="col-sm-9">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" value="1" name="isNetworkAvailable" checked="checked">是
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" value="0" name="isNetworkAvailable">否
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">是否使用会员价</label>
+                                                <div class="col-sm-9">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" value="1" name="isVipPriceAvailable" checked="checked">是
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" value="0" name="isVipPriceAvailable">否
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">是否可用代金卷</label>
+                                                <div class="col-sm-9">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" value="1" name="isVoucherAvailable" checked="checked">是
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" value="0" name="isVoucherAvailable">否
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--编辑页刷点赞人数-->
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">点赞人数</label>
+                                                <div class="col-sm-9">
+                                                    <input class="w180" type="text"  name="likeNums" value=""/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group dish">
+                                                <label class="col-sm-3 control-label">菜品介绍</label>
+                                                <div class="col-sm-6 clearfix">
+                                                    <textarea class="form-control" rows="6" name="description"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                <div class="btn-toolbar">
+                                                    <button class="btn-primary btn J_submitBtn" type="submit" data-btn-type="loading" data-btn-loading-text="正在保存，请稍后">
+                                                        <i class="fa fa-arrow-right"></i>
+                                                        &nbsp;下一步
+                                                    </button>
+                                                    <button class="btn-default btn" type="reset"><i class="fa fa-undo"></i>&nbsp;重置</button>
+                                                    <!--如果是编辑页面,请刷下面的按钮-->
+                                                    <!--<button class="btn-default btn" type="button"><i class="fa fa-undo"></i>&nbsp;返回</button>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <select class="selectpicker show-tick form-control hidden" data-live-search="true">
+                                <option value="1" data-price="01" data-code="c" data-unit="斤">cow</option>
+                                <option value="2" data-price="02" data-code="b" data-unit="斤">bull</option>
+                                <option value="3" data-price="03" data-code="o" data-unit="斤">ox</option>
+                                <option value="4" data-price="04" data-code="A" data-unit="斤">ASD</option>
+                                <option value="5" data-price="05" data-code="B" data-unit="斤">Bla</option>
+                                <option value="6" data-price="06" data-code="B" data-unit="斤">Ble</option>
+                                <option value="6" data-price="06" data-code="B" data-unit="斤">Ble</option>
+                                <option value="6" data-price="06" data-code="B" data-unit="斤">Ble</option>
+                                <option value="6" data-price="06" data-code="B" data-unit="斤">Ble</option>
+                                <option value="6" data-price="06" data-code="B" data-unit="斤">Ble</option>
+                            </select>
+                            <div role="tabpanel" class="tab-pane" id="batch">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4>编辑套餐大图</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                                <h4>当前套餐大图</h4>
+                                                <hr>
+                                                <div class="col-sm-3 J_imgContainer" data-img-id="0">
+                                                    <div class="img-container">
+                                                        <img class="img-responsive J_currentBigPic" src="/resources/img/admin/base-info/index.jpg" alt="菜品大图">
+                                                        <a href="javascript:;" class="J_del del"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 J_imgContainer" data-img-id="1">
+                                                    <div class="img-container">
+                                                        <img class="img-responsive J_currentBigPic" src="/resources/img/admin/base-info/index1.jpg" alt="菜品大图">
+                                                        <a href="javascript:;" class="J_del del"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 J_imgContainer" data-img-id="2">
+                                                    <div class="img-container">
+                                                        <img class="img-responsive J_currentBigPic" src="/resources/img/admin/base-info/index2.jpg" alt="菜品大图">
+                                                        <a href="javascript:;" class="J_del del"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 J_imgContainer" data-img-id="3">
+                                                    <div class="img-container">
+                                                        <img class="img-responsive J_currentBigPic" src="/resources/img/admin/base-info/index3.jpg" alt="菜品大图">
+                                                        <a href="javascript:;" class="J_del del"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 margin-top-15">
+                                            <div class="clearfix uploader">
+                                                <div id="dndArea1" class="placeholder">
+                                                    <div id="fileList1" class="uploader-list clearfix"></div>
+                                                </div>
+                                                <div id="filePicker1" class="pull-left">选择图片</div>
+                                                <button id="ctlBtn1" class="btn btn-default">开始上传</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4>编辑套餐小图</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                                <h4>当前套餐小图</h4>
+                                                <hr>
+                                                <div class="col-sm-2 J_imgContainer" data-img-id="123">
+                                                    <div class="img-container">
+                                                        <img class="img-responsive J_currentSmallPic" src="/resources/img/admin/base-info/index.jpg" alt="菜品大图">
+                                                        <a href="javascript:;" class="J_del del"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 margin-top-15">
+                                            <div class="clearfix uploader">
+                                                <div id="dndArea2" class="placeholder">
+                                                    <div id="fileList2" class="uploader-list clearfix"></div>
+                                                </div>
+                                                <div id="filePicker2" class="pull-left">选择图片</div>
+                                                <button id="ctlBtn2" class="btn btn-default">开始上传</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--#include file="/pages/admin/common/footer.html"-->
+<!--添加菜品对话框-->
+<!-- change：价格改为只读 -->
+<script type="text/template" id="dlgTpl">
+    <form class="form-horizontal J_addForm" action="" method="">
+        <p class="count pull-right">共&nbsp;<span class="J_dishNumber">0</span>&nbsp;道菜</p>
+        <p class="count pull-right">共&nbsp;￥<span class="J_dishCount">0</span></p>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"><span class="requires">*</span>菜品</label>
+            <div class="col-sm-5">
+                <div id="basic"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"><span class="requires">*</span>价格</label>
+            <div class="col-sm-6">
+                <input class="w180 J_priceInp" type="text" name="dishPrice" value="" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"><span class="requires">*</span>数量</label>
+            <div class="col-sm-6">
+                <input class="w180 J_numberInp" type="text" data-valid-rule="isFloat" data-valid-tip="请输入数量|数量有误,请重新输入" name="dishQuantity" value="">
+            </div>
+        </div>
+        <div class="col-sm-offset-3 margin-bottom-15">
+            <a href="javascript:;" class="J_addSpecificDish btn btn-success" disabled="disabled"><i class="fa fa-plus"></i></a>
+            <a href="javascript:;" class="J_emptySpecificDish btn btn-success"><i class="fa fa-eraser"></i></a>
+            <a href="javascript:;" class="J_delSpecificDish btn btn-success" disabled="disabled"><i class="fa fa-minus"></i></a>
+        </div>
+    </form>
+    <form class="J_oper" action="" method="">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered J_table">
+                <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" class="J_selectAll" />
+                    </th>
+                    <th>名称</th>
+                    <th>单位</th>
+                    <th>价格</th>
+                    <th>数量</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="J_template"></tbody>
+            </table>
+        </div>
+    </form>
+</script>
+<!--菜品模板-->
+<!-- change:每个tr加input-->
+<script type="text/template" id="dishTpl">
+    <tr data-dish-id="&{dishId}">
+        <input type="hidden" name="dishId" value="&{dishId}">
+        <input type="hidden" name="dishPrice" value="&{dishPrice}">
+        <input type="hidden" name="dishQuantity" value="&{dishQuantity}">
+        <td><input type="checkbox" class="J_check" /></td>
+        <td>&{dishName}</td>
+        <td>&{dishUnit}</td>
+        <td>&{dishPrice}</td>
+        <td>&{dishQuantity}</td>
+        <td>
+            <a href="javascript:;" class="label-info J_editDish"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+            <a href="javascript:;" class="label-info J_delDish"><i class="fa fa-times"></i>&nbsp;删除</a>
+        </td>
+    </tr>
+</script>
+<!--菜品编辑模板-->
+<script type="text/template" id="editDishTpl">
+    <tr data-dish-id="&{dishId}">
+        <td><input type="checkbox" class="J_check" /></td>
+        <td><input class="dish-input J_dishInput" type="text" data-valid-rule="notNull" value="&{dishName}" name="dishName" /></td>
+        <td><input class="dish-input J_dishInput" type="text" data-valid-rule="notNull" value="&{dishUnit}" name="dishUnit" /></td>
+        <td><input class="dish-input J_dishInput" type="text" value="&{dishPrice}" name="dishPrice"  readonly/></td>
+        <td><input class="dish-input J_dishInput" type="text" data-valid-rule="isFloat" value="&{dishQuantity}" name="dishQuantity" /></td>
+        <td>
+            <a href="javascript:;" class="label-info J_saveDish"><i class="fa fa-save"></i>&nbsp;保存</a>
+            <a href="javascript:;" class="label-info J_cancelDish"><i class="fa fa-undo"></i>&nbsp;取消</a>
+        </td>
+    </tr>
+</script>
+<script type="text/javascript">
+    KISSY.ready(function(S){
+        S.use('page/dish-management/package-dish-management-add, page/dish-management/dish-img-management-edit, page/dish-management/dish-img-management-add, widget/tab', function(S){
+            PW.page.DishManagement.PackageDishManagement.Add();
+            PW.page.DishManagement.DishImgManagementEdit.Core();
+            PW.page.DishManagement.DishImgManagementAdd.BigPic({
+                upload: {
+                    // 文件接收服务端
+                    uploadUrl: 'http://upload.pandawork.net/file/upload',
+                    // 文件列表
+                    fileList: '#fileList1',
+                    // 选择图片按钮
+                    pick: '#filePicker1',
+                    // 开始上传按钮
+                    ctlBtn: '#ctlBtn1',
+                    fileVal: 'file'
+                }
+            });
+            PW.page.DishManagement.DishImgManagementAdd.SmallPic({
+                upload: {
+                    // 文件接收服务端
+                    uploadUrl: 'http://upload.pandawork.net/file/upload',
+                    // 文件列表
+                    fileList: '#fileList2',
+                    // 选择图片按钮
+                    pick: '#filePicker2',
+                    // 开始上传按钮
+                    ctlBtn: '#ctlBtn2',
+                    fileVal: 'file'
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>会员价管理</title>
+        <!--#include file="/pages/admin/common/head.html"-->
+        <style type="text/css">
+            .table > tbody > tr > td.v-middle{
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <!--#include file="/pages/admin/common/header.html"-->
+        <div class="page clearfix">
+            <!--#include file="/pages/admin/common/sidebar.html"-->
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                                </li>
+                                <li>
+                                    <a href="#">会员管理</a>
+                                </li>
+                                <li class="active">
+                                    会员价管理
+                                </li>
+                            </ol>
+                            <h2>会员价管理</h2>
+                            <div class="alert alert-success col-sm-12 
+                            J_msg" role="alert">添加成功！</div>
+                            <!-- <div class="alert alert-danger col-sm-12 J_msg" role="alert">添加失败！</div> -->
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>搜索</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="form-horizontal J_searchForm" method="" action="">
+                                        <input type="hidden" class="J_planIdHidden" name="vipDishPricePlanId" value="2">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">关键字</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control w200" placeholder="请输入名称/编号/助记码" name="keyword" value="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <div class="btn-toolbar">
+                                                <button class="btn-primary btn J_search" type="submit"><i class="fa fa-search"></i>&nbsp;搜索</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>会员价：<span>方案一</span></h4>
+                                </div>
+                                <div class="panel-body">
+                                    <a href="javascript:;" class="btn btn-success margin-bottom-15 J_generate"><i class="fa fa-plus"></i>&nbsp;自动生成会员价</a>
+                                    <form class="J_operForm" method="" action=""  autocomplete="off">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <input class="J_selectAll"type="checkbox" name="dishIdList"/>
+                                                        </th>
+                                                        <th>编号</th>
+                                                        <th>商品名称</th>
+                                                        <th>定价</th>
+                                                        <th>售价</th>
+                                                        <th>会员价</th>
+                                                        <th>差价</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="J_template">
+                                                    <tr data-dish-id="1">
+                                                        <td>
+                                                            <input class="J_price" type="checkbox" value="1" />
+                                                        </td>
+                                                        <td>1</td>
+                                                        <td>2</td>
+                                                        <td>5</td>
+                                                        <td>6</td>
+                                                        <td class="J_vipDishPrice">3</td>
+                                                        <td>
+                                                        <i class="fa fa-long-arrow-down"></i>&nbsp;2
+                                                        <!-- <i class="fa fa-long-arrow-up"></i>&nbsp;0 -->
+                                                        </td>
+                                                        <td><a href="javascript:;" class="label-info J_edit"><i class="fa fa-pencil"></i>&nbsp;编辑</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--container-->
+            </div><!--holder-->
+        </div><!--page-->
+        <!--#include file="/pages/admin/common/footer.html"-->
+        <!--列表模板-->
+        <script type="text/template" id="listTpl">
+            {@each list as it}
+                <tr data-dish-id="&{it.dishId}">
+                    <td><input class="J_price" type="checkbox" name="dishIdList" value="&{it.dishId}"/></td>
+                    <td>&{it.dishNumber}</td>
+                    <td>&{it.dishName}</td>
+                    <td>&{it.price}</td>
+                    <td>&{it.salePrice}</td>
+                    <td class="J_vipDishPrice">&{it.vipDishPrice}</td>
+                    <td>
+                        {@if it.order == 0}
+                            <i class="fa fa-long-arrow-down"></i>&nbsp;&{it.difference}
+                        {@else if it.order == 1}
+                            <i class="fa fa-long-arrow-up"></i>&nbsp;&{it.difference}
+                        {@/if}
+                    </td>
+                    <td><a href="javascript:;" class="label-info J_edit"><i class="fa fa-pencil"></i>&nbsp;编辑</a></td>
+                </tr>
+            {@/each}
+        </script>
+        <!-- 编辑模板 -->
+        <script type="text/template" id="editTpl">
+            <tr>
+                <td class="v-middle"><input class="J_price" type="checkbox"/></td>
+                <td class="v-middle">&{dishNumber}</td>
+                <td class="v-middle">&{dishName}</td>
+                <td class="v-middle">&{price}</td>
+                <td class="v-middle">&{salePrice}</td>
+                <td class="v-middle"><input type="text" class="form-control J_vipPriceInp" data-valid-rule="notNull" name="vipDishPrice" value="&{vipDishPrice}"/></td>
+                <td class="v-middle">
+                    {@if order == 0}
+                        <i class="fa fa-long-arrow-down"></i>&nbsp;&{difference}
+                    {@else if order == 1}
+                        <i class="fa fa-long-arrow-up"></i>&nbsp;&{difference}
+                    {@/if}
+                </td>
+                <td class="v-middle">
+                    <a href="javascript:;" class="label-info J_save"><i class="fa fa-save"></i>&nbsp;保存</a>
+                    <a href="javascript:;" class="label-info J_cancel"><i class="fa fa-undo"></i>&nbsp;取消</a>
+                </td>
+            </tr>
+        </script>
+        <!--弹出框内容模板-->
+        <script type="text/template" id="dialogTpl">
+            <form method="" action="" class="J_addForm">
+                <div class="form-group J_type">
+                    <label>
+                        <input type="radio" name="type" value="0" checked>按折扣生成
+                    </label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="0~10之间的数字" data-valid-rule="scale(0,10,1)" name="discount" value="">
+                        <span class="input-group-addon">折</span>
+                    </div>
+                </div>
+                <div class="form-group J_type">
+                    <label>
+                        <input type="radio" name="type" value="1">按固定金额减少生成
+                    </label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="降低的金额" data-valid-rule="notNegativeNumber" disabled="disabled" name="difference" value="">
+                        <span class="input-group-addon">元</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>生成价格不低于</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" value="1" data-valid-rule="notNegativeNumber" name="lowPrice" value="">
+                        <span class="input-group-addon">元</span>
+                    </div>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="0" name="includeDrinks">不包括酒水
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="cover" value="1">覆盖已设会员价的项目
+                  </label>
+                </div>
+                <input class="J_hidden" type="hidden" name="vipDishPricePlanId" value="333"/>
+            </form>
+        </script>
+        <script type="text/javascript">
+            KISSY.ready(function(S){
+                S.use('page/vip-management/vip-dish-price-management',function(){
+                    PW.page.VipDishPrice.Core();
+                })
+            });
+        </script>
+    </body>
+</html>

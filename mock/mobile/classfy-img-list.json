@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list":[
+        {"sale": "5.60", "price": "8.00", "dishId": 1, "name": "青岛啤酒", "likeNums": 120, "src":"/resources/img/mobile/carousel/dish1.gif"},
+        {"sale": "5.60", "price": "8.00", "dishId": 2, "name": "青岛啤酒", "likeNums": 120, "src":"/resources/img/mobile/carousel/dish1.gif"},
+        {"sale": "5.60", "price": "8.00", "dishId": 3, "name": "青岛啤酒", "likeNums": 120, "src":"/resources/img/mobile/carousel/dish1.gif"},
+        {"sale": "5.60", "price": "8.00", "dishId": 41, "name": "青岛啤酒", "likeNums": 120,"src":"/resources/img/mobile/carousel/dish1.gif"},
+        {"sale": "5.60", "price": "8.00", "dishId": 41, "name": "青岛啤酒", "likeNums": 120,"src":"/resources/img/mobile/carousel/dish1.gif"},
+        {"sale": "5.60", "price": "8.00", "dishId": 51, "name": "青岛啤酒", "likeNums": 120,"src":"/resources/img/mobile/carousel/dish1.gif"},
+        {"sale": "5.60", "price": "8.00", "dishId": 81, "name": "青岛啤酒", "likeNums": 120,"src":"/resources/img/mobile/carousel/dish1.gif"}
+    ], 
+    "errMsg": "错误信息!"
+}

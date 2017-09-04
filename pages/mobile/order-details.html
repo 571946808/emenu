@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>点菜详情</title>
+		<!--#include file="/pages/mobile/common/head.html"-->
+		<link rel="stylesheet" href="/resources/css/mobile/order-details.css">
+		<link rel="stylesheet" href="/resources/tool/pui2/assets/carousel/css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<!--#include file="/pages/mobile/common/details-header.html"-->
+			<!--#include file="/pages/mobile/common/footer.html"-->
+
+			<div class="container">
+				<div id="carousel" class="carousel slide">
+					<ol class="carousel-indicators">
+						<li data-target="#carousel" data-slide-to="0"></li>
+						<li data-target="#carousel" data-slide-to="1"></li>
+						<li data-target="#carousel" data-slide-to="2"></li>
+						<li data-target="#carousel" data-slide-to="3"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<span class="tag-background"></span>
+						<span class="dish-tag">菠萝饭</span>
+						<div class="item active">
+							<a href="#"><img src="/resources/img/mobile/carousel/dish-pic1.gif" alt="菜品展示"></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="/resources/img/mobile/carousel/dish-pic2.gif" alt="菜品展示"></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="/resources/img/mobile/carousel/dish-pic3.gif" alt="菜品展示"></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="/resources/img/mobile/carousel/dish-pic4.gif" alt="菜品展示"></a>
+						</div>
+					</div>
+				</div>
+				<div class="dish-title">
+					<span class="dish-name">菠萝饭</span>
+					<span class="dish-sale">￥32</span>
+					<span class="dish-price">￥42</span>
+				</div>
+				<p class="intro J_intro" data-ellipsis="40|...">菠萝内含维生素A、B、C，钙、磷、钾等矿物质，脂肪，蛋白质等。其中一种叫“菠菠萝饭菠萝饭萝脘酶”的物质能分解蛋白质，溶解阻塞于组织中的纤维蛋白和血凝块。同时菠萝中所含的糖、盐类和酶有利尿作用</p>
+				<div class="package">套餐</div>
+				<table class="package-list">
+					<tbody>
+						<tr>
+							<td class="name">梅花肉</td>
+							<td>￥15.00</td>
+							<td>1份</td>
+						</tr>
+						<tr>
+							<td class="name">梅花肉</td>
+							<td>￥15.00</td>
+							<td>1份</td>
+						</tr>
+					</tbody>
+				</table>
+				<form action="" method="" class="J_form">
+					<input type="hidden" name="id" value="">
+					<div class="order-require">
+						<label>上菜方式</label>
+					</div>
+					<div class="options J_type">
+						<input type="hidden" name="type" value="">
+						<span data-type="1"><i class="fa fa-circle-o"></i>即起</span>
+						<span data-type="2"><i class="fa fa-circle-o"></i>叫起</span>
+					</div>
+					<div class="order-require">
+						<label>口&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;味</label>
+					</div>
+					<div class="options J_type">
+						<input type="hidden" name="taste" value="">
+						<span data-type="0" class="selected"><i class="fa fa-circle-o"></i>酸</span>
+						<span data-type="1"><i class="fa fa-circle-o"></i>甜</span>
+						<span data-type="2"><i class="fa fa-circle-o"></i>苦</span>
+						<span data-type="3"><i class="fa fa-circle-o"></i>辣</span>
+						<span data-type="4"><i class="fa fa-circle-o"></i>麻</span>
+						<span data-type="5"><i class="fa fa-circle-o"></i>不要辣</span>
+						<!-- <div>暂无口味</div> -->
+					</div>
+					<div class="order-require">
+						<label>数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</label>
+						<div class="set-number">
+							<button type="button" class="J_minus"><i class="fa fa-minus"></i></button>
+							<input type="number" name="number" value="1">
+							<button type="button" class="J_plus"><i class="fa fa-plus"></i></button>
+						</div>
+					</div>
+					<div class="order-require">
+						<label>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</label>
+						<div class="set-remarks J_remarks">
+							<input type="hidden" value="">
+							<span>少放盐</span>
+							<span>多放辣</span>
+							<span>少糖</span>
+							<span>多糖</span>
+							<span>多盐</span>
+							<span>少辣</span>
+							<textarea name="remarks" rows="2">111</textarea>
+							<button type="submit" class="J_submit">点菜</button>
+						</div>
+					</div>
+				</form>
+			</div><!-- container -->	
+		</div><!-- page -->
+		<script type="text/javascript">
+			KISSY.use('page/order-details', function(S){
+				PW.page.OrderDetails();
+			});
+		</script>
+	</body>
+</html>

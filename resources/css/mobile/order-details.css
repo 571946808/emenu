@@ -1,0 +1,269 @@
+html,
+body,
+.page {
+  background-color: #f0f0f0; }
+
+body {
+  overflow: hidden; }
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: 100% !important;
+  width: 100%; }
+
+#wrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 1.25333rem;
+  width: 10rem;
+  bottom: 1.50667rem; }
+
+.hidden {
+  display: none; }
+
+/* **************details-header start******************** */
+.header {
+  background-color: #ff8822;
+  padding: 0.32rem 0.37333rem;
+  border-bottom: 0.02667rem solid #e66a00;
+  position: fixed;
+  width: 9.25333rem;
+  top: 0;
+  left: 0;
+  z-index: 16;
+  color: #fff; }
+
+.back-icon {
+  float: left;
+  font-size: 0.50667rem; }
+
+.header-title {
+  text-align: center;
+  width: 9.09333rem;
+  font-size: 0.41333rem;
+  font-weight: normal; }
+
+/* **************order-details start******************** */
+.carousel-inner > .item {
+  margin-top: 1.28rem;
+  height: 5.16rem; }
+
+.carousel-inner {
+  border-bottom: 0.02667rem solid #d2d2d2; }
+
+.tag-background {
+  width: 3.08rem;
+  height: 0.82667rem;
+  background: #fff;
+  position: absolute;
+  top: 1.28rem;
+  left: 0;
+  z-index: 1;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5; }
+
+.tag-background:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 3.06667rem;
+  border-top: 0.41333rem solid #fff;
+  border-right: 0.41333rem solid transparent;
+  border-bottom: 0.41333rem solid #fff;
+  border-left: 0rem solid transparent; }
+
+.dish-tag {
+  width: 2.97333rem;
+  text-align: center;
+  color: #ff8822;
+  background: #fff;
+  height: 0.82667rem;
+  line-height: 0.82667rem;
+  font-size: 0.4rem;
+  font-weight: bold;
+  position: absolute;
+  top: 1.28rem;
+  left: 0;
+  z-index: 2;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7; }
+
+.dish-tag:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 2.96rem;
+  border-top: 0.41333rem solid #fff;
+  border-right: 0.41333rem solid transparent;
+  border-bottom: 0.41333rem solid #fff;
+  border-left: 0rem solid transparent; }
+
+.carousel-indicators {
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0.17333rem;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  text-align: center;
+  list-style: none; }
+  .carousel-indicators li {
+    display: inline-block;
+    width: 0.22667rem !important;
+    height: 0.22667rem !important;
+    margin-right: 0.17333rem !important;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff !important;
+    border: 0.02667rem solid #c2c3bc !important;
+    border-radius: 0.22667rem !important; }
+  .carousel-indicators .active {
+    width: 0.22667rem !important;
+    height: 0.22667rem !important;
+    margin-right: 0.17333rem !important;
+    background-color: #ff8822 !important;
+    border: 0.02667rem solid #c2c3bc !important; }
+
+.dish-title {
+  padding: 0.64rem 0.44rem 0.24rem 0.4rem;
+  border-bottom: 0.01333rem solid #b8b8b8; }
+
+.dish-name {
+  font-size: 0.42667rem;
+  color: #333333; }
+
+.dish-price {
+  float: right;
+  font-size: 0.37333rem;
+  color: #8f8ba2;
+  text-decoration: line-through;
+  margin-top: 0.06667rem; }
+
+.dish-sale {
+  float: right;
+  font-size: 0.48rem;
+  color: #ff0000;
+  margin-top: -0.05333rem; }
+
+.intro {
+  text-indent: 2em;
+  font-size: 0.37333rem;
+  color: #666666;
+  margin: 0.10667rem 0.30667rem 0.10667rem 0.53333rem;
+  line-height: 0.61333rem; }
+
+.package, .package-list {
+  background: #f8f8f8; }
+
+.package {
+  color: #333333;
+  font-size: 0.4rem;
+  padding: 0.13333rem 0rem 0.13333rem 0.4rem; }
+
+.package-list {
+  width: 100%;
+  color: #666666;
+  margin: 0.2rem 0rem;
+  font-size: 0.37333rem;
+  line-height: 0.93333rem; }
+
+.package-list .name {
+  padding-left: 0.53333rem; }
+
+.order-require label {
+  color: #333333;
+  display: inline-block;
+  font-size: 0.4rem;
+  margin-left: 0.42667rem;
+  margin-bottom: 0.30667rem; }
+
+.options {
+  background: #f8f8f8;
+  padding: 0.24rem 0.42667rem;
+  margin-bottom: 0.30667rem;
+  font-size: 0.37333rem;
+  color: #666666;
+  line-height: 0.8rem; }
+  .options .fa-circle-o {
+    font-size: 0.26667rem;
+    color: #b5b5b5;
+    vertical-align: top;
+    margin-top: 0.26667rem;
+    margin-right: 0.13333rem; }
+  .options span {
+    display: inline-block;
+    width: 1.92rem; }
+
+.selected {
+  color: #ff8822; }
+  .selected .fa-circle-o {
+    color: #ff8822; }
+
+.set-number {
+  display: inline-block;
+  margin: 0.18667rem 0rem 0.61333rem 0rem; }
+  .set-number button {
+    color: #fff;
+    background: #ff8822;
+    font-size: 0.28rem;
+    height: 0.65333rem;
+    width: 0.65333rem;
+    margin: 0rem 0.21333rem;
+    border: 0; }
+  .set-number input {
+    width: 1.14667rem;
+    height: 0.57333rem;
+    font-size: 0.37333rem;
+    border: 0.04rem solid #bfbfbf;
+    vertical-align: top;
+    color: #ff8822;
+    background: transparent;
+    text-align: center; }
+
+.set-remarks {
+  display: inline-block;
+  width: 7.01333rem;
+  vertical-align: top; }
+  .set-remarks span {
+    display: inline-block;
+    color: #333333;
+    font-size: 0.34667rem;
+    background: #dcdcdc;
+    padding: 0.08rem 0.26667rem 0.12rem 0.18667rem;
+    margin-left: 0.22667rem;
+    margin-bottom: 0.22667rem; }
+  .set-remarks textarea {
+    font-size: 0.34667rem;
+    color: #333333;
+    line-height: 0.64rem;
+    min-height: 1.29333rem;
+    border: 0.06667em solid #bfbfbf;
+    min-width: 100%;
+    margin: 0.29333rem 0rem 0.24rem 0.06667rem; }
+  .set-remarks button {
+    background: #ff8822;
+    font-size: 0.34667rem;
+    color: #fff;
+    padding: 0.2rem 0.45333rem 0.17333rem;
+    border: 0.01333rem solid #ff8822;
+    border-radius: 0.10667rem;
+    -moz-border-radius: 0.10667rem;
+    -webkit-border-radius: 0.10667rem;
+    float: right;
+    letter-spacing: 0.12rem;
+    margin-bottom: 3.36rem; }
+  .set-remarks .selected {
+    background: #ff8822;
+    color: #fff; }
+
+/*# sourceMappingURL=order-details.css.map */
